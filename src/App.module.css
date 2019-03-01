@@ -1,0 +1,51 @@
+.header {
+  position: relative;
+  height: 80vmin;
+  overflow: hidden;
+  background-image: url('./portugal.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 32px;
+}
+
+.headline {
+  position: absolute;
+  bottom: 0;
+  left: 32px;
+  color: white;
+  background-color: var(--tradewind-transparent);
+  max-width: 40vw;
+  padding: 16px 48px;
+}
+
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.introHeadline {
+  position: relative;
+}
+
+.introText {
+  position: relative;
+  align-self: flex-end;
+}
+
+.introBackground {
+  position: absolute;
+  background-color: var(--lily-blue);
+  top: 0;
+  bottom: 0;
+  left: 18%;
+  right: 18%;
+}
+
+@media (min-width: 768px) {
+  .introText,
+  .introHeadline {
+    max-width: 65%;
+  }
+}

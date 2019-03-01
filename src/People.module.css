@@ -1,0 +1,57 @@
+.section {
+  background-color: var(--cashmere);
+}
+
+.people {
+  display: flex;
+  overflow-x: scroll;
+  max-width: 100vw;
+}
+
+.person {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+  height: 400px;
+  flex-basis: 180px;
+  flex-shrink: 0;
+  filter: brightness(0.5);
+}
+
+.highlight {
+  opacity: 0;
+}
+
+.name {
+  background-color: var(--tradewind-transparent);
+  padding: 2px;
+  margin-bottom: auto;
+}
+
+.quote {
+  font-size: 12px;
+}
+
+.link {
+  color: white;
+  align-self: flex-end;
+  text-decoration: none;
+}
+
+.linkText {
+  text-decoration: underline;
+}
+
+.person:hover .highlight {
+  opacity: 1;
+  transition: opacity 0.25s;
+}
+
+.person:hover {
+  filter: none;
+}

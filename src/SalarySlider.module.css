@@ -1,0 +1,27 @@
+.SalarySlider {
+  position: relative;
+}
+
+.moneyBox {
+  position: relative;
+  padding: 32px 0;
+}
+
+.money {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 16px;
+}
+
+.label {
+  text-transform: uppercase;
+}
+
+.background {
+  position: absolute;
+  background-color: var(--lily-blue);
+  top: 0;
+  bottom: 0;
+  left: 18%;
+  right: 18%;
+}
