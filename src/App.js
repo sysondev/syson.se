@@ -4,6 +4,9 @@ import styles from './App.module.css';
 import SalarySlider from './SalarySlider';
 import logo from './logo.png';
 import People from './People';
+import Insta from './Insta';
+import Contact from './Contact';
+import Map from './Map';
 
 export default () => {
   return (
@@ -38,7 +41,23 @@ export default () => {
           </div>
         </section>
         <People />
-        <SalarySlider />
+        <section>
+          <div className='container'>
+            <h2>En schysst deal 🤝</h2>
+            <p>
+              <strong>
+                Vår lönemodell är simpel: du får 70% av timpriset när du har ett
+                uppdrag, annars är du garanterad 26 000 kr.
+              </strong>{' '}
+              Vi räknar med att du tar minst sex veckors semester, men du har
+              friheten att ta mer om du vill.{' '}
+            </p>
+            <SalarySlider />
+          </div>
+        </section>
+        <Insta />
+        <Contact />
+        <Map />
       </main>
     </>
   );

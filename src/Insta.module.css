@@ -1,0 +1,34 @@
+.grid {
+  height: 180vmax;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  height: 150vmax;
+  overflow: hidden;
+}
+
+.image {
+  width: 50vw;
+}
+
+@media (min-width: 720px) {
+  .image {
+    width: 25vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image {
+    width: 20vw;
+  }
+  .grid {
+    height: 70vw;
+  }
+  .wrapper {
+    height: 50vw;
+  }
+}

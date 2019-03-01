@@ -112,6 +112,7 @@ export default () => {
       <div className={styles.people}>
         {people.map(person => (
           <div
+            key={person.name}
             className={styles.person}
             style={{ backgroundImage: `url(${person.image})` }}
           >

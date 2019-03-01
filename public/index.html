@@ -45,29 +45,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 59.3455752, lng: 18.0449555},
-          zoom: 14
-        });
-        var theParkSveavagenLocation = {lat: 59.3424874, lng: 18.0572211 };
-        var theParkHalsingegatanLocation = {lat: 59.3466611, lng: 18.0382911 };
-        var theParkSveavagenMarker = new google.maps.Marker({
-          position: theParkSveavagenLocation,
-          map: map,
-          icon: '%PUBLIC_URL%/images/syson-google-marker.png',
-        });
-        var theParkHalsingegatanMarker = new google.maps.Marker({
-          position: theParkHalsingegatanLocation,
-          map: map,
-          icon: '%PUBLIC_URL%/images/syson-google-marker.png',
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr56WKXjNbvehf7vOI8y4m0Qsyl9PiPww&callback=initMap"
-    async defer></script>
   </body>
 </html>
