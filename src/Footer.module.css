@@ -1,0 +1,15 @@
+.footer {
+  background-color: var(--mirage);
+  color: white;
+  padding: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 100px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}

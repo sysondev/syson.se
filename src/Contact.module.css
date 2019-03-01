@@ -5,6 +5,15 @@
   align-items: flex-start;
 }
 
+.left {
+  padding-top: 32px;
+  max-width: 300px;
+}
+
+.left p {
+  margin-top: 0;
+}
+
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr;

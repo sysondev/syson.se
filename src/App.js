@@ -7,6 +7,7 @@ import People from './People';
 import Insta from './Insta';
 import Contact from './Contact';
 import Map from './Map';
+import Footer from './Footer';
 
 export default () => {
   return (
@@ -79,6 +80,7 @@ Vi är idag 16 personer. Några fler ska vi bli. Men inte många.
         <Contact />
         <Map />
       </main>
+      <Footer />
     </>
   );
 };

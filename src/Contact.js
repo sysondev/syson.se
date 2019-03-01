@@ -7,10 +7,8 @@ export default () => {
       <div className='container'>
         <h2>Säg hej!</h2>
         <div className={styles.contact}>
-          <div className={styles.list}>
-            <div>
-              Vi sitter på The Park’s lokaler i City, Vasastan & Södermalm.
-            </div>
+          <div className={styles.left}>
+            <p>Vi sitter på The Park’s lokaler i City, Vasastan & Södermalm.</p>
             <a href='mailto:hej@syson.se' className={styles.mail}>
               hej@syson.se
             </a>
