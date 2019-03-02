@@ -5,6 +5,7 @@
 .people {
   display: flex;
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
   max-width: 100vw;
 }
 
