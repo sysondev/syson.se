@@ -12,15 +12,23 @@ export default ({ min, max, value, onChange }) => {
     e.dataTransfer.setDragImage(img, 1, 1);
   };
 
-  const drag = event => {
+  const handleChange = dragX => {
     const barRect = bar.current.getBoundingClientRect();
     const barWidth = barRect.right - barRect.left;
-    const xPos = event.clientX - barRect.left;
+    const xPos = dragX - barRect.left;
     const percentage = xPos / barWidth;
     if (percentage > 0 && percentage < 1) {
       const value = Math.trunc(percentage * (max - min) + min);
       onChange(value);
     }
+  };
+
+  const drag = event => {
+    handleChange(event.clientX);
+  };
+
+  const touchMove = event => {
+    handleChange(event.touches[0].clientX);
   };
 
   const valuePercentage = ((value - min) / (max - min)) * 100;
@@ -36,6 +44,7 @@ export default ({ min, max, value, onChange }) => {
         className={styles.handle}
         onDragStart={dragStart}
         onDrag={drag}
+        onTouchMove={touchMove}
         draggable
       />
     </div>
