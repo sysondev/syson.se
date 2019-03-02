@@ -23,10 +23,16 @@ export default ({ min, max, value, onChange }) => {
     }
   };
 
+  const valuePercentage = ((value - min) / (max - min)) * 100;
+
   return (
     <div className={styles.bar} ref={bar}>
       <div
-        style={{ left: `${((value - min) / (max - min)) * 100}%` }}
+        className={styles.barFill}
+        style={{ width: `${valuePercentage}%` }}
+      />
+      <div
+        style={{ left: `${valuePercentage}%` }}
         className={styles.handle}
         onDragStart={dragStart}
         onDrag={drag}
