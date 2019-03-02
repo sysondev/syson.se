@@ -12,10 +12,11 @@
 .headline {
   position: absolute;
   bottom: 0;
-  left: 32px;
+  left: 16px;
+  right: 16px;
   color: white;
   background-color: var(--tradewind-transparent);
-  max-width: 40vw;
+
   padding: 16px 48px;
 }
 
@@ -44,6 +45,11 @@
 }
 
 @media (min-width: 768px) {
+  .headline {
+    max-width: 40vw;
+    left: 32px;
+    right: auto;
+  }
   .introText,
   .introHeadline {
     max-width: 65%;
