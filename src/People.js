@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import styles from './People.module.css';
 import leo from './leo.jpg';
@@ -6,97 +6,97 @@ import arrow from './arrow.svg';
 
 const people = [
   {
-    name: 'Leo Danielsan',
+    name: 'Alexander Hedberg',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Johanna Lagerholm',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Leo Danielsson',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Alexander Lissenko',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Olov Gullikson',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Anton Söderstedt',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Mikael Larsson',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Otto Nordgren',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Magnus Linell',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Katrine Johansson',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'David Skog',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Joakim Gordillo',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Patrick Thomsson',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Soroush Hakami',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Love Gehlin',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
   },
   {
-    name: 'Leo Danielsan',
+    name: 'Anders Söderstedt',
     url: '//google.se',
     image: leo,
     quote: 'Jag heter Leo Danielsson egentligen'
@@ -104,17 +104,47 @@ const people = [
 ];
 
 export default () => {
+  const [highlighted, setHighlighted] = useState();
+  const peopleElement = useRef();
+  const refs = people.reduce((refMap, person) => {
+    refMap[person.name] = useRef();
+    return refMap;
+  }, {});
+
+  const highlightCenter = () => {
+    const centerPerson = Object.keys(refs).find(name => {
+      const rect = refs[name].current.getBoundingClientRect();
+      const viewportCenter = window.innerWidth / 2;
+      return rect.left < viewportCenter && rect.right > viewportCenter;
+    });
+    setHighlighted(centerPerson);
+  };
+
+  useEffect(() => {
+    peopleElement.current.scrollLeft = 100;
+    highlightCenter();
+  }, []);
+
   return (
     <section className={styles.section}>
       <div className='container'>
         <h2>DJ’s, Föräldrar och Hårdrockare 🤘</h2>
       </div>
-      <div className={styles.people}>
+      <div
+        className={styles.people}
+        onScroll={highlightCenter}
+        ref={peopleElement}
+      >
+        <div className={styles.space} />
         {people.map(person => (
           <div
             key={person.name}
-            className={styles.person}
+            className={classNames(
+              styles.person,
+              highlighted === person.name && styles.highlighted
+            )}
             style={{ backgroundImage: `url(${person.image})` }}
+            ref={refs[person.name]}
           >
             <div className={classNames(styles.name, styles.highlight)}>
               {person.name}
@@ -131,6 +161,7 @@ export default () => {
             </a>
           </div>
         ))}
+        <div className={styles.space} />
       </div>
     </section>
   );

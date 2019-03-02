@@ -19,7 +19,7 @@
   align-items: flex-start;
   padding: 8px;
   height: 400px;
-  flex-basis: 180px;
+  flex-basis: 200px;
   flex-shrink: 0;
   filter: brightness(0.5);
 }
@@ -48,11 +48,33 @@
   text-decoration: underline;
 }
 
-.person:hover .highlight {
-  opacity: 1;
-  transition: opacity 0.25s;
+.space {
+  flex-basis: 100px;
+  flex-shrink: 0;
 }
 
-.person:hover {
-  filter: none;
+@media (max-width: 755px) {
+  .highlighted .highlight {
+    opacity: 1;
+    transition: opacity 0.25s;
+  }
+
+  .highlighted {
+    filter: none;
+  }
+}
+
+@media (min-width: 756px) {
+  .person:hover .highlight {
+    opacity: 1;
+    transition: opacity 0.25s;
+  }
+
+  .person:hover {
+    filter: none;
+  }
+
+  .space {
+    display: none;
+  }
 }
