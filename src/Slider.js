@@ -11,8 +11,7 @@ export default ({ min, max, value, onChange }) => {
     const xPos = dragX - barRect.left;
     const percentage = xPos / barWidth;
     if (percentage > 0 && percentage < 1) {
-      const value = Math.trunc(percentage * (max - min) + min);
-      onChange(value);
+      onChange(Math.trunc(percentage * (max - min) + min));
     }
   };
 
@@ -43,7 +42,6 @@ export default ({ min, max, value, onChange }) => {
   }, []);
 
   const valuePercentage = ((value - min) / (max - min)) * 100;
-
   return (
     <div
       className={styles.slider}
