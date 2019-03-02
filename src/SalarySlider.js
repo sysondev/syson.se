@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './SalarySlider.module.css';
 import Slider from './Slider';
 
-const defaultRate = 980;
+const defaultRate = 900;
 
 const locale = 'sv-SE';
 
@@ -24,7 +24,7 @@ export default () => {
           <span className={styles.label}>Kr</span>
         </div>
         <div className={styles.slider}>
-          <Slider onChange={setRate} defaultValue={defaultRate} />
+          <Slider onChange={setRate} min={600} max={1200} value={rate} />
         </div>
         <div>
           <span className={styles.label}>Lön</span>

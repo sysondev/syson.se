@@ -1,6 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
-import styles from './App.module.css';
 import SalarySlider from './SalarySlider';
 import People from './People';
 import Insta from './Insta';

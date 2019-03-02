@@ -1,2 +1,29 @@
-.tooltip {
+.bar {
+  position: relative;
+  height: 8px;
+  background-color: var(--westar);
+  border-radius: 4px;
+}
+
+.handle {
+  position: absolute;
+  top: -8px;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.handle::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  left: 8px;
+  bottom: 8px;
+  right: 8px;
+  top: 8px;
+  background-color: var(--mirage);
 }

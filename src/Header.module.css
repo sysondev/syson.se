@@ -1,0 +1,29 @@
+.header {
+  position: relative;
+  height: 80vmin;
+  overflow: hidden;
+  background-image: url('./otto.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 32px;
+}
+
+.headline {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  color: white;
+  background-color: var(--tradewind-transparent);
+
+  padding: 16px 48px;
+}
+
+@media (min-width: 768px) {
+  .headline {
+    max-width: 40vw;
+    left: 32px;
+    right: auto;
+  }
+}

@@ -26,3 +26,8 @@
   left: 18%;
   right: 18%;
 }
+
+.slider {
+  width: 50vw;
+  margin: 0 auto;
+}

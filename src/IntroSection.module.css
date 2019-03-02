@@ -1,0 +1,38 @@
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.headline {
+  position: relative;
+}
+
+.text {
+  position: relative;
+  align-self: flex-end;
+}
+
+.background {
+  position: absolute;
+  background-color: var(--lily-blue);
+  top: 0;
+  bottom: 0;
+  left: 18%;
+  right: 18%;
+}
+
+@media (min-width: 768px) {
+  .text,
+  .headline {
+    max-width: 65%;
+  }
+
+  .leftAligned .headline {
+    align-self: flex-end;
+  }
+
+  .leftAligned .text {
+    align-self: flex-start;
+  }
+}
