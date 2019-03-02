@@ -16,16 +16,23 @@ export default () => {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.grid}>
-        {posts.map(post => (
-          <img
-            key={post.id}
-            className={styles.image}
-            src={post.images.standard_resolution.url}
-          />
-        ))}
+    <>
+      <h2 className='container'>
+        <a href='https://www.instagram.com/syson.se/'>@syson.se</a> följ oss på
+        Instagram
+      </h2>
+      <div className={styles.wrapper}>
+        <div className={styles.grid}>
+          {posts.map(post => (
+            <a key={post.id} href={post.link}>
+              <img
+                className={styles.image}
+                src={post.images.standard_resolution.url}
+              />
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };

@@ -1,34 +1,32 @@
 .grid {
-  height: 180vmax;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  overflow-x: hidden;
+  column-count: 3;
+  column-gap: 0px;
+  margin-top: 36px;
 }
 
 .wrapper {
-  height: 150vmax;
+  height: 80vmax;
   overflow: hidden;
 }
 
 .image {
-  width: 50vw;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 @media (min-width: 720px) {
-  .image {
-    width: 25vw;
+  .grid {
+    column-count: 4;
+  }
+
+  .wrapper {
+    height: 50vmax;
   }
 }
 
 @media (min-width: 1024px) {
-  .image {
-    width: 20vw;
-  }
   .grid {
-    height: 70vw;
-  }
-  .wrapper {
-    height: 50vw;
+    column-count: 6;
   }
 }
