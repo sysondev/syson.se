@@ -1,16 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './Slider.module.css';
 
 export default ({ min, max, value, onChange }) => {
   const bar = useRef();
-
-  const dragStart = e => {
-    // Disable drag ghost image by setting dragImage to transparent pixel
-    const img = new Image();
-    img.src =
-      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=';
-    e.dataTransfer.setDragImage(img, 1, 1);
-  };
+  const [dragging, setDragging] = useState(false);
 
   const handleChange = dragX => {
     const barRect = bar.current.getBoundingClientRect();
@@ -23,30 +16,52 @@ export default ({ min, max, value, onChange }) => {
     }
   };
 
-  const drag = event => {
+  const mouseDown = event => {
+    setDragging(true);
     handleChange(event.clientX);
+  };
+
+  const mouseUp = () => {
+    setDragging(false);
+  };
+
+  const mouseMove = event => {
+    if (dragging) {
+      handleChange(event.clientX);
+    }
   };
 
   const touchMove = event => {
     handleChange(event.touches[0].clientX);
   };
 
+  useEffect(() => {
+    document.addEventListener('mouseup', mouseUp);
+    return () => {
+      document.removeEventListener('mouseup', mouseUp);
+    };
+  }, []);
+
   const valuePercentage = ((value - min) / (max - min)) * 100;
 
   return (
-    <div className={styles.bar} ref={bar}>
-      <div
-        className={styles.barFill}
-        style={{ width: `${valuePercentage}%` }}
-      />
-      <div
-        style={{ left: `${valuePercentage}%` }}
-        className={styles.handle}
-        onDragStart={dragStart}
-        onDrag={drag}
-        onTouchMove={touchMove}
-        draggable
-      />
+    <div
+      className={styles.slider}
+      onTouchMove={touchMove}
+      onTouchStart={touchMove}
+      onMouseDown={mouseDown}
+      onMouseMove={mouseMove}
+    >
+      <div className={styles.bar} ref={bar}>
+        <div
+          className={styles.barFill}
+          style={{ width: `${valuePercentage}%` }}
+        />
+        <div
+          style={{ left: `${valuePercentage}%` }}
+          className={styles.handle}
+        />
+      </div>
     </div>
   );
 };

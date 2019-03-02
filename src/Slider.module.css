@@ -1,8 +1,13 @@
+.slider {
+  padding: 16px 0;
+}
+
 .bar {
   position: relative;
   height: 8px;
   background-color: var(--westar);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .barFill {
