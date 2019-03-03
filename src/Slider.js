@@ -12,10 +12,13 @@ export default ({ min, max, value, onChange }) => {
     const percentage = xPos / barWidth;
     if (percentage > 0 && percentage < 1) {
       onChange(Math.trunc(percentage * (max - min) + min));
+    } else {
+      console.log('not moving', percentage);
     }
   };
 
   const mouseDown = event => {
+    console.log('mousedown');
     setDragging(true);
     handleChange(event.clientX);
   };
@@ -36,10 +39,12 @@ export default ({ min, max, value, onChange }) => {
 
   useEffect(() => {
     document.addEventListener('mouseup', mouseUp);
+    document.addEventListener('mousemove', mouseMove);
     return () => {
       document.removeEventListener('mouseup', mouseUp);
+      document.removeEventListener('mousemove', mouseMove);
     };
-  }, []);
+  }, [dragging]);
 
   const valuePercentage = ((value - min) / (max - min)) * 100;
   return (
@@ -48,7 +53,6 @@ export default ({ min, max, value, onChange }) => {
       onTouchMove={touchMove}
       onTouchStart={touchMove}
       onMouseDown={mouseDown}
-      onMouseMove={mouseMove}
     >
       <div className={styles.bar} ref={bar}>
         <div
@@ -58,6 +62,10 @@ export default ({ min, max, value, onChange }) => {
         <div
           style={{ left: `${valuePercentage}%` }}
           className={styles.handle}
+          role='slider'
+          aria-valuemin={min}
+          aria-valuemax={max}
+          aria-valuenow={value}
         />
       </div>
     </div>
