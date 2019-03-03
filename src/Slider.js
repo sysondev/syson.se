@@ -10,15 +10,16 @@ export default ({ min, max, value, onChange }) => {
     const barWidth = barRect.right - barRect.left;
     const xPos = dragX - barRect.left;
     const percentage = xPos / barWidth;
-    if (percentage > 0 && percentage < 1) {
-      onChange(Math.trunc(percentage * (max - min) + min));
-    } else {
-      console.log('not moving', percentage);
+    if (percentage <= 0) {
+      return onChange(min);
     }
+    if (percentage >= 1) {
+      return onChange(max);
+    }
+    return onChange(Math.trunc(percentage * (max - min) + min));
   };
 
   const mouseDown = event => {
-    console.log('mousedown');
     setDragging(true);
     handleChange(event.clientX);
   };
