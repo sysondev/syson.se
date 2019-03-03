@@ -7,7 +7,7 @@ export default () => {
     <header className={styles.header}>
       <img src={logo} />
       <div className={styles.headline}>
-        <h1>Frihet, Bra Häng och Schysst Lön</h1>
+        <h1>Frihet, bra häng och schysst lön</h1>
       </div>
     </header>
   );

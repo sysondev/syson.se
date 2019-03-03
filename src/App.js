@@ -28,7 +28,7 @@ export default () => {
             Och man presterar bra av det. Win-win.
           </p>
         </IntroSection>
-        <IntroSection title='Bäst - Inte störst 🏡' leftAligned>
+        <IntroSection title='Bäst - inte störst 🏡' leftAligned>
           <p>
             Vi är ett konsultbolag som utvecklar system, hemsidor och appar. Vi
             jobbar i roller som utvecklare, testare, tech lead och scrum master.
@@ -49,12 +49,15 @@ export default () => {
           <div className='container'>
             <h2>En schysst deal 🤝</h2>
             <p>
-              <strong>
-                Vår lönemodell är simpel: du får 70% av timpriset när du har ett
-                uppdrag, annars är du garanterad 26 000 kr.
-              </strong>{' '}
+              Vår lönemodell är simpel. Du får 70% av timpriset när du har ett
+              uppdrag, annars är du garanterad 26 000 kr.
+            </p>
+            <p>
               Vi räknar med att du tar minst sex veckors semester, men du har
-              friheten att ta mer om du vill.{' '}
+              friheten att ta mer om du vill. Vill du ha en tjänstebil, spara mer pengar till pensionen eller något annat så hjälper vi dig med det. 
+            </p>
+            <p>
+            Alla har samma deal, nyanställd som veteran.
             </p>
             <SalarySlider />
           </div>
