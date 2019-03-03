@@ -32,10 +32,12 @@
   background-color: var(--tradewind-transparent);
   padding: 2px;
   margin-bottom: auto;
+  font-family: octarine;
+  font-size: 18px;
 }
 
 .quote {
-  font-size: 12px;
+  margin-bottom: 8px;
 }
 
 .link {
@@ -60,7 +62,8 @@
   }
 
   .highlighted {
-    filter: none;
+    filter: brightness(1);
+    transition: filter 1s;
   }
 }
 
@@ -71,7 +74,8 @@
   }
 
   .person:hover {
-    filter: none;
+    filter: brightness(1);
+    transition: filter 0.25s;
   }
 
   .space {
