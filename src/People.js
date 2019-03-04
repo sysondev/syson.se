@@ -3,6 +3,11 @@ import classNames from 'classnames';
 import styles from './People.module.css';
 import arrow from './arrow.svg';
 
+const isTouchDevice = () => {
+  // there's probably a better way to do this
+  return window.innerWidth < 1024;
+};
+
 const people = [
   {
     name: 'Alexander Hedberg',
@@ -124,13 +129,13 @@ export default () => {
   };
 
   const scroll = () => {
-    if (window.innerWidth < 1024) {
+    if (isTouchDevice()) {
       highlightCenter();
     }
   };
 
   useEffect(() => {
-    peopleElement.current.scrollLeft = 100;
+    peopleElement.current.scrollLeft = isTouchDevice() ? 100 : 0;
     highlightCenter();
   }, []);
 
@@ -146,7 +151,7 @@ export default () => {
             <div
               className={styles.preview}
               style={{ backgroundImage: `url(${person.image})` }}
-              onMouseEnter={event => mouseEnter(person.name)}
+              onMouseEnter={() => mouseEnter(person.name)}
               ref={refs[person.name]}
             />
             <div
