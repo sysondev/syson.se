@@ -1,105 +1,104 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import styles from './People.module.css';
-import leo from './leo.jpg';
 import arrow from './arrow.svg';
 
 const people = [
   {
     name: 'Alexander Hedberg',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/alexh.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Johanna Lagerholm',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/johanna.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Leo Danielsson',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/leo.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Alexander Lissenko',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/alexander.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Olov Gullikson',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/olov.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Anton Söderstedt',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/anton.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Mikael Larsson',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/micke.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Otto Nordgren',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/otto.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Magnus Linell',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/magnus.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Katrine Johansson',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/katrine.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'David Skog',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/david.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Joakim Gordillo',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/joakim.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Patrick Thomsson',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/patrick.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Soroush Hakami',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/soroush.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Love Gehlin',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/love.jpg',
+    quote: 'Jag jobbar med data'
   },
   {
     name: 'Anders Söderstedt',
     url: '//google.se',
-    image: leo,
-    quote: 'Jag heter Leo Danielsson egentligen'
+    image: '/images/people/anders.jpg',
+    quote: 'Jag jobbar med data'
   }
 ];
 
@@ -120,6 +119,16 @@ export default () => {
     setHighlighted(centerPerson);
   };
 
+  const mouseEnter = name => {
+    setHighlighted(name);
+  };
+
+  const scroll = () => {
+    if (window.innerWidth < 1024) {
+      highlightCenter();
+    }
+  };
+
   useEffect(() => {
     peopleElement.current.scrollLeft = 100;
     highlightCenter();
@@ -130,38 +139,41 @@ export default () => {
       <div className='container'>
         <h2>Foodies, löpare och hårdrockare 🤘</h2>
       </div>
-      <div
-        className={styles.people}
-        onScroll={highlightCenter}
-        ref={peopleElement}
-      >
-        <div className={styles.space} />
+      <div className={styles.people} ref={peopleElement} onScroll={scroll}>
+        <span className={styles.space} />
         {people.map(person => (
-          <div
-            key={person.name}
-            className={classNames(
-              styles.person,
-              highlighted === person.name && styles.highlighted
-            )}
-            style={{ backgroundImage: `url(${person.image})` }}
-            ref={refs[person.name]}
-          >
-            <div className={classNames(styles.name, styles.highlight)}>
-              {person.name}
-            </div>
-            <div className={classNames(styles.quote, styles.highlight)}>
-              {person.quote}
-            </div>
-            <a
-              href={person.url}
-              className={classNames(styles.link, styles.highlight)}
+          <div key={person.name} className={styles.person}>
+            <div
+              className={styles.preview}
+              style={{ backgroundImage: `url(${person.image})` }}
+              onMouseEnter={event => mouseEnter(event, person.name)}
+              ref={refs[person.name]}
+            />
+            <div
+              className={classNames(
+                styles.details,
+                highlighted === person.name && styles.highlighted
+              )}
+              style={{ backgroundImage: `url(${person.image})` }}
+              ref={refs[person.name]}
             >
-              <span className={styles.linkText}>Profil</span>{' '}
-              <img src={arrow} />
-            </a>
+              <div className={classNames(styles.name, styles.highlight)}>
+                {person.name}
+              </div>
+              <div className={classNames(styles.quote, styles.highlight)}>
+                {person.quote}
+              </div>
+              <a
+                href={person.url}
+                className={classNames(styles.link, styles.highlight)}
+              >
+                <span className={styles.linkText}>Profil</span>{' '}
+                <img src={arrow} />
+              </a>
+            </div>
           </div>
         ))}
-        <div className={styles.space} />
+        <span className={styles.space} />
       </div>
     </section>
   );
