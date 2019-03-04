@@ -146,7 +146,7 @@ export default () => {
             <div
               className={styles.preview}
               style={{ backgroundImage: `url(${person.image})` }}
-              onMouseEnter={event => mouseEnter(event, person.name)}
+              onMouseEnter={event => mouseEnter(person.name)}
               ref={refs[person.name]}
             />
             <div
