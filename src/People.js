@@ -11,101 +11,112 @@ const isTouchDevice = () => {
 const people = [
   {
     name: 'Alexander Hedberg',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/alexh.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Johanna Lagerholm',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/johanna.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Leo Danielsson',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/leo.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Alexander Lissenko',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/alexander.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Olov Gullikson',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/olov.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Anton Söderstedt',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/anton.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Mikael Larsson',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/micke.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Otto Nordgren',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/otto.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Magnus Linell',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/magnus.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Katrine Johansson',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/katrine.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'David Skog',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/david.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Joakim Gordillo',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/joakim.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Patrick Thomsson',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/patrick.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Soroush Hakami',
-    url: '//google.se',
     image: '/images/people/soroush.jpg',
-    quote: 'Jag jobbar med data'
+    linkedInUrl: 'https://www.linkedin.com/in/soroush-hakami/',
+    quote: 'Rekrytering, sälj och sånt!'
   },
   {
     name: 'Love Gehlin',
-    url: '//google.se',
+    profileUrl: '//google.se',
     image: '/images/people/love.jpg',
     quote: 'Jag jobbar med data'
   },
   {
     name: 'Anders Söderstedt',
-    url: '//google.se',
     image: '/images/people/anders.jpg',
+    linkedInUrl: 'https://www.linkedin.com/in/anders-s%C3%B6derstedt-1631b8/',
     quote: 'Jag jobbar med data'
   }
 ];
+
+const Link = ({ url, title }) => (
+  <a
+    href={url}
+    target="_blank"
+    className={classNames(styles.link, styles.highlight)}
+  >
+    <span className={styles.linkText}>{title}</span>{' '}
+    <img src={arrow} />
+  </a>
+)
 
 export default () => {
   const [highlighted, setHighlighted] = useState();
@@ -168,13 +179,12 @@ export default () => {
               <div className={classNames(styles.quote, styles.highlight)}>
                 {person.quote}
               </div>
-              <a
-                href={person.url}
-                className={classNames(styles.link, styles.highlight)}
-              >
-                <span className={styles.linkText}>Profil</span>{' '}
-                <img src={arrow} />
-              </a>
+              { person.linkedInUrl &&
+                <Link url={person.linkedInUrl} title="LinkedIn" />
+              }
+              { person.profileUrl &&
+                <Link url={person.profileUrl} title="Profil" />
+              }
             </div>
           </div>
         ))}
