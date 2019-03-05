@@ -13,7 +13,7 @@ export default () => {
     <>
       <Header />
       <main>
-        <IntroSection title='Fokus på dig 👩🏻‍💻'>
+        <IntroSection title='Fokus på dig 👩🏻'>
           <p>
             Hos oss får du friheten att fokusera på det du tycker om. Jobba på
             roliga projekt hos bra kunder. Umgås avslappnat och resa till nya
@@ -27,7 +27,7 @@ export default () => {
             ser vi som en självklarhet. 
           </p>
         </IntroSection>
-        <IntroSection title='Bäst - inte störst 🏡' leftAligned>
+        <IntroSection title='Bäst, inte störst 🏡' leftAligned>
           <p>
             Vi är ett konsultbolag som utvecklar system, hemsidor och appar. Vi
             jobbar i roller som utvecklare, testare, tech lead och scrum master.
