@@ -1,7 +1,4 @@
 .squares {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 32px;
   color: white;
 }
 
@@ -19,4 +16,12 @@
 
 .link {
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .squares {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 32px;
+  }
 }
