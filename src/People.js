@@ -142,7 +142,7 @@ export default () => {
   return (
     <section className={styles.section}>
       <div className='container'>
-        <h2>Foodies, löpare och hårdrockare 🤘</h2>
+        <h2>Foodies, gamers och rockers 🤘</h2>
       </div>
       <div className={styles.people} ref={peopleElement} onScroll={scroll}>
         <span className={styles.space} />

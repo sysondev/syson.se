@@ -22,10 +22,9 @@ export default () => {
           </p>
           <p>
             Du kan lägga din energi på att lära dig nya saker och träffa
-            människor snarare än att klättra i en karriärstege - vi har inte ens
-            någon. Att jobba 8 timmar om dagen och sen [kunna] tänka på annat
-            ser vi som en självklarhet. Man behöver vila. Man mår bra av det.
-            Och man presterar bra av det. Win-win.
+            människor snarare än att klättra i en karriärstege.
+            Att jobba 8 timmar om dagen och sen kunna tänka på annat
+            ser vi som en självklarhet. 
           </p>
         </IntroSection>
         <IntroSection title='Bäst - inte störst 🏡' leftAligned>
