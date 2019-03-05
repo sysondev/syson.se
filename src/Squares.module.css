@@ -1,0 +1,22 @@
+.squares {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 32px;
+  color: white;
+}
+
+.square {
+  height: 364px;
+  background-color: var(--citrus);
+  border-radius: 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 32px;
+}
+
+.link {
+  text-decoration: none;
+}

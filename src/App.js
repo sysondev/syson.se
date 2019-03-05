@@ -7,6 +7,7 @@ import Map from './Map';
 import Footer from './Footer';
 import Header from './Header';
 import IntroSection from './IntroSection';
+import Squares from './Squares'
 
 export default () => {
   return (
@@ -61,6 +62,7 @@ export default () => {
             <SalarySlider />
           </div>
         </section>
+        <Squares />
         <Insta />
         <Contact />
         <Map />
