@@ -8,6 +8,7 @@ export default () => {
       <img src={logo} />
       <div className={styles.headline}>
         <h1>Frihet, bra häng och schysst lön</h1>
+        <p>Vi är konsulter i Stockholm, duktiga inom systemutveckling & test.</p>
       </div>
     </header>
   );
