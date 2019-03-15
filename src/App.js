@@ -25,10 +25,29 @@ export default () => {
             Du kan lägga din energi på att lära dig nya saker och träffa
             människor snarare än att klättra i en karriärstege.
             Att jobba 8 timmar om dagen och sen kunna tänka på annat
-            ser vi som en självklarhet. 
+            ser vi som en självklarhet.
           </p>
         </IntroSection>
-        <IntroSection title='Bäst, inte störst 🏡' leftAligned>
+        <People />
+        <section>
+          <div className='container'>
+            <h2>En schysst deal 🤝</h2>
+            <p>
+              Vår lönemodell är simpel. Du får 70% av timpriset när du har ett
+              uppdrag, annars är du garanterad 26 000 kr.
+            </p>
+            <p>
+              Vi räknar med att du tar minst sex veckors semester, men du har
+              friheten att ta mer om du vill. Vill du ha en tjänstebil, spara mer pengar till pensionen eller något annat så hjälper vi dig med det.
+            </p>
+            <p>
+              Alla har samma deal, nyanställd som veteran.
+            </p>
+            <SalarySlider />
+          </div>
+        </section>
+        {/* <Squares /> */}
+        <IntroSection title='Bäst, inte störst 🏡'>
           <p>
             Vi är ett konsultbolag som utvecklar system, hemsidor och appar. Vi
             jobbar i roller som utvecklare, testare, tech lead och scrum master.
@@ -44,25 +63,6 @@ export default () => {
             viktigare.
           </p>
         </IntroSection>
-        <People />
-        <section>
-          <div className='container'>
-            <h2>En schysst deal 🤝</h2>
-            <p>
-              Vår lönemodell är simpel. Du får 70% av timpriset när du har ett
-              uppdrag, annars är du garanterad 26 000 kr.
-            </p>
-            <p>
-              Vi räknar med att du tar minst sex veckors semester, men du har
-              friheten att ta mer om du vill. Vill du ha en tjänstebil, spara mer pengar till pensionen eller något annat så hjälper vi dig med det. 
-            </p>
-            <p>
-            Alla har samma deal, nyanställd som veteran.
-            </p>
-            <SalarySlider />
-          </div>
-        </section>
-        <Squares />
         <Insta />
         <Contact />
         <Map />
