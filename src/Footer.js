@@ -8,8 +8,7 @@ export default () => {
     <footer className={styles.footer}>
       <div className={classNames(styles.grid, 'container')}>
         <div>
-          <p>+46 73 334 79 99</p>
-          <p>kontakt@syson.se</p>
+          <p>hej@syson.se</p>
         </div>
         <div>
           <p>Sveavägen 98</p>
