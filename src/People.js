@@ -5,13 +5,31 @@ import arrow from './arrow.svg';
 import Emoji from './Emoji'
 import rockSign from './emojis/rock-sign.png'
 
+const shuffle = (array) => {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
 
 const isTouchDevice = () => {
   // there's probably a better way to do this
   return window.innerWidth < 1024;
 };
 
-const people = [
+const people = shuffle([
   {
     name: 'Alexander Hedberg',
     profileUrl: '//google.se',
@@ -108,7 +126,7 @@ const people = [
     linkedInUrl: 'https://www.linkedin.com/in/anders-s%C3%B6derstedt-1631b8/',
     quote: 'Jag jobbar med data'
   }
-];
+]);
 
 const Link = ({ url, title }) => (
   <a
