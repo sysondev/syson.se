@@ -2,6 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import styles from './People.module.css';
 import arrow from './arrow.svg';
+import Emoji from './Emoji'
+import rockSign from './emojis/rock-sign.png'
+
 
 const isTouchDevice = () => {
   // there's probably a better way to do this
@@ -107,7 +110,7 @@ const people = [
   }
 ];
 
-const Link = ({ url, title }) => (
+const Link = ({ url, title }) => (
   <a
     href={url}
     target="_blank"
@@ -153,7 +156,7 @@ export default () => {
   return (
     <section className={styles.section}>
       <div className='container'>
-        <h2>Foodies, gamers och rockers 🤘</h2>
+        <h2>Foodies, gamers och rockers <Emoji src={rockSign} /></h2>
       </div>
       <div className={styles.people} ref={peopleElement} onScroll={scroll}>
         <span className={styles.space} />
@@ -179,10 +182,10 @@ export default () => {
               <div className={classNames(styles.quote, styles.highlight)}>
                 {person.quote}
               </div>
-              { person.linkedInUrl &&
+              {person.linkedInUrl &&
                 <Link url={person.linkedInUrl} title="LinkedIn" />
               }
-              { person.profileUrl &&
+              {person.profileUrl &&
                 <Link url={person.profileUrl} title="Profil" />
               }
             </div>

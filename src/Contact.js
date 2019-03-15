@@ -5,7 +5,7 @@ export default () => {
   return (
     <section>
       <div className='container'>
-        <h2>Säg hej! 😃</h2>
+        <h2>Säg hej!</h2>
         <div className={styles.contact}>
           <div className={styles.left}>
             <p>Vi sitter på The Park’s lokaler i City, Vasastan & Södermalm.</p>

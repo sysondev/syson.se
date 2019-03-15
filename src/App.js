@@ -10,13 +10,19 @@ import IntroSection from './IntroSection';
 import Customers from './Customers';
 import Gasell from './Gasell'
 import Squares from './Squares'
+import Emoji from './Emoji'
+import handshake from './emojis/handshake.png';
+import woman from './emojis/woman.png'
+import house from './emojis/house.png'
+
+
 
 export default () => {
   return (
     <>
       <Header />
       <main>
-        <IntroSection title='Fokus på dig 👩🏻'>
+        <IntroSection title='Fokus på dig' emoji={woman}>
           <p>
             Hos oss får du friheten att fokusera på det du tycker om. Jobba på
             roliga projekt hos bra kunder. Umgås avslappnat och resa till nya
@@ -33,7 +39,7 @@ export default () => {
         <People />
         <section>
           <div className='container'>
-            <h2>En schysst deal 🤝</h2>
+            <h2>En schysst deal <Emoji src={handshake} /></h2>
             <p>
               Vår lönemodell är simpel. Du får 70% av timpriset när du har ett
               uppdrag, annars är du garanterad 26 000 kr.
@@ -51,7 +57,7 @@ export default () => {
         <Customers />
         <Gasell />
         {/* <Squares /> */}
-        <IntroSection title='Bäst, inte störst 🏡'>
+        <IntroSection title='Bäst, inte störst' emoji={house}>
           <p>
             Vi är ett konsultbolag som utvecklar system, hemsidor och appar. Vi
             jobbar i roller som utvecklare, testare, tech lead och scrum master.

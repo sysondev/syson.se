@@ -4,7 +4,7 @@ import styles from './Gasell.module.css';
 import gasell from './gasell.png';
 
 
-export default ({ title }) => {
+export default () => {
   return (
     <div
       className={classNames(
