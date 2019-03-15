@@ -14,12 +14,10 @@ export default () => {
             </a>
           </div>
           <div className={styles.list}>
-            <div>Anders</div>
-            <a href='tel:700707070700'>070-7070000</a>
             <div>Soroush</div>
-            <a href='tel:700707070700'>070-7070000</a>
-            <div>Love</div>
-            <a href='tel:700707070700'>070-7070000</a>
+            <a href='tel:0730473441'>073-047 34 41</a>
+            <div>Anders</div>
+            <a href='tel:0733347999'>073-334 79 99</a>
           </div>
           <div>
             <img src={starbox} />
