@@ -1,0 +1,48 @@
+.customers {
+  background-color: var(--mirage);
+  min-width: 100vw;
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--tradewind);
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    margin-bottom: 66px;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .customers {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+  
+
+  .logos {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logo {
+    margin-right: 38px;
+  }
+}

@@ -7,6 +7,7 @@ import Map from './Map';
 import Footer from './Footer';
 import Header from './Header';
 import IntroSection from './IntroSection';
+import Customers from './Customers';
 import Squares from './Squares'
 
 export default () => {
@@ -46,6 +47,7 @@ export default () => {
             <SalarySlider />
           </div>
         </section>
+        <Customers />
         {/* <Squares /> */}
         <IntroSection title='Bäst, inte störst 🏡'>
           <p>
