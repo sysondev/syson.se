@@ -1,6 +1,7 @@
 .customers {
   background-color: var(--mirage);
   min-width: 100vw;
+  margin-top: 64px;
   padding-top: 48px;
   padding-bottom: 64px;
 }

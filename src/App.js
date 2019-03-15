@@ -8,6 +8,7 @@ import Footer from './Footer';
 import Header from './Header';
 import IntroSection from './IntroSection';
 import Customers from './Customers';
+import Gasell from './Gasell'
 import Squares from './Squares'
 
 export default () => {
@@ -48,6 +49,7 @@ export default () => {
           </div>
         </section>
         <Customers />
+        <Gasell />
         {/* <Squares /> */}
         <IntroSection title='Bäst, inte störst 🏡'>
           <p>

@@ -10,23 +10,21 @@ import assa from './assa.png';
 
 export default ({ title }) => {
   return (
-    <section>
-      <div
-        className={classNames(
-          styles.customers
-        )}
-      >
-        <div className={classNames('container', styles.content)}>
-          <h1 className={styles.title}>Några av våra kunder</h1>
-          <div className={classNames(styles.logos)}>
-            <img className={styles.logo} src={trustly} />
-            <img className={styles.logo} src={comhem} />
-            <img className={styles.logo} src={sj} />
-            <img className={styles.logo} src={klarna} />
-            <img className={styles.logo} src={assa} />
-          </div>
+    <div
+      className={classNames(
+        styles.customers
+      )}
+    >
+      <div className={classNames('container', styles.content)}>
+        <h1 className={styles.title}>Några av våra kunder</h1>
+        <div className={classNames(styles.logos)}>
+          <img className={styles.logo} src={trustly} />
+          <img className={styles.logo} src={comhem} />
+          <img className={styles.logo} src={sj} />
+          <img className={styles.logo} src={klarna} />
+          <img className={styles.logo} src={assa} />
         </div>
       </div>
-    </section>
+    </div>
   );
 };

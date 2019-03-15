@@ -1,0 +1,8 @@
+.gasell {
+  background-color: var(--lily-blue);
+  min-width: 100vw;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
