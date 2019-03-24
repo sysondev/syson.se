@@ -3,8 +3,6 @@ import classNames from 'classnames';
 import styles from './People.module.css';
 import arrow from './arrow.svg';
 import people from './peoples';
-import Emoji from './Emoji';
-import rockSign from './emojis/rock-sign.png';
 
 const isTouchDevice = () => {
   // there's probably a better way to do this

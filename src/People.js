@@ -61,7 +61,7 @@ export default () => {
           )}
           onClick={toggleShowAllPeople}
         >
-          {showAllPeople ? 'Visa mindre folk' : 'Visa fler folk'}
+          {showAllPeople ? 'DÖLJ' : 'VISA ALLA'}
         </button>
       </div>
     </section>
