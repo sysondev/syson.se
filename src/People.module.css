@@ -67,7 +67,7 @@
 }
 
 .link {
-  color: white;
+  color: white !important;
   align-self: flex-end;
   text-decoration: none;
 }

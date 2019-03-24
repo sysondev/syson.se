@@ -54,9 +54,9 @@ export default () => {
             <SalarySlider />
           </div>
         </section>
+        <Squares />
         <Customers />
         <Gasell />
-        {/* <Squares /> */}
         <IntroSection title='Bäst, inte störst' emoji={house}>
           <p>
             Vi är ett konsultbolag som utvecklar system, hemsidor och appar. Vi
