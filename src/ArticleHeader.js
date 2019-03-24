@@ -8,7 +8,7 @@ export default () => {
   }
 
   return (
-    <header>
+    <header style={{ padding: '32px' }}>
       <img src={logo} style={{ width: '150px', cursor: 'pointer' }} onClick={onClick} />
     </header>
   );
