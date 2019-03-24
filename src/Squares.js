@@ -34,7 +34,7 @@ export default () => {
           title="Hur vi har räknat ut lönen"
           description="Läs mer"
           color="tradewind"
-          url="/"
+          url="/kalkylen"
         />
         <Square
           emoji={woman}
