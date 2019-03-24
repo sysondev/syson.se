@@ -3,7 +3,7 @@ body {
   --lily-blue: #edfaff;
   --tradewind: #59b89d;
   --tradewind-transparent: rgba(89, 184, 157, 0.9);
-  --mirage: #1e3540;
+  --mirage: #1D3541;
   --citrus: #ecd579;
   --cashmere: #e8b5aa;
   --westar: #dbdad0;
@@ -19,6 +19,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--mirage)
 }
 
 h1,
@@ -47,3 +48,8 @@ section {
   padding: 0 16px;
   margin: 0 auto;
 }
+
+a:visited {
+  color: var(--mirage)
+}
+
