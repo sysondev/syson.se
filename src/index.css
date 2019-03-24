@@ -30,14 +30,14 @@ h3 {
   margin-top: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 4vmax;
 }
 
 h3 {
   font-size: 32px;
 }
-
 
 section {
   padding: 64px 0;
@@ -46,4 +46,10 @@ section {
   max-width: var(--body-max-width);
   padding: 0 16px;
   margin: 0 auto;
+}
+
+button {
+  font-family: monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
 }
