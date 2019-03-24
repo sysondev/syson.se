@@ -11,6 +11,7 @@
 .text {
   position: relative;
   align-self: flex-end;
+  padding-bottom: 44px;
 }
 
 .background {

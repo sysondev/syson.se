@@ -3,19 +3,47 @@
 }
 
 .square {
-  height: 364px;
-  background-color: var(--citrus);
   border-radius: 8px;
+  display: flex;
+  height: 364px;
+}
+
+.tradewind {
+  background-color: var(--tradewind)
+}
+
+.cashmere {
+  background-color: var(--cashmere)
+}
+
+.citrus {
+  background-color: var(--citrus)
 }
 
 .content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 32px;
+  flex: 1;
 }
 
 .link {
   text-decoration: none;
+  color: white !important;
+  text-decoration: underline;
+}
+
+.emoji {
+  font-size: 96px;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .square {
+    margin-bottom: 16px;
+  }
 }
 
 @media (min-width: 768px) {

@@ -2,14 +2,20 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './Squares.module.css';
 import arrow from './arrow.svg';
+import Emoji from './Emoji'
+import pencil from './emojis/pencil.png';
+import woman from './emojis/woman_office_worker.png'
+import trophy from './emojis/trophy.png'
 
 
 
-const Square = ({ emoji, title, description, url }) => (
-  <div className={styles.square}>
+const Square = ({ emoji, title, description, url, color }) => (
+  <div className={classNames(styles.square, styles[color])}>
     <div className={styles.content}>
-      <h1>{emoji}</h1>
-      <h3>{title}</h3>
+      <div>
+        <p className={styles.emoji}><Emoji src={emoji} /></p>
+        <h3>{title}</h3>
+      </div>
       <a
         href={url}
         className={styles.link}
@@ -25,9 +31,9 @@ export default () => {
   return (
     <section>
       <div className={classNames('container', styles.squares)}>
-        <Square emoji="⚖️" title="Kalkylen" description="Så har vi räknat" />
-        <Square emoji="👩🏼‍💻" title="Konsultlivet" description="Hur är det?" />
-        <Square emoji="🏆" title="Man får skryta ibland" description="Vi vann ett pris ..." />
+        <Square emoji={pencil} title="Hur vi har räknat ut lönen" description="Läs mer" color="tradewind" url="/" />
+        <Square emoji={woman} title="Hur är konsultlivet?" description="Läs mer" color="cashmere" url="/" />
+        <Square emoji={trophy} title="Man får skryta ibland" description="Läs mer" color="citrus" url="/" />
       </div>
     </section>
   );
