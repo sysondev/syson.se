@@ -20,6 +20,10 @@
   padding: 16px 48px;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .headline {
     max-width: 40vw;
