@@ -55,6 +55,10 @@ button {
     'Helvetica Neue', sans-serif;
 }
 
+a {
+  color: var(--mirage);
+}
+
 a:visited {
   color: var(--mirage);
 }
