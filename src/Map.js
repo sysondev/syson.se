@@ -22,7 +22,7 @@ export default () => {
 
   function initMap() {
     const map = new window.google.maps.Map(element.current, {
-      center: { lat: 59.3347953, lng: 18.0306792 },
+      center: { lat: 59.3354653, lng: 18.0506054 },
       zoom: 12
     });
     new window.google.maps.Marker({
