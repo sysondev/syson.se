@@ -21,9 +21,24 @@
   padding-top: 32px;
 }
 
+.sysonman {
+  height: 200px;
+}
+
 .mail {
   grid-column-start: 1;
 }
+
+
+@media (max-width: 720px) {
+  .sysonmanContainer {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
 @media (min-width: 720px) {
   .contact {
     flex-direction: row;
