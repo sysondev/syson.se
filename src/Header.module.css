@@ -4,7 +4,7 @@
   overflow: hidden;
   background-image: url('./otto.jpg');
   background-size: cover;
-  background-position: top;
+  background-position: left;
   background-repeat: no-repeat;
   padding: 32px;
 }
@@ -33,5 +33,6 @@
   }
   .header {
     height: 80vmin;
+    background-position: top;
   }
 }
