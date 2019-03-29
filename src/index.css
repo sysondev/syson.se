@@ -33,7 +33,13 @@ h3 {
 
 h1,
 h2 {
-  font-size: 56px;
+  font-size: 36px;
+}
+@media (min-width: 768px) {
+  h1,
+  h2 {
+    font-size: 56px;
+  }
 }
 
 h3 {
