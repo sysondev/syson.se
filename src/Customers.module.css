@@ -19,6 +19,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  max-height: 52px;
+  max-width: 180px;
 }
 
 @media (max-width: 1024px) {
