@@ -1,11 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
+import posed from 'react-pose';
 import styles from './People.module.css';
 import arrow from './arrow.svg';
 import Emoji from './Emoji';
 import rockSign from './emojis/rock-sign.png';
 import people from './peoples';
 import PeopleSlider from './PeopleSlider';
+
+const Box = posed.div({
+  hoverable: true,
+  init: { scale: 1.0 },
+  hover: { scale: 1.025 },
+})
 
 const Link = ({ url, title }) => (
   <a
@@ -35,7 +42,7 @@ export default () => {
       {showAllPeople && (
         <div className={classNames('container', styles.allPeople)}>
           {people.map(person => (
-            <div key={person.name} className={styles.allPeoplePerson}>
+            <div key={person.name} className={styles.allPeoplePerson} onClick={() => { console.log('derp') }}>
               <div
                 className={classNames(styles.details, styles.highlighted)}
                 style={{ backgroundImage: `url(${person.image})` }}
@@ -54,15 +61,17 @@ export default () => {
         </div>
       )}
       <div className={classNames('container', styles.buttonContainer)}>
-        <button
-          className={classNames(
-            !showAllPeople && styles.button,
-            showAllPeople && styles.invertedButton
-          )}
-          onClick={toggleShowAllPeople}
-        >
-          {showAllPeople ? 'DÖLJ' : 'VISA ALLA'}
-        </button>
+        <Box>
+          <button
+            className={classNames(
+              !showAllPeople && styles.button,
+              showAllPeople && styles.invertedButton
+            )}
+            onClick={toggleShowAllPeople}
+          >
+            {showAllPeople ? 'DÖLJ' : 'VISA ALLA'}
+          </button>
+        </Box>
       </div>
     </section>
   );

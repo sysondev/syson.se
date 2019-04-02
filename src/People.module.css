@@ -97,6 +97,11 @@
   background-color: var(--westar);
   padding: 16px 64px;
   text-transform: uppercase;
+  font-family: 'octarine';
+}
+
+.button:focus, .invertedButton:focus {
+  outline: 0;
 }
 
 .invertedButton {
@@ -104,6 +109,7 @@
   background-color: transparent;
   padding: 16px 64px;
   text-transform: uppercase;
+  font-family: 'octarine';
 }
 
 .buttonContainer {
