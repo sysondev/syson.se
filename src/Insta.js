@@ -18,7 +18,7 @@ export default () => {
   return (
     <>
       <h2 className='container'>
-        <a href='https://www.instagram.com/syson.se/'>@syson.se</a> följ oss på
+        <a href='https://www.instagram.com/syson.se/'>@syson.se</a> på
         Instagram
       </h2>
       <div className={styles.wrapper}>

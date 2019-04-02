@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { withRouter } from 'react-router-dom';
+import posed from 'react-pose';
 import styles from './Squares.module.css';
 import arrow from './arrow.svg';
 import Emoji from './Emoji';
@@ -9,21 +10,29 @@ import chart from './emojis/chart.png';
 import woman from './emojis/woman_office_worker.png';
 import trophy from './emojis/trophy.png';
 
+const Box = posed.div({
+  hoverable: true,
+  init: { scale: 1.0 },
+  hover: { scale: 1.025 },
+})
+
 const Square = withRouter(({ history, emoji, title, description, url, color }) => (
-  <div className={classNames(styles.square, styles[color])} onClick={() => { history.push(url) }}>
-    <div className={styles.content}>
-      <div>
-        <p className={styles.emoji}>
-          <Emoji src={emoji} />
-        </p>
-        <h3>{title}</h3>
-      </div>
-      <div className={styles.link}>
-        <span className={styles.linkText}>{description}</span>{' '}
-        <img src={arrow} />
+  <Box>
+    <div className={classNames(styles.square, styles[color])} onClick={() => { history.push(url) }}>
+      <div className={styles.content}>
+        <div>
+          <p className={styles.emoji}>
+            <Emoji src={emoji} />
+          </p>
+          <h3>{title}</h3>
+        </div>
+        <div className={styles.link}>
+          <span className={styles.linkText}>{description}</span>{' '}
+          <img src={arrow} />
+        </div>
       </div>
     </div>
-  </div>
+  </Box>
 ));
 
 export default () => {
