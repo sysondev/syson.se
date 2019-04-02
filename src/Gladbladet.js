@@ -7,14 +7,19 @@ export default () => {
 
     <h1>Hur vi mår är viktigast</h1>
 
-    <p>Vi tror att det viktigaste som finns är att alla på Syson mår bra. Att dom är så glada som möjligt. För oss är det ingen floskel utan något vi lever efter.</p>
+    <p>Vi tror att det viktigaste som finns är att alla på Syson mår bra. Att vi är så glada som möjligt. För oss är det ingen floskel utan något vi lever efter.</p>
 
     <p>Så på våra möten pratar vi inte om omsättningsmål eller resultatmål. Vi pratar om hur folk mår och vad vi kan göra för att förbättra det.</p>
 
-    <div className={styles.imageContainer}><img className={styles.image} src={gladbladet} /></div>
+    <div className={styles.imageContainer}>
+      <img className={styles.image} src={gladbladet} />
+      <figcaption><i>Vårt faktiska gladblad per April 2019</i></figcaption>
+    </div>
 
-    <p>För fyra år sedan började vi mäta hur vi mådde i något vi kallar för gladbladet. Idén snodde vi rakt av från Crisp ( https://dna.crisp.se/docs/happiness-index.html ). Vi gillar att Crisp delar med sig. Och deras tänk har inspirerat oss att också dela med oss av hur vi driver vårt bolag.</p>
+    <p>2015 började vi mäta vårt mående i det vi kallar för gladbladet. Idén snodde vi rakt av från <a href="https://dna.crisp.se/docs/happiness-index.html">Crisp</a>.</p>
 
-    <p>Gladbladet har fört med sig flera positiva effekter.</p>
+    <p>Det funkar så att man några gånger om året fyller i hur man trivs på Syson, hur man trivs på sitt uppdrag, vad som får en att må sämre och vad som får en att må bättre.</p>
+
+    <p>Vi kan snabbt se trender och göra saker bättre. Alla vet hur alla mår och kan sträcka ut en hand om det behövs. Det är simpelt. Och det funkar.</p>
   </>;
 };

@@ -7,7 +7,7 @@ export default () => {
 
     <h1>Hur är konsultlivet?</h1>
 
-    <p>Som konsult på Syson hjälper du företag att fixa system, hemsidor och appar. Du jobbar på kundens kontor, oftast i centrala Stockholm och är en i gänget i det team du jobbar i. Uppdragen varar oftast mellan 1 till 2 år.</p>
+    <p>Som konsult på Syson hjälper du företag att fixa system, hemsidor och appar. Du jobbar på kundens kontor, oftast i centrala Stockholm och är en i gänget i det team du jobbar i. Uppdragen varar oftast mellan 1 till 2 år. Ibland längre, ibland kortare.</p>
 
     <div className={styles.imageContainer}><img className={styles.image} src={konsultlivet} /></div>
 

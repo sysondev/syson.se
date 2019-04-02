@@ -5,7 +5,7 @@ import gasell from './gasell.png';
 export default () => {
   return <>
 
-    <h1>Ibland är det OK att skryta</h1>
+    <h1>Man får skryta ibland</h1>
 
     <div className={styles.imageContainer}><img className={styles.image} src={gasell} /></div>
 

@@ -52,7 +52,7 @@ export default () => (
           <SalarySlider />
         </div>
       </section>
-      {/* <Squares /> */}
+      <Squares />
       <Customers />
       <Gasell />
       <IntroSection title="Bäst, inte störst" emoji={house}>

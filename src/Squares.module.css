@@ -6,6 +6,7 @@
   border-radius: 8px;
   display: flex;
   height: 364px;
+  cursor: pointer;
 }
 
 .tradewind {

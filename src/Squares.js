@@ -1,15 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import styles from './Squares.module.css';
 import arrow from './arrow.svg';
 import Emoji from './Emoji';
 import pencil from './emojis/pencil.png';
+import chart from './emojis/chart.png';
 import woman from './emojis/woman_office_worker.png';
 import trophy from './emojis/trophy.png';
 
-const Square = ({ emoji, title, description, url, color }) => (
-  <div className={classNames(styles.square, styles[color])}>
+const Square = withRouter(({ history, emoji, title, description, url, color }) => (
+  <div className={classNames(styles.square, styles[color])} onClick={() => { history.push(url) }}>
     <div className={styles.content}>
       <div>
         <p className={styles.emoji}>
@@ -17,31 +18,38 @@ const Square = ({ emoji, title, description, url, color }) => (
         </p>
         <h3>{title}</h3>
       </div>
-      <Link to={url} className={styles.link}>
+      <div className={styles.link}>
         <span className={styles.linkText}>{description}</span>{' '}
         <img src={arrow} />
-      </Link>
+      </div>
     </div>
   </div>
-);
+));
 
 export default () => {
   return (
     <section>
       <div className={classNames('container', styles.squares)}>
-        <Square
+        {/* <Square
           emoji={pencil}
           title="Hur vi har räknat ut lönen"
           description="Läs mer"
           color="tradewind"
           url="/"
+        /> */}
+        <Square
+          emoji={chart}
+          title="Hur vi mår är viktigast"
+          description="Läs mer"
+          color="tradewind"
+          url="/gladbladet"
         />
         <Square
           emoji={woman}
           title="Hur är konsultlivet?"
           description="Läs mer"
           color="cashmere"
-          url="/"
+          url="/konsultlivet"
         />
         <Square
           emoji={trophy}
