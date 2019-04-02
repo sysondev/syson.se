@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import styles from './ArticlePage.module.css';
 import ArticleHeader from './ArticleHeader';
 import GasellArticle from './GasellArticle';
+import Konsultlivet from './Konsultlivet';
 
 export default () => (
   <>
@@ -10,6 +11,7 @@ export default () => (
     <main className={styles.content}>
       <Switch>
         <Route path="/gasell" component={GasellArticle} />
+        <Route path="/konsultlivet" component={Konsultlivet} />
       </Switch>
     </main>
   </>
