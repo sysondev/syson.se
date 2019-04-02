@@ -1,5 +1,13 @@
 .content {
-  width: 794px;
-  padding-left: 96px;
-  padding-right: 96px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 32px;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    width: 794px;
+    padding-left: 96px;
+    padding-right: 96px;
+  }
 }
