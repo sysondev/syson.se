@@ -8,6 +8,7 @@ import Map from './Map';
 import IntroSection from './IntroSection';
 import Customers from './Customers';
 import Gasell from './Gasell';
+import Buzzwords from './Buzzwords'
 import Squares from './Squares';
 import Emoji from './Emoji';
 import handshake from './emojis/handshake.png';
@@ -32,6 +33,7 @@ export default () => (
         </p>
       </IntroSection>
       <People />
+      <Buzzwords />
       <section>
         <div className="container">
           <h2>

@@ -1,0 +1,32 @@
+.buzzwords {
+  background-color: var(--mirage);
+  min-width: 100vw;
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--tradewind);
+}
+
+.words {
+  color: var(--westar);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.word {
+  margin-right: 24px;
+}
+
+@media (min-width: 1024px) {
+  .words {
+    justify-content: space-between;
+  }
+}
