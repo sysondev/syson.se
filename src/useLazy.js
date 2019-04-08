@@ -1,11 +1,8 @@
 import {useEffect} from 'react';
+import 'intersection-observer'; // Polyfill for IOS Safari
 
 export default (ref, load) => {
   useEffect(() => {
-    if (!window.IntersectionObserver) {
-      load();
-    }
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
@@ -16,4 +13,4 @@ export default (ref, load) => {
     })
     observer.observe(ref.current);
   }, []);
-}
+} 

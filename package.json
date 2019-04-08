@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
+    "intersection-observer": "^0.5.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-pose": "^4.0.8",
