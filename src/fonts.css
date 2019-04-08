@@ -4,6 +4,7 @@
     url('/fonts/octarine-lightoblique-webfont.woff') format('woff');
   font-weight: lighter;
   font-style: oblique;
+  font-display: swap;
 }
   
 @font-face {
@@ -12,6 +13,7 @@
     url('/fonts/octarine-boldoblique-webfont.woff') format('woff');
   font-weight: normal;
   font-style: oblique;
+  font-display: swap;
 }
 
 @font-face {
@@ -20,6 +22,7 @@
     url('/fonts/octarine-light-webfont.woff') format('woff');
   font-weight: lighter;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -28,6 +31,7 @@
     url('/fonts/octarine-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -36,4 +40,5 @@
     url('/fonts/IBMPlexMono-Text.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: fallback;
 }
