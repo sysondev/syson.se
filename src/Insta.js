@@ -25,11 +25,12 @@ export default () => {
         <div className={styles.grid}>
           {posts.map(post => (
             <a key={post.id} href={post.link}>
-              <img
-                className={styles.image}
-                src={post.images.standard_resolution.url}
-                alt={post.caption.text}
-              />
+              <picture>
+                <source media="(max-width: 480px)" srcSet={post.images.thumbnail.url} />
+                <source media="(max-width: 1920px)" srcSet={post.images.low_resolution.url} />
+                <source srcSet={post.images.standard_resolution.url} />
+                <img className={styles.image} src={post.images.low_resolution.url} alt={post.caption.text} />
+              </picture>
             </a>
           ))}
         </div>
