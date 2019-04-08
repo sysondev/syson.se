@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import posed from 'react-pose';
 import styles from './People.module.css';
@@ -18,9 +18,10 @@ const Link = ({ url, title }) => (
   <a
     href={url}
     target="_blank"
+    rel="noopener noreferrer"
     className={classNames(styles.link, styles.highlight)}
   >
-    <span className={styles.linkText}>{title}</span> <img src={arrow} />
+    <span className={styles.linkText}>{title}</span> <img src={arrow} alt="" />
   </a>
 );
 

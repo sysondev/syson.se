@@ -19,7 +19,7 @@ export default () => {
           <p>Orgnr: 556934-1851</p>
         </div>
         <div className={styles.icon}>
-          <img src={footerLogo} />
+          <img src={footerLogo} alt="Syson" />
         </div>
       </div>
     </footer>

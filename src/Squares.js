@@ -5,7 +5,7 @@ import posed from 'react-pose';
 import styles from './Squares.module.css';
 import arrow from './arrow.svg';
 import Emoji from './Emoji';
-import pencil from './emojis/pencil.png';
+// import pencil from './emojis/pencil.png';
 import chart from './emojis/chart.png';
 import woman from './emojis/woman_office_worker.png';
 import trophy from './emojis/trophy.png';

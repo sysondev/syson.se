@@ -13,9 +13,10 @@ const Link = ({ url, title }) => (
   <a
     href={url}
     target="_blank"
+    rel="noopener noreferrer"
     className={classNames(styles.link, styles.highlight)}
   >
-    <span className={styles.linkText}>{title}</span> <img src={arrow} />
+    <span className={styles.linkText}>{title}</span> <img src={arrow} alt="" />
   </a>
 );
 

@@ -22,7 +22,7 @@ export default () => {
             </a>
           </div>
           <div className={styles.sysonmanContainer}>
-            <img className={styles.sysonman} src={sysonman} />
+            <img className={styles.sysonman} src={sysonman} alt="" />
           </div>
         </div>
       </div>

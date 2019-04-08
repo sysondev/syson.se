@@ -7,7 +7,7 @@ export default () => {
 
     <h1>Man får skryta ibland</h1>
 
-    <div className={styles.imageContainer}><img className={styles.image} src={gasell} /></div>
+    <div className={styles.imageContainer}><img className={styles.image} src={gasell} alt="DI Gasell 2018" /></div>
 
     <p>Att få brev i postlådan brukar inte vara så kul nu för tiden. Det är mest reklam och räkningar. Men nyligen fick vi ett brev från Dagens Industri som vi blev glada för.</p>
 

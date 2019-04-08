@@ -12,7 +12,7 @@ export default () => {
     <p>Så på våra möten pratar vi inte om omsättningsmål eller resultatmål. Vi pratar om hur folk mår och vad vi kan göra för att förbättra det.</p>
 
     <div className={styles.imageContainer}>
-      <img className={styles.image} src={gladbladet} />
+      <img className={styles.image} src={gladbladet} alt="gladbladet" />
       <figcaption><i>Vårt faktiska gladblad per April 2019</i></figcaption>
     </div>
 

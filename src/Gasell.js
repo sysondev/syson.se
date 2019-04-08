@@ -11,7 +11,7 @@ export default () => {
         styles.gasell
       )}
     >
-      <img className={classNames(styles.image)} src={gasell} />
+      <img className={classNames(styles.image)} src={gasell} alt="DI Gasell 2018" />
     </div>
   );
 };

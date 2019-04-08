@@ -4,4 +4,4 @@ import styles from './Emoji.module.css';
 
 
 export default ({ src }) =>
-  <img className={classNames(styles.emoji)} src={src} />
+  <img className={classNames(styles.emoji)} src={src} alt="emoji" />

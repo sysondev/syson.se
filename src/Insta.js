@@ -28,6 +28,7 @@ export default () => {
               <img
                 className={styles.image}
                 src={post.images.standard_resolution.url}
+                alt={post.caption.text}
               />
             </a>
           ))}

@@ -18,11 +18,11 @@ export default ({ title }) => {
       <div className={classNames('container', styles.content)}>
         <h1 className={styles.title}>Några av våra kunder</h1>
         <div className={classNames(styles.logos)}>
-          <img className={styles.logo} src={trustly} />
-          <img className={styles.logo} src={comhem} />
-          <img className={styles.logo} src={sj} />
-          <img className={styles.logo} src={klarna} />
-          <img className={styles.logo} src={assa} />
+          <img className={styles.logo} src={trustly} alt="Trustly" />
+          <img className={styles.logo} src={comhem} alt="Com Hem" />
+          <img className={styles.logo} src={sj} alt="SJ" />
+          <img className={styles.logo} src={klarna} alt="Klarna" />
+          <img className={styles.logo} src={assa} alt="ASSA" />
         </div>
       </div>
     </div>
