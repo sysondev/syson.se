@@ -1,12 +1,23 @@
 .header {
   position: relative;
-  height: 130vmin;
+  height: 145vmin;
   overflow: hidden;
-  background-image: url('./otto.jpg');
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
+}
+
+.heroImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.content {
   padding: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .headline {
@@ -26,13 +37,15 @@
 
 @media (min-width: 768px) {
   .headline {
-    max-width: 40vw;
+    max-width: 40vmax;
     left: 32px;
     right: auto;
     padding: 16px 48px;
   }
   .header {
-    height: 80vmin;
-    background-position: top;
+    height: 85vmin;
+  }
+  .heroImage {
+    object-position: top;
   }
 }
