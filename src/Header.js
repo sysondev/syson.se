@@ -4,20 +4,20 @@ import styles from './Header.module.css';
 import logo from './logo.png';
 import Emoji from './Emoji'
 import wavingHand from './emojis/waving-hand.png'
-import ottoSmallWebp from './otto-800.webp';
+import ottoSmallWebp from './otto-portrait.webp';
 import ottoBigWebp from './otto-1920.webp';
-import ottoSmall from './otto-800.jpg';
+import ottoSmall from './otto-portrait.jpg';
 import ottoBig from './otto-1920.jpg';
 import ottoFallback from './otto.jpg';
 
 export default () => (
     <header className={styles.header}>
-      <picture className={styles.heroImage} >
+      <picture>
         <source media="(min-width: 450px)" srcSet={ottoBigWebp} type="image/webp" />
         <source media="(min-width: 450px)" srcSet={ottoBig} type="image/jpeg" /> 
         <source srcSet={ottoSmallWebp} type="image/webp" />
         <source srcSet={ottoSmall} type="image/jpeg" />
-        <img src={ottoFallback} alt="" />
+        <img className={styles.heroImage} src={ottoFallback} alt="" />
       </picture>
       <div className={styles.content}>
         <Link to="/"><img src={logo} alt="Syson Logo" className={styles.logo} /></Link>
