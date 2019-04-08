@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import { withRouter } from 'react-router-dom';
 import posed from 'react-pose';
 import styles from './Squares.module.css';
 import arrow from './arrow.svg';
@@ -16,9 +16,9 @@ const Box = posed.div({
   hover: { scale: 1.025 },
 })
 
-const Square = withRouter(({ history, emoji, title, description, url, color }) => (
+const Square = ({ emoji, title, description, url, color }) => (
   <Box>
-    <div className={classNames(styles.square, styles[color])} onClick={() => { history.push(url) }}>
+    <Link to={url} className={classNames(styles.square, styles[color])}>
       <div className={styles.content}>
         <div>
           <p className={styles.emoji}>
@@ -28,12 +28,12 @@ const Square = withRouter(({ history, emoji, title, description, url, color }) =
         </div>
         <div className={styles.link}>
           <span className={styles.linkText}>{description}</span>{' '}
-          <img src={arrow} />
+          <img src={arrow} alt="" />
         </div>
       </div>
-    </div>
+    </Link>
   </Box>
-));
+);
 
 export default () => {
   return (

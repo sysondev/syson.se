@@ -1,15 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from './logo-green.png';
 
-export default () => {
-
-  const onClick = () => {
-    window.location = '/'
-  }
-
-  return (
-    <header style={{ padding: '32px' }}>
-      <img src={logo} style={{ width: '150px', cursor: 'pointer' }} onClick={onClick} />
-    </header>
-  );
-};
+export default () => (
+  <header style={{ padding: '32px' }}>
+    <Link to='/'>
+      <img
+        src={logo}
+        alt="Syson Logo"
+        style={{ width: '150px'}}
+      />
+    </Link>
+  </header>
+);
