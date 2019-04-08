@@ -8,7 +8,6 @@ export default () => {
   const [loaded, setLoaded] = useState(false);
   useLazy(heading, () => setLoaded(true));
 
-
   const fetchPosts = async () => {
     const response = await fetch(
       '//api.instagram.com/v1/users/1805388781/media/recent/?access_token=1805388781.6f84264.ba97662b8d0240579d138931a4d06671',
@@ -24,7 +23,7 @@ export default () => {
 
   return (
     <>
-      <h2 ref={heading}>
+      <h2 ref={heading} className="container">
         <a href='https://www.instagram.com/syson.se/'>@syson.se</a> på
         Instagram
       </h2>
