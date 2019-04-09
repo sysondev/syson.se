@@ -24,7 +24,7 @@ const Square = ({ emoji, title, description, url, color }) => (
           <p className={styles.emoji}>
             <Emoji src={emoji} />
           </p>
-          <h3>{title}</h3>
+          <h3 className={styles.title}>{title}</h3>
         </div>
         <div className={styles.link}>
           <span className={styles.linkText}>{description}</span>{' '}

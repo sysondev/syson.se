@@ -36,6 +36,10 @@
   text-decoration: underline;
 }
 
+.title {
+  color: white !important;
+}
+
 .emoji {
   font-size: 96px;
   text-align: center;
