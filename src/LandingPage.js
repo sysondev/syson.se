@@ -27,8 +27,7 @@ export default () => (
           lägga åt sidan.
         </p>
         <p>
-          Du kan lägga din energi på att lära dig nya saker och träffa människor
-          snarare än att klättra i en karriärstege. Att jobba 8 timmar om dagen
+          Du kan lägga din energi på uppdraget och på att lära dig nya saker. Att jobba 8 timmar om dagen
           och sen kunna tänka på annat ser vi som en självklarhet.
         </p>
       </IntroSection>
