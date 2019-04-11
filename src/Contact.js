@@ -9,7 +9,7 @@ export default () => {
         <div className={styles.contact}>
           <div className={styles.left}>
             <p>Vi vill alltid höra från trevligt folk. </p>
-            <p>Fikasugen? Vi sitter på The Parks lokaler i City, Vasastan & Södermalm.</p>
+            <p>Fikasugen? Vi sitter på The Parks lokaler i City, Vasastan och Södermalm.</p>
           </div>
           <div className={styles.list}>
             <div>Soroush</div>

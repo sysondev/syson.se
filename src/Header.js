@@ -11,20 +11,20 @@ import ottoBig from './otto-1920.jpg';
 import ottoFallback from './otto.jpg';
 
 export default () => (
-    <header className={styles.header}>
-      <picture>
-        <source media="(min-width: 450px)" srcSet={ottoBigWebp} type="image/webp" />
-        <source media="(min-width: 450px)" srcSet={ottoBig} type="image/jpeg" /> 
-        <source srcSet={ottoSmallWebp} type="image/webp" />
-        <source srcSet={ottoSmall} type="image/jpeg" />
-        <img className={styles.heroImage} src={ottoFallback} alt="" />
-      </picture>
-      <div className={styles.content}>
-        <Link to="/"><img src={logo} alt="Syson Logo" className={styles.logo} /></Link>
-        <div className={styles.headline}>
-          <h1>Frihet, bra häng och schysst lön</h1>
-          <p>Hej! <Emoji src={wavingHand} /> Vi är konsulter i Stockholm, duktiga inom systemutveckling & test.</p>
-        </div>
+  <header className={styles.header}>
+    <picture>
+      <source media="(min-width: 450px)" srcSet={ottoBigWebp} type="image/webp" />
+      <source media="(min-width: 450px)" srcSet={ottoBig} type="image/jpeg" />
+      <source srcSet={ottoSmallWebp} type="image/webp" />
+      <source srcSet={ottoSmall} type="image/jpeg" />
+      <img className={styles.heroImage} src={ottoFallback} alt="" />
+    </picture>
+    <div className={styles.content}>
+      <Link to="/"><img src={logo} alt="Syson Logo" className={styles.logo} /></Link>
+      <div className={styles.headline}>
+        <h1>Frihet, bra häng och schysst lön</h1>
+        <p>Hej! <Emoji src={wavingHand} /> Vi är konsulter i Stockholm, duktiga inom systemutveckling och test.</p>
       </div>
-    </header>
-  );
+    </div>
+  </header>
+);
