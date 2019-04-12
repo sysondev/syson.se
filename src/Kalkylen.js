@@ -7,11 +7,11 @@ class Kalkylen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hourlyRate: 900,
-      sickDays: 10,
-      extraVacationDays: 0,
-      otherMonthlyCosts: 1000,
-      extraPension: 0,
+      hourlyRate: DEFAULT_VALUES.HOURLY_RATE,
+      sickDays: DEFAULT_VALUES.SICK_DAYS,
+      extraVacationDays: DEFAULT_VALUES.EXTRA_VACATION_DAYS,
+      otherMonthlyCosts: DEFAULT_VALUES.OTHER_MONTHLY_COSTS,
+      extraPension: DEFAULT_VALUES.EXTRA_PENSION,
     };
   }
 
