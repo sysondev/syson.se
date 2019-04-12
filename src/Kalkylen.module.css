@@ -1,5 +1,4 @@
 .container {
-  width: 768px;
   border-radius: 8px;
   box-shadow: 0 2px 8px 4px #dbdad0;
 }
@@ -36,7 +35,6 @@
 
 .inputs {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px;
 }
 
@@ -61,4 +59,19 @@
   background-color: var(--gum-leaf);
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 768px) {
+  .inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+  }
 }
