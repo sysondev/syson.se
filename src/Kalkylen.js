@@ -77,7 +77,7 @@ class Kalkylen extends React.Component {
         </div>
         <div className={styles.results}>
           <div className={classNames(styles.result, styles.first)}>
-            <span className={styles.resultLabel}>Antal arbetsdagar 2019</span>
+            <span className={styles.resultLabel}>Antal arbetsdagar</span>
             <span className={styles.resultValue}>{DEFAULT_VALUES.NUMBER_OF_DAYS}</span>
           </div>
           <div className={classNames(styles.result)}>
