@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from './Kalkylen.module.css';
+import { calculateSalary, DEFAULT_VALUES } from './salary'
 class Kalkylen extends React.Component {
 
   constructor(props) {
@@ -8,24 +9,20 @@ class Kalkylen extends React.Component {
     this.state = {
       hourlyRate: 900,
       sickDays: 10,
-      extraVacation: 0,
+      extraVacationDays: 0,
       otherMonthlyCosts: 1000,
       extraPension: 0,
-      numberOfDays: 253,
-      defaultPension: 2600,
     };
   }
 
   setSalary = () => {
-    const salary =
-      Math.round(((((this.state.numberOfDays / 12) - ((this.state.sickDays + this.state.extraVacation) / 12) - 2.5) * (this.state.hourlyRate * 8 * 0.7))
-        - ((this.state.defaultPension + this.state.extraPension) * 1.2426) - this.state.otherMonthlyCosts) / 1.3142)
+    const salary = calculateSalary(this.state)
     this.setState({
       salary
     })
   }
 
-  getTotalPension = () => this.state.defaultPension + this.state.extraPension
+  getTotalPension = () => DEFAULT_VALUES.DEFAULT_PENSION + this.state.extraPension
 
   componentDidMount() {
     this.setSalary()
@@ -53,7 +50,7 @@ class Kalkylen extends React.Component {
             </div>
             <div>
               <label className={styles.label}>Extra semesterdagar</label>
-              <input name="extraVacation" type="number" value={this.state.extraVacation} className={classNames(styles.input)} onChange={this.handleInputChange} />
+              <input name="extraVacationDays" type="number" value={this.state.extraVacationDays} className={classNames(styles.input)} onChange={this.handleInputChange} />
               <label className={classNames(styles.label, styles.labelSmall)}>Utöver 30 dagars semester</label>
             </div>
             <div>
@@ -70,8 +67,8 @@ class Kalkylen extends React.Component {
         </div>
         <div className={styles.results}>
           <div className={classNames(styles.result, styles.first)}>
-            <span className={styles.resultLabel}>2019 antal dagar</span>
-            <span className={styles.resultValue}>{this.state.numberOfDays}</span>
+            <span className={styles.resultLabel}>Antal arbetsdagar 2019</span>
+            <span className={styles.resultValue}>{DEFAULT_VALUES.NUMBER_OF_DAYS}</span>
           </div>
           <div className={classNames(styles.result)}>
             <span className={styles.resultLabel}>Total månadspension</span>
