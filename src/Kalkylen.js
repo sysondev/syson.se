@@ -9,25 +9,25 @@ export default () => {
         <div className={styles.inputs}>
           <div>
             <label className={styles.label}>Timpris</label>
-            <input className={styles.input} />
+            <input type="number" defaultValue="900" className={styles.input} />
           </div>
           <div>
             <label className={styles.label}>Procent av heltid</label>
-            <input className={styles.input} />
+            <input type="number" defaultValue="100" className={styles.input} />
           </div>
           <div>
             <label className={styles.label}>Sjukdagar / Övrig frånvaro</label>
-            <input className={classNames(styles.input, styles.inputSmall)} />
+            <input type="number" defaultValue="10" className={classNames(styles.input, styles.inputSmall)} />
           </div>
           <div>
-            <label className={styles.label}>Övrigt</label>
-            <input className={styles.input} />
+            <label className={styles.label}>Övriga månadskostnader</label>
+            <input type="number" defaultValue="1000" className={styles.input} />
             <label className={classNames(styles.label, styles.labelSmall)}>Telefon, tjänstebil, mm</label>
           </div>
           <div>
             <label className={styles.label}>Extra pensionsavsättning</label>
-            <input className={styles.input} />
-            <label className={classNames(styles.label, styles.labelSmall)}>Utöver 2600kr</label>
+            <input type="number" defaultValue="0" className={styles.input} />
+            <label className={classNames(styles.label, styles.labelSmall)}>Utöver 2600kr. per månad</label>
           </div>
         </div>
       </div>
