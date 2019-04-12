@@ -5,10 +5,9 @@ import posed from 'react-pose';
 import styles from './Squares.module.css';
 import arrow from './arrow.svg';
 import Emoji from './Emoji';
-// import pencil from './emojis/pencil.png';
+import pencil from './emojis/pencil.png';
 import chart from './emojis/chart.png';
 import woman from './emojis/woman_office_worker.png';
-import trophy from './emojis/trophy.png';
 
 const Box = posed.div({
   hoverable: true,
@@ -39,19 +38,12 @@ export default () => {
   return (
     <section>
       <div className={classNames('container', styles.squares)}>
-        {/* <Square
-          emoji={pencil}
-          title="Hur vi har räknat ut lönen"
-          description="Läs mer"
-          color="tradewind"
-          url="/"
-        /> */}
         <Square
-          emoji={chart}
-          title="Hur vi mår är viktigast"
+          emoji={pencil}
+          title="Räkna ut din lön"
           description="Läs mer"
           color="tradewind"
-          url="/gladbladet"
+          url="/kalkylen"
         />
         <Square
           emoji={woman}
@@ -61,11 +53,11 @@ export default () => {
           url="/konsultlivet"
         />
         <Square
-          emoji={trophy}
-          title="Man får skryta ibland"
+          emoji={chart}
+          title="Hur vi mår är viktigast"
           description="Läs mer"
           color="citrus"
-          url="/gasell"
+          url="/gladbladet"
         />
       </div>
     </section>

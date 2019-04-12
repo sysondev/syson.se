@@ -3,11 +3,11 @@ import Kalkylen from './Kalkylen';
 
 export default () => {
   return (
-    <section>
-      <div className="container">
-        <h1>The Syson Way</h1>
-        <Kalkylen />
-      </div>
-    </section>
+    <div className="container">
+      <h1>Räkna ut din lön</h1>
+      <p>Med dina 70% gör du vad du vill. Det är inte mer än rimligt.</p>
+      <p>Extra semesterdagar? Mer i pension? Hitta ett upplägg som passar dig.</p>
+      <Kalkylen />
+    </div>
   );
 };

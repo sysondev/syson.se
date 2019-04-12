@@ -1,4 +1,6 @@
 .container {
+  margin-top: 56px;
+  margin-bottom: 56px;
   border-radius: 8px;
   box-shadow: 0 2px 8px 4px #dbdad0;
 }

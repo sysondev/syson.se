@@ -38,14 +38,14 @@ class Kalkylen extends React.Component {
     return (
       <div className={styles.container} >
         <div className={styles.inputContainer}>
-          <h2 className={styles.title}>Räkna ut din månadslön</h2>
+          <h2 className={styles.title}></h2>
           <div className={styles.inputs}>
             <div>
               <label className={styles.label}>Timpris</label>
               <input name="hourlyRate" type="number" value={this.state.hourlyRate} className={styles.input} onChange={this.handleInputChange} />
             </div>
             <div>
-              <label className={styles.label}>Sjukdagar / Övrig frånvaro</label>
+              <label className={styles.label}>Sjukdagar / Utan uppdrag</label>
               <input name="sickDays" type="number" value={this.state.sickDays} className={classNames(styles.input)} onChange={this.handleInputChange} />
             </div>
             <div>
@@ -56,12 +56,12 @@ class Kalkylen extends React.Component {
             <div>
               <label className={styles.label}>Övriga månadskostnader</label>
               <input name="otherMonthlyCosts" type="number" value={this.state.otherMonthlyCosts} className={styles.input} onChange={this.handleInputChange} />
-              <label className={classNames(styles.label, styles.labelSmall)}>Telefon, tjänstebil, mm</label>
+              <label className={classNames(styles.label, styles.labelSmall)}>Telefon, tjänstebil, mm.</label>
             </div>
             <div>
               <label className={styles.label}>Extra pensionsavsättning</label>
               <input name="extraPension" type="number" value={this.state.extraPension} className={styles.input} onChange={this.handleInputChange} />
-              <label className={classNames(styles.label, styles.labelSmall)}>Utöver 2600kr. per månad</label>
+              <label className={classNames(styles.label, styles.labelSmall)}>Utöver 2600kr. per månad.</label>
             </div>
           </div>
         </div>
