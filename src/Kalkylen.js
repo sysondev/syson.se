@@ -17,7 +17,7 @@ export default () => {
           </div>
           <div>
             <label className={styles.label}>Sjukdagar / Övrig frånvaro</label>
-            <input className={styles.input} />
+            <input className={classNames(styles.input, styles.inputSmall)} />
           </div>
           <div>
             <label className={styles.label}>Övrigt</label>
@@ -27,7 +27,7 @@ export default () => {
           <div>
             <label className={styles.label}>Extra pensionsavsättning</label>
             <input className={styles.input} />
-            <label className={classNames(styles.label, styles.labelSmall)}>Utöver 2600 kr</label>
+            <label className={classNames(styles.label, styles.labelSmall)}>Utöver 2600kr</label>
           </div>
         </div>
       </div>
