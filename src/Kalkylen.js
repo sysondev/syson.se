@@ -56,6 +56,7 @@ class Kalkylen extends React.Component {
             <div>
               <label className={styles.label}>Sjukdagar / Utan uppdrag</label>
               <input name="sickDays" type="number" value={this.state.sickDays} className={classNames(styles.input)} onChange={this.handleInputChange} onFocus={this.handleFocus} />
+              <label className={classNames(styles.label, styles.labelSmall)}>per år</label>
             </div>
             <div>
               <label className={styles.label}>Extra semesterdagar</label>
@@ -63,14 +64,14 @@ class Kalkylen extends React.Component {
               <label className={classNames(styles.label, styles.labelSmall)}>Utöver 30 dagars semester</label>
             </div>
             <div>
-              <label className={styles.label}>Övriga månadskostnader</label>
+              <label className={styles.label}>Övriga kostnader</label>
               <input name="otherMonthlyCosts" type="number" value={this.state.otherMonthlyCosts} className={styles.input} onChange={this.handleInputChange} onFocus={this.handleFocus} />
-              <label className={classNames(styles.label, styles.labelSmall)}>Telefon, tjänstebil, mm.</label>
+              <label className={classNames(styles.label, styles.labelSmall)}>Telefon, mm. per månad</label>
             </div>
             <div>
               <label className={styles.label}>Extra pensionsavsättning</label>
               <input name="extraPension" type="number" value={this.state.extraPension} className={styles.input} onChange={this.handleInputChange} onFocus={this.handleFocus} />
-              <label className={classNames(styles.label, styles.labelSmall)}>Utöver 2600kr. per månad.</label>
+              <label className={classNames(styles.label, styles.labelSmall)}>Utöver 2600kr. per månad</label>
             </div>
           </div>
         </div>

@@ -30,6 +30,11 @@
     'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+.input:focus {
+  border: solid 1px var(--tradewind);
+  outline: none;
+}
+
 .inputSmall {
   width: 40px;
 }
