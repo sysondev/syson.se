@@ -39,8 +39,8 @@ export default () => (
             En schysst deal <Emoji src={handshake} />
           </h2>
           <p>
-            Vår lönemodell är simpel. Du får 70% av timpriset när du har ett
-            uppdrag, annars är du garanterad 26 000 kr.
+            Vår lönemodell är simpel. Du får <b>70%</b> av timpriset när du har ett
+            uppdrag, annars är du garanterad 26 000 kr. Att hitta uppdraget eller förhandla om timpriset behöver du inte lägga någon energi på själv, det löser vi.
           </p>
           <p>
             Vi räknar med att du tar minst sex veckors semester, men du har
@@ -61,7 +61,7 @@ export default () => (
           Men det är inte det som gör Syson speciellt.
         </p>
         <p>
-          Vi är ett litet bolag och det tänker vi förbli. Vi är idag 16
+          Vi är ett <b>litet bolag</b> och det tänker vi förbli. Vi är idag 16
           personer. Några fler ska vi bli. Men inte många.
         </p>
         <p>

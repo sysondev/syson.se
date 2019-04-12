@@ -36,7 +36,7 @@ export default () => {
     <section className={styles.section}>
       <div className="container">
         <h2>
-          Foodies, gamers och rockers <Emoji src={rockSign} />
+          Vi är Syson <Emoji src={rockSign} />
         </h2>
       </div>
       {!showAllPeople && <PeopleSlider />}
