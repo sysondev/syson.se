@@ -29,10 +29,19 @@ class Kalkylen extends React.Component {
   }
 
   handleInputChange = e => {
-    this.setState({
-      [e.target.name]: parseInt(e.target.value)
-    }, this.setSalary)
+    const value = e.target.value
+    if (value > 0) {
+      this.setState({
+        [e.target.name]: parseInt(e.target.value)
+      }, this.setSalary)
+    } else {
+      this.setState({
+        [e.target.name]: 0
+      }, this.setSalary)
+    }
   }
+
+  handleFocus = e => e.target.select();
 
   render() {
     return (
@@ -42,25 +51,25 @@ class Kalkylen extends React.Component {
           <div className={styles.inputs}>
             <div>
               <label className={styles.label}>Timpris</label>
-              <input name="hourlyRate" type="number" value={this.state.hourlyRate} className={styles.input} onChange={this.handleInputChange} />
+              <input name="hourlyRate" type="number" value={this.state.hourlyRate} className={styles.input} onChange={this.handleInputChange} onFocus={this.handleFocus} />
             </div>
             <div>
               <label className={styles.label}>Sjukdagar / Utan uppdrag</label>
-              <input name="sickDays" type="number" value={this.state.sickDays} className={classNames(styles.input)} onChange={this.handleInputChange} />
+              <input name="sickDays" type="number" value={this.state.sickDays} className={classNames(styles.input)} onChange={this.handleInputChange} onFocus={this.handleFocus} />
             </div>
             <div>
               <label className={styles.label}>Extra semesterdagar</label>
-              <input name="extraVacationDays" type="number" value={this.state.extraVacationDays} className={classNames(styles.input)} onChange={this.handleInputChange} />
+              <input name="extraVacationDays" type="number" value={this.state.extraVacationDays} className={classNames(styles.input)} onChange={this.handleInputChange} onFocus={this.handleFocus} />
               <label className={classNames(styles.label, styles.labelSmall)}>Utöver 30 dagars semester</label>
             </div>
             <div>
               <label className={styles.label}>Övriga månadskostnader</label>
-              <input name="otherMonthlyCosts" type="number" value={this.state.otherMonthlyCosts} className={styles.input} onChange={this.handleInputChange} />
+              <input name="otherMonthlyCosts" type="number" value={this.state.otherMonthlyCosts} className={styles.input} onChange={this.handleInputChange} onFocus={this.handleFocus} />
               <label className={classNames(styles.label, styles.labelSmall)}>Telefon, tjänstebil, mm.</label>
             </div>
             <div>
               <label className={styles.label}>Extra pensionsavsättning</label>
-              <input name="extraPension" type="number" value={this.state.extraPension} className={styles.input} onChange={this.handleInputChange} />
+              <input name="extraPension" type="number" value={this.state.extraPension} className={styles.input} onChange={this.handleInputChange} onFocus={this.handleFocus} />
               <label className={classNames(styles.label, styles.labelSmall)}>Utöver 2600kr. per månad.</label>
             </div>
           </div>
