@@ -5,6 +5,7 @@ import ArticleHeader from './ArticleHeader';
 import GasellArticle from './GasellArticle';
 import Konsultlivet from './Konsultlivet';
 import Gladbladet from './Gladbladet';
+import KalkylenArticle from './KalkylenArticle';
 
 export default () => (
   <>
@@ -14,6 +15,7 @@ export default () => (
         <Route path="/gasell" component={GasellArticle} />
         <Route path="/konsultlivet" component={Konsultlivet} />
         <Route path="/gladbladet" component={Gladbladet} />
+        <Route path="/kalkylen" component={KalkylenArticle} />
       </Switch>
     </main>
   </>
