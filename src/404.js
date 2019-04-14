@@ -5,7 +5,7 @@ export default () => {
   return (
     <>
         <h1>404 :(</h1>
-        <img src={image} alt="Not found" />
+        <img style={{maxWidth: '90vw'}} src={image} alt="Not found" />
     </>
   )
 }
