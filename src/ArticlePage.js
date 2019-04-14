@@ -6,6 +6,7 @@ import GasellArticle from './GasellArticle';
 import Konsultlivet from './Konsultlivet';
 import Gladbladet from './Gladbladet';
 import KalkylenArticle from './KalkylenArticle';
+import NotFoundPage from './404';
 
 export default () => (
   <>
@@ -16,6 +17,7 @@ export default () => (
         <Route path="/konsultlivet" component={Konsultlivet} />
         <Route path="/gladbladet" component={Gladbladet} />
         <Route path="/kalkylen" component={KalkylenArticle} />
+        <Route component={NotFoundPage} />
       </Switch>
     </main>
   </>
