@@ -40,10 +40,10 @@ export default () => {
       <div className={classNames('container', styles.squares)}>
         <Square
           emoji={pencil}
-          title="Räkna ut din lön"
-          description="Läs mer"
+          title="Lek med lönemodellen"
+          description="Lägg till mer semester, pension, mm"
           color="tradewind"
-          url="/kalkylen"
+          url="/avtal"
         />
         <Square
           emoji={woman}

@@ -30,13 +30,14 @@ class Kalkylen extends React.Component {
 
   handleInputChange = e => {
     const value = e.target.value
-    if (value > 0) {
+
+    if (value === '') {
+      this.setState({
+        [e.target.name]: ''
+      }, this.setSalary)
+    } else if (value >= 0) {
       this.setState({
         [e.target.name]: parseInt(e.target.value)
-      }, this.setSalary)
-    } else {
-      this.setState({
-        [e.target.name]: 0
       }, this.setSalary)
     }
   }
@@ -47,11 +48,11 @@ class Kalkylen extends React.Component {
     return (
       <div className={styles.container} >
         <div className={styles.inputContainer}>
-          <h2 className={styles.title}></h2>
           <div className={styles.inputs}>
             <div>
               <label className={styles.label}>Timpris</label>
               <input name="hourlyRate" type="number" value={this.state.hourlyRate} className={styles.input} onChange={this.handleInputChange} onFocus={this.handleFocus} />
+              <label className={classNames(styles.label, styles.labelSmall)}>Ditt pris mot kund</label>
             </div>
             <div>
               <label className={styles.label}>Sjukdagar / Utan uppdrag</label>
@@ -76,10 +77,6 @@ class Kalkylen extends React.Component {
           </div>
         </div>
         <div className={styles.results}>
-          <div className={classNames(styles.result, styles.first)}>
-            <span className={styles.resultLabel}>Antal arbetsdagar</span>
-            <span className={styles.resultValue}>{DEFAULT_VALUES.NUMBER_OF_DAYS}</span>
-          </div>
           <div className={classNames(styles.result)}>
             <span className={styles.resultLabel}>Total månadspension</span>
             <span className={styles.resultValue}>{this.getTotalPension()} kr</span>

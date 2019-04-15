@@ -65,7 +65,6 @@
   display: flex;
   justify-content: space-between;
   padding: 16px 32px;
-  border-top: solid 1px var(--tradewind);
 }
 
 .first {

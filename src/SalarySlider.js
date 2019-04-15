@@ -21,7 +21,10 @@ export default () => {
         </div>
         <div>
           <span className={styles.label}>Lön</span>
-          <span className={styles.money}>{calculateSalary({ hourlyRate: rate })}</span>
+          <span className={styles.money}>{calculateSalary({
+            hourlyRate: rate, sickDays: DEFAULT_VALUES.SICK_DAYS, extraVacationDays: DEFAULT_VALUES.EXTRA_VACATION_DAYS,
+            extraPension: DEFAULT_VALUES.EXTRA_PENSION, otherMonthlyCosts: DEFAULT_VALUES.OTHER_MONTHLY_COSTS
+          })}</span>
           <span className={styles.label}>Kr</span>
         </div>
       </div>
