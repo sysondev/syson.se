@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import posed from 'react-pose';
 import styles from './Squares.module.css';
-import arrow from './arrow.svg';
+import arrow from './arrow-dark.svg';
 import Emoji from './Emoji';
 import pencil from './emojis/pencil.png';
 import chart from './emojis/chart.png';
