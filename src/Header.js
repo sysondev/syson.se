@@ -12,13 +12,14 @@ import ottoFallback from './otto.jpg';
 
 export default () => (
   <header className={styles.header}>
-    <picture>
+    {/* <picture>
       <source media="(min-width: 450px)" srcSet={ottoBigWebp} type="image/webp" />
       <source media="(min-width: 450px)" srcSet={ottoBig} type="image/jpeg" />
       <source srcSet={ottoSmallWebp} type="image/webp" />
       <source srcSet={ottoSmall} type="image/jpeg" />
       <img className={styles.heroImage} src={ottoFallback} alt="" />
-    </picture>
+    </picture> */}
+    <video autoPlay loop muted style={styles.video}><source src="/video/test-small.mp4" type="video/mp4" /></video>
     <div className={styles.content}>
       <Link to="/"><img src={logo} alt="Syson Logo" className={styles.logo} /></Link>
       <div className={styles.headline}>
