@@ -36,7 +36,6 @@
   height: 400px;
   width: 100%;
   flex-grow: 1;
-  filter: brightness(0.5);
 }
 
 .details {
@@ -122,6 +121,10 @@
 @media (min-width: 768px) {
   .allPeople {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .preview {
+    filter: brightness(0.5);
   }
 }
 
