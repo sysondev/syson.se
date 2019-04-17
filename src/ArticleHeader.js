@@ -6,6 +6,7 @@ import styles from './ArticleHeader.module.css';
 
 export default () => (
   <header className={styles.header}>
+    <div className={styles.background} />
     <Link to='/'>
       <img
         src={logo}

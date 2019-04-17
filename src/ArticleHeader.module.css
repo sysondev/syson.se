@@ -1,5 +1,16 @@
 .header {
   padding: 16px;
+  padding-top: 32px;
+}
+
+.background {
+  position: absolute;
+  background-color: var(--lily-blue);
+  top: 0;
+  left: 0;
+  height: 58px;
+  width: 100vw;
+  z-index: -1;
 }
 
 @media (min-width: 768px) {
