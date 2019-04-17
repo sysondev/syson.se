@@ -78,7 +78,7 @@ class Kalkylen extends React.Component {
         </div>
         <div className={styles.results}>
           <div className={classNames(styles.result)}>
-            <span className={styles.resultLabel}>Total månadspension</span>
+            <span className={styles.resultLabel}>Månadspension</span>
             <span className={styles.resultValue}>{this.getTotalPension()} kr</span>
           </div>
           <div className={classNames(styles.result, styles.highlight)}>
