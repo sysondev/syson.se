@@ -48,13 +48,11 @@ export default () => {
   };
 
   useEffect(() => {
-    peopleElement.current.scrollLeft = isTouchDevice() ? 100 : 0;
     highlightCenter();
   }, []);
 
   return (
     <div className={styles.people} ref={peopleElement} onScroll={scroll}>
-      <span className={styles.space} />
       {people.map(person => (
         <div key={person.name} className={styles.person}>
           <div
@@ -86,7 +84,6 @@ export default () => {
           </div>
         </div>
       ))}
-      <span className={styles.space} />
     </div>
   );
 };
