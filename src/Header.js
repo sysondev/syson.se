@@ -19,7 +19,10 @@ export default () => (
       <source srcSet={ottoSmall} type="image/jpeg" />
       <img className={styles.heroImage} src={ottoFallback} alt="" />
     </picture> */}
-    <video autoPlay loop muted style={styles.video}><source src="/video/test-small.mp4" type="video/mp4" /></video>
+    <video autoPlay loop muted playsInline style={styles.video}>
+      <source src="/video/test3.mp4" type="video/mp4" media="all and (min-width: 768px)" />
+      <source src="/video/test3-mobile.mp4" type="video/mp4" media="all and (max-width: 768px)" />
+    </video>
     <div className={styles.content}>
       <Link to="/"><img src={logo} alt="Syson Logo" className={styles.logo} /></Link>
       <div className={styles.headline}>
