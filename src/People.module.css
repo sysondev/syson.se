@@ -80,6 +80,7 @@
   color: white !important;
   align-self: flex-end;
   text-decoration: none;
+  margin-bottom: 8px;
 }
 
 .linkText {
