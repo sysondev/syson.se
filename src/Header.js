@@ -4,21 +4,9 @@ import styles from './Header.module.css';
 import logo from './logo.png';
 import Emoji from './Emoji'
 import wavingHand from './emojis/waving-hand.png'
-import ottoSmallWebp from './otto-portrait.webp';
-import ottoBigWebp from './otto-1920.webp';
-import ottoSmall from './otto-portrait.jpg';
-import ottoBig from './otto-1920.jpg';
-import ottoFallback from './otto.jpg';
 
 export default () => (
   <header className={styles.header}>
-    {/* <picture>
-      <source media="(min-width: 450px)" srcSet={ottoBigWebp} type="image/webp" />
-      <source media="(min-width: 450px)" srcSet={ottoBig} type="image/jpeg" />
-      <source srcSet={ottoSmallWebp} type="image/webp" />
-      <source srcSet={ottoSmall} type="image/jpeg" />
-      <img className={styles.heroImage} src={ottoFallback} alt="" />
-    </picture> */}
     <video autoPlay loop muted playsInline style={styles.video}>
       <source src="/video/test3.mp4" type="video/mp4" media="all and (min-width: 768px)" />
       <source src="/video/test3-mobile.mp4" type="video/mp4" media="all and (max-width: 768px)" />
