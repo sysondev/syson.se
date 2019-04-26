@@ -14,6 +14,7 @@ import Emoji from './Emoji';
 import handshake from './emojis/handshake.png';
 import woman from './emojis/woman.png';
 import house from './emojis/house.png';
+import peoples from './peoples'
 
 export default () => (
   <>
@@ -61,7 +62,7 @@ export default () => (
           Men det är inte det som gör Syson speciellt.
         </p>
         <p>
-          Vi är ett <b>litet bolag</b> och det tänker vi förbli. Vi är idag 16
+          Vi är ett <b>litet bolag</b> och det tänker vi förbli. Vi är idag {peoples.length + ' '}
           personer. Några fler ska vi bli. Men inte många.
         </p>
         <p>

@@ -128,5 +128,11 @@ export default shuffle([
     image: '/images/people/anders.jpg',
     linkedInUrl: 'https://www.linkedin.com/in/anders-s%C3%B6derstedt-1631b8/',
     quote: 'Sälj / Rekrytering'
+  },
+  {
+    name: 'Sabina Kosgård',
+    image: '/images/people/sabina.jpg',
+    profileUrl: 'https://docs.google.com/document/d/e/2PACX-1vRTjqB_pEAps8T-toENZn0y82Q7Xm8Af2uAIn-m1FAgVvMM8a1xFvWhcO6FIcM0T4VQr-L5zi9Cw8h-/pub',
+    quote: 'Test & testautomatisering'
   }
 ]);
