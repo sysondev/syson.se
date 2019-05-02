@@ -16,10 +16,10 @@ export default () => {
       <figcaption><i>Vårt faktiska gladblad per April 2019</i></figcaption>
     </div>
 
-    <p>2015 började vi mäta vårt mående i det vi kallar för gladbladet. Idén snodde vi rakt av från <a href="https://dna.crisp.se/docs/happiness-index.html">Crisp</a>.</p>
+    <p>2015 började vi mäta vårt mående i det vi kallar för gladbladet. Idén lånade vi från <a href="https://dna.crisp.se/docs/happiness-index.html">Crisp</a>.</p>
 
     <p>Det funkar så att man några gånger om året fyller i hur man trivs på Syson, hur man trivs på sitt uppdrag, vad som får en att må sämre och vad som får en att må bättre.</p>
 
-    <p>Vi kan snabbt se trender och göra saker bättre. Alla vet hur alla mår och kan sträcka ut en hand om det behövs. Det är simpelt. Och det funkar.</p>
+    <p>Vi kan snabbt se trender och göra saker bättre. Alla vet hur alla mår och kan sträcka ut en hand om det behövs.</p>
   </>;
 };

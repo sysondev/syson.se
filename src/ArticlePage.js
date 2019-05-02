@@ -16,7 +16,7 @@ export default () => (
         <Route path="/gasell" component={GasellArticle} />
         <Route path="/konsultlivet" component={Konsultlivet} />
         <Route path="/gladbladet" component={Gladbladet} />
-        <Route path="/avtal" component={KalkylenArticle} />
+        <Route path="/lonemodell" component={KalkylenArticle} />
         <Route component={NotFoundPage} />
       </Switch>
     </main>
