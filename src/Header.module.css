@@ -2,9 +2,10 @@
   position: relative;
   height: 145vmin;
   overflow: hidden;
+  background-color: var(--tradewind);
 }
 
-.heroImage {
+.heroImage, video {
   height: 100%;
   width: 100%;
   object-fit: cover;
