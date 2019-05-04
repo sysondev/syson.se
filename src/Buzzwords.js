@@ -17,7 +17,7 @@ export default () => {
           <h3 className={classNames(styles.word)}>React</h3>
           <h3 className={classNames(styles.word)}>Java</h3>
           <h3 className={classNames(styles.word)}>.NET</h3>
-          <h3 className={classNames(styles.word)}>Docker</h3>
+          <h3 className={classNames(styles.word)}>AWS</h3>
           <h3 className={classNames(styles.word)}>Node</h3>
         </div>
       </div>
