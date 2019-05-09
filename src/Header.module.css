@@ -2,7 +2,7 @@
   position: relative;
   height: 145vmin;
   overflow: hidden;
-  background-color: var(--tradewind);
+  background-color: var(--westar);
 }
 
 .heroImage, video {
