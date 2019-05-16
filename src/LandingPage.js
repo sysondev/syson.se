@@ -62,8 +62,8 @@ export default () => (
           Men det är inte det som gör Syson speciellt.
         </p>
         <p>
-          Vi är ett <b>litet bolag</b> och det tänker vi förbli. Vi är idag {peoples.length + ' '}
-          personer. Några fler ska vi bli. Men inte många.
+          Vi är ett litet bolag och vi gillar det. Vi är idag {peoples.length + ' '}
+          personer. Som en liten skolklass eller ett fotbollslag ungefär. Några fler vill vi bli, men inte många.
         </p>
         <p>
           Mycket blir bättre när man är mindre. Vi lär känna varandra bättre,
