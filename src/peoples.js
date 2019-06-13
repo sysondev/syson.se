@@ -113,13 +113,14 @@ export default shuffle([
   {
     name: 'Soroush Hakami',
     image: '/images/people/soroush.jpg',
-    linkedInUrl: 'https://www.linkedin.com/in/soroush-hakami/',
+    profileUrl: 'https://docs.google.com/document/d/1O1IH9Apn6hyHSbCebiTXNcRu4nsij3wBs6Fo5EAqZmE/edit?usp=sharing',
+    // linkedInUrl: 'https://www.linkedin.com/in/soroush-hakami/',
     quote: 'Sälj / Rekrytering'
   },
   {
     name: 'Love Gehlin',
     profileUrl:
-      'https://docs.google.com/document/d/13WyjMVR69WEQ75vV5UPBtdOjLMaqUFTyZLAwPr90Hvk/pub',
+      'https://docs.google.com/document/d/1rk1qTNxWkkgRCP6aTH_8Wj_mJsv1GfKWqORRGdz1sWA/edit?usp=sharing',
     image: '/images/people/love.jpg',
     quote: 'JS / Java'
   },
