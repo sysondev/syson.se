@@ -36,7 +36,7 @@ export default shuffle([
   {
     name: 'Leo Danielsson',
     profileUrl:
-      'https://docs.google.com/document/d/e/2PACX-1vSxiEc0TSynbc_BFIo2Yr8f-oBzkKkHtYuVcDsNclXb1N3LO0Y5UAahoGoJ2gzJUAF4CIV9YFzJ4RHK/pub',
+      'https://docs.google.com/document/d/137oNF9v4lR4XGavlMksW7wwxxtYERTnONBFZrlud3i4/edit?usp=sharing',
     image: '/images/people/leo.jpg',
     quote: 'JS / Java'
   },
@@ -133,7 +133,7 @@ export default shuffle([
   {
     name: 'Sabina Kosgård',
     image: '/images/people/sabina.jpg',
-    profileUrl: 'https://docs.google.com/document/d/e/2PACX-1vRTjqB_pEAps8T-toENZn0y82Q7Xm8Af2uAIn-m1FAgVvMM8a1xFvWhcO6FIcM0T4VQr-L5zi9Cw8h-/pub',
+    profileUrl: 'https://docs.google.com/document/d/1kzZkwy7fCbRlKJKmD6v01i4UO8_WpjbQAAsVjGLJAZM/edit?usp=sharing',
     quote: 'Test & testautomatisering'
   }
 ]);
