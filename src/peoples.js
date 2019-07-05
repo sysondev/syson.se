@@ -113,8 +113,7 @@ export default shuffle([
   {
     name: 'Soroush Hakami',
     image: '/images/people/soroush.jpg',
-    profileUrl: 'https://docs.google.com/document/d/1O1IH9Apn6hyHSbCebiTXNcRu4nsij3wBs6Fo5EAqZmE/edit?usp=sharing',
-    // linkedInUrl: 'https://www.linkedin.com/in/soroush-hakami/',
+    linkedInUrl: 'https://www.linkedin.com/in/soroush-hakami/',
     quote: 'Sälj / Rekrytering'
   },
   {
