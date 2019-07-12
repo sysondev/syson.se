@@ -20,13 +20,6 @@ const shuffle = array => {
 
 export default shuffle([
   {
-    name: 'Alexander Hedberg',
-    profileUrl:
-      'https://docs.google.com/document/d/e/2PACX-1vQWXShOcs8-aZ3i516973hCPjy_N_jvfk0BM5M6LCR3jBbgviCVm9IPpGevjt8ywkzfTIakMnYGRYoT/pub',
-    image: '/images/people/alexh.jpg',
-    quote: '.NET / JS'
-  },
-  {
     name: 'Johanna Lagerholm',
     profileUrl:
       'https://docs.google.com/document/d/1FTaXx83ry7rS5vMPMyywwaQ_XqRk-3VBmQV5Pi-7-yc/pub',
@@ -132,7 +125,8 @@ export default shuffle([
   {
     name: 'Sabina Kosgård',
     image: '/images/people/sabina.jpg',
-    profileUrl: 'https://docs.google.com/document/d/1kzZkwy7fCbRlKJKmD6v01i4UO8_WpjbQAAsVjGLJAZM/edit?usp=sharing',
+    profileUrl:
+      'https://docs.google.com/document/d/1kzZkwy7fCbRlKJKmD6v01i4UO8_WpjbQAAsVjGLJAZM/edit?usp=sharing',
     quote: 'Test & testautomatisering'
   }
 ]);
