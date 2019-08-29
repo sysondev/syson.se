@@ -41,18 +41,11 @@ export default shuffle([
     quote: 'JS / Java'
   },
   {
-    name: 'Olov Gullikson',
-    profileUrl:
-      'https://docs.google.com/document/d/e/2PACX-1vQR6JrgxZw2vG9Sc0C9XeuDs59uhXo-7edCIN_7PpYDPCJNDUid9a3McxW4OB2TNlWKuJcfBSceRC5I/pub',
-    image: '/images/people/olov.jpg',
-    quote: '.NET / JS'
-  },
-  {
     name: 'Anton Söderstedt',
     profileUrl:
       'https://docs.google.com/document/d/1vZeB8Jxe7qM4qVV8wJBM6X2zGvQKCUEhkVY4-vTFGtk/pub',
     image: '/images/people/anton.jpg',
-    quote: '.NET / JS'
+    quote: 'JS / .NET'
   },
   {
     name: 'Mikael Larsson',
@@ -81,13 +74,6 @@ export default shuffle([
       'https://docs.google.com/document/d/1TZj2yAhj6acUkCCTEomhN2GXQNFQHp2HRt6ksnaJP2M/pub',
     image: '/images/people/katrine.jpg',
     quote: 'Testautomatisering / Java'
-  },
-  {
-    name: 'David Skog',
-    profileUrl:
-      'https://docs.google.com/document/d/1ykZhFpRhlcc2CH5JnDdna6fZId4l4stmS78A92BqXh0/pub',
-    image: '/images/people/david.jpg',
-    quote: 'JS / Java'
   },
   {
     name: 'Joakim Gordillo',
@@ -128,5 +114,12 @@ export default shuffle([
     profileUrl:
       'https://docs.google.com/document/d/1kzZkwy7fCbRlKJKmD6v01i4UO8_WpjbQAAsVjGLJAZM/edit?usp=sharing',
     quote: 'Test & testautomatisering'
-  }
+  },
+  {
+    name: 'Aram Ghanipour',
+    profileUrl:
+      'https://docs.google.com/document/d/1MMQOWN8GbvxxQAmD6bisEndDSZVme1B-A2yiF8e5WS0/edit?usp=sharing',
+    image: '/images/people/aram.jpg',
+    quote: 'JS / .NET'
+  },
 ]);
