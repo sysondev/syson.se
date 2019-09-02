@@ -122,4 +122,9 @@ export default shuffle([
     image: '/images/people/aram.jpg',
     quote: 'JS / .NET'
   },
+  {
+    name: 'Denny Johansson',
+    image: '/images/people/denny.jpg',
+    quote: 'JS / React'
+  },
 ]);
