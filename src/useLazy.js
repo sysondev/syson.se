@@ -7,7 +7,6 @@ export default (ref, load) => {
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            console.log('intersected!');
             load();
             observer.disconnect();
           }

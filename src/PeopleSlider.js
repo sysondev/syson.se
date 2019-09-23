@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import styles from './People.module.css';
 import arrow from './arrow.svg';
@@ -23,19 +23,20 @@ const Link = ({ url, title }) => (
 export default () => {
   const [highlighted, setHighlighted] = useState();
   const peopleElement = useRef();
+
   const refs = people.reduce((refMap, person) => {
     refMap[person.name] = useRef();
     return refMap;
   }, {});
 
-  const highlightCenter = useCallback(() => {
+  const highlightCenter = () => {
     const centerPerson = Object.keys(refs).find(name => {
       const rect = refs[name].current.getBoundingClientRect();
       const viewportCenter = window.innerWidth / 2;
       return rect.left < viewportCenter && rect.right > viewportCenter;
     });
     setHighlighted(centerPerson);
-  }, [refs]);
+  };
 
   const mouseEnter = name => {
     setHighlighted(name);
@@ -49,7 +50,8 @@ export default () => {
 
   useEffect(() => {
     highlightCenter();
-  }, [highlightCenter]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className={styles.people} ref={peopleElement} onScroll={scroll}>
