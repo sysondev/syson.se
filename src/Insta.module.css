@@ -30,3 +30,12 @@
     column-count: 6;
   }
 }
+
+.masonry {
+  display: flex;
+  width: auto;
+}
+
+.masonryColumn {
+  background-clip: padding-box;
+}

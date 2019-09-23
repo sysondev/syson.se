@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Masonry from 'react-masonry-css';
 import useLazy from './useLazy';
 import styles from './Insta.module.css';
 
@@ -23,24 +24,34 @@ export default () => {
 
   return (
     <>
-      <h2 ref={heading} className="container">
-        <a href='https://www.instagram.com/syson.se/'>@syson.se</a> på
-        Instagram
+      <h2 ref={heading} className='container'>
+        <a href='https://www.instagram.com/syson.se/'>@syson.se</a> på Instagram
       </h2>
       <div className={styles.wrapper}>
-        <div className={styles.grid}>
+        <Masonry
+          breakpointCols={{ default: 6, 720: 3, 1024: 4 }}
+          className={styles.masonry}
+          columnClassName={styles.masonryColumn}
+        >
           {posts.map(post => (
             <a key={post.id} href={post.link}>
-              {loaded && 
+              {loaded && (
                 <picture>
-                  <source media="(max-width: 960px)" srcSet={post.images.low_resolution.url} />
+                  <source
+                    media='(max-width: 960px)'
+                    srcSet={post.images.low_resolution.url}
+                  />
                   <source srcSet={post.images.standard_resolution.url} />
-                  <img className={styles.image} src={post.images.low_resolution.url} alt={post.caption.text} />
+                  <img
+                    className={styles.image}
+                    src={post.images.low_resolution.url}
+                    alt={post.caption.text}
+                  />
                 </picture>
-              }
+              )}
             </a>
           ))}
-        </div>
+        </Masonry>
       </div>
     </>
   );
