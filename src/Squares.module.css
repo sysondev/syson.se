@@ -1,22 +1,22 @@
-
 .square {
   border-radius: 8px;
   display: flex;
   height: 364px;
   cursor: pointer;
   text-decoration: none;
+  margin-bottom: 16px;
 }
 
 .tradewind {
-  background-color: var(--tradewind)
+  background-color: var(--tradewind);
 }
 
 .cashmere {
-  background-color: var(--cashmere)
+  background-color: var(--cashmere);
 }
 
 .citrus {
-  background-color: var(--citrus)
+  background-color: var(--citrus);
 }
 
 .content {
@@ -43,13 +43,16 @@
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 600px) {
   .square {
-    margin-bottom: 16px;
+    text-align: center;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
+  .square {
+    margin-bottom: 0;
+  }
   .squares {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
