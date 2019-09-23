@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import 'intersection-observer'; // Polyfill for IOS Safari
 
 export default (ref, load) => {
   useEffect(() => {

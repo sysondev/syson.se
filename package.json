@@ -6,6 +6,7 @@
     "classnames": "^2.2.6",
     "react": "16.9.0",
     "react-dom": "16.9.0",
+    "intersection-observer": "^0.5.1",
     "react-pose": "^4.0.8",
     "react-router-dom": "5.0.1",
     "react-scripts": "3.1.2"
