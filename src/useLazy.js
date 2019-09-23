@@ -15,5 +15,5 @@ export default (ref, load) => {
       { rootMargin: '100%' }
     );
     observer.observe(ref.current);
-  }, []);
+  }, [ref, load]);
 };

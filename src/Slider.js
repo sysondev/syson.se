@@ -1,23 +1,26 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './Slider.module.css';
 
 export default ({ min, max, value, onChange }) => {
   const bar = useRef();
   const [dragging, setDragging] = useState(false);
 
-  const handleChange = dragX => {
-    const barRect = bar.current.getBoundingClientRect();
-    const barWidth = barRect.right - barRect.left;
-    const xPos = dragX - barRect.left;
-    const percentage = xPos / barWidth;
-    if (percentage <= 0) {
-      return onChange(min);
-    }
-    if (percentage >= 1) {
-      return onChange(max);
-    }
-    return onChange(Math.trunc(percentage * (max - min) + min));
-  };
+  const handleChange = useCallback(
+    dragX => {
+      const barRect = bar.current.getBoundingClientRect();
+      const barWidth = barRect.right - barRect.left;
+      const xPos = dragX - barRect.left;
+      const percentage = xPos / barWidth;
+      if (percentage <= 0) {
+        return onChange(min);
+      }
+      if (percentage >= 1) {
+        return onChange(max);
+      }
+      return onChange(Math.trunc(percentage * (max - min) + min));
+    },
+    [max, min, onChange]
+  );
 
   const mouseDown = event => {
     setDragging(true);
@@ -28,24 +31,24 @@ export default ({ min, max, value, onChange }) => {
     setDragging(false);
   };
 
-  const mouseMove = event => {
-    if (dragging) {
-      handleChange(event.clientX);
-    }
-  };
-
   const touchMove = event => {
     handleChange(event.touches[0].clientX);
   };
 
   useEffect(() => {
+    const mouseMove = event => {
+      if (dragging) {
+        handleChange(event.clientX);
+      }
+    };
+
     document.addEventListener('mouseup', mouseUp);
     document.addEventListener('mousemove', mouseMove);
     return () => {
       document.removeEventListener('mouseup', mouseUp);
       document.removeEventListener('mousemove', mouseMove);
     };
-  }, [dragging]);
+  }, [dragging, handleChange]);
 
   const valuePercentage = ((value - min) / (max - min)) * 100;
   return (

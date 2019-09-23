@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import classNames from 'classnames';
 import styles from './People.module.css';
 import arrow from './arrow.svg';
@@ -12,11 +12,11 @@ const isTouchDevice = () => {
 const Link = ({ url, title }) => (
   <a
     href={url}
-    target="_blank"
-    rel="noopener noreferrer"
+    target='_blank'
+    rel='noopener noreferrer'
     className={classNames(styles.link, styles.highlight)}
   >
-    <span className={styles.linkText}>{title}</span> <img src={arrow} alt="" />
+    <span className={styles.linkText}>{title}</span> <img src={arrow} alt='' />
   </a>
 );
 
@@ -28,14 +28,14 @@ export default () => {
     return refMap;
   }, {});
 
-  const highlightCenter = () => {
+  const highlightCenter = useCallback(() => {
     const centerPerson = Object.keys(refs).find(name => {
       const rect = refs[name].current.getBoundingClientRect();
       const viewportCenter = window.innerWidth / 2;
       return rect.left < viewportCenter && rect.right > viewportCenter;
     });
     setHighlighted(centerPerson);
-  };
+  }, [refs]);
 
   const mouseEnter = name => {
     setHighlighted(name);
@@ -49,7 +49,7 @@ export default () => {
 
   useEffect(() => {
     highlightCenter();
-  }, []);
+  }, [highlightCenter]);
 
   return (
     <div className={styles.people} ref={peopleElement} onScroll={scroll}>
@@ -76,10 +76,10 @@ export default () => {
               {person.quote}
             </div>
             {person.linkedInUrl && (
-              <Link url={person.linkedInUrl} title="LinkedIn" />
+              <Link url={person.linkedInUrl} title='LinkedIn' />
             )}
             {person.profileUrl && (
-              <Link url={person.profileUrl} title="Profil" />
+              <Link url={person.profileUrl} title='Profil' />
             )}
           </div>
         </div>
