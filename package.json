@@ -26,7 +26,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {
-    "react-masonry-css": "^1.0.12"
-  }
+  "devDependencies": {}
 }

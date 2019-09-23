@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Masonry from 'react-masonry-css';
+import Masonry from './Masonry';
 import useLazy from './useLazy';
 import styles from './Insta.module.css';
 
@@ -29,7 +29,7 @@ export default () => {
       </h2>
       <div className={styles.wrapper}>
         <Masonry
-          breakpointCols={{ default: 6, 720: 3, 1024: 4 }}
+          breakpointCols={{ default: 3, 720: 4, 1024: 6 }}
           className={styles.masonry}
           columnClassName={styles.masonryColumn}
         >
