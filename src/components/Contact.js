@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Contact.module.css';
-import sysonman from './sysonman.png';
+import sysonman from '../images/sysonman.png';
 export default () => {
   return (
     <section>
@@ -9,7 +9,10 @@ export default () => {
         <div className={styles.contact}>
           <div className={styles.left}>
             <p>Vi vill alltid höra från trevligt folk. </p>
-            <p>Fikasugen? Vi sitter på The Parks lokaler i City, Vasastan och Södermalm.</p>
+            <p>
+              Fikasugen? Vi sitter på The Parks lokaler i City, Vasastan och
+              Södermalm.
+            </p>
           </div>
           <div className={styles.list}>
             <div>Soroush</div>
@@ -17,12 +20,10 @@ export default () => {
             <div>Anders</div>
             <a href='tel:0733347999'>073-334 79 99</a>
             <div></div>
-            <a href='mailto:hej@syson.se'>
-              hej@syson.se
-            </a>
+            <a href='mailto:hej@syson.se'>hej@syson.se</a>
           </div>
           <div className={styles.sysonmanContainer}>
-            <img className={styles.sysonman} src={sysonman} alt="" />
+            <img className={styles.sysonman} src={sysonman} alt='' />
           </div>
         </div>
       </div>

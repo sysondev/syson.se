@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from './Footer.module.css';
-import footerLogo from './footerLogo.svg';
+import footerLogo from '../images/footerLogo.svg';
 
 export default () => {
   return (
@@ -19,7 +19,7 @@ export default () => {
           <p>Orgnr: 556934-1851</p>
         </div>
         <div className={styles.icon}>
-          <img src={footerLogo} alt="Syson" />
+          <img src={footerLogo} alt='Syson' />
         </div>
       </div>
     </footer>

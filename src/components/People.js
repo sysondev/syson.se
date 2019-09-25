@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import posed from 'react-pose';
 import styles from './People.module.css';
-import arrow from './arrow.svg';
+import arrow from '../icons/arrow.svg';
 import Emoji from './Emoji';
-import rockSign from './emojis/rock-sign.png';
+import rockSign from '../emojis/rock-sign.png';
 import people from '../peoples';
 import PeopleSlider from './PeopleSlider';
 

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
-import logo from './logo.png';
+import logo from '../images/logo.png';
 import Emoji from './Emoji';
-import wavingHand from './emojis/waving-hand.png';
-import ottoSmallWebp from './otto-portrait.webp';
-import ottoBigWebp from './otto-1920.webp';
-import ottoSmall from './otto-portrait.jpg';
-import ottoBig from './otto-1920.jpg';
-import ottoFallback from './otto.jpg';
+import wavingHand from '../emojis/waving-hand.png';
+import ottoSmallWebp from '../images/otto-portrait.webp';
+import ottoBigWebp from '../images/otto-1920.webp';
+import ottoSmall from '../images/otto-portrait.jpg';
+import ottoBig from '../images/otto-1920.jpg';
+import ottoFallback from '../images/otto.jpg';
 
 const isSmallDevice = () => {
   return window.innerWidth < 1024;

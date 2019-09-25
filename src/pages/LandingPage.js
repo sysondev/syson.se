@@ -7,13 +7,13 @@ import Contact from '../components/Contact';
 import Map from '../components/Map';
 import IntroSection from '../components/IntroSection';
 import Customers from '../components/Customers';
-import Gasell from '../pages/Gasell';
+import Gasell from '../components/Gasell';
 import Buzzwords from '../components/Buzzwords';
 import Squares from '../components/Squares';
 import Emoji from '../components/Emoji';
-import handshake from './emojis/handshake.png';
-import woman from './emojis/woman.png';
-import house from './emojis/house.png';
+import handshake from '../emojis/handshake.png';
+import woman from '../emojis/woman.png';
+import house from '../emojis/house.png';
 import peoples from '../peoples';
 
 export default () => (
