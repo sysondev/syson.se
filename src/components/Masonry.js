@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import debounce from './debounce';
+import debounce from '../utils/debounce';
 
 const Masonry = ({
   children,

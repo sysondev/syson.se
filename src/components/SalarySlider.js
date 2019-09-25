@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './SalarySlider.module.css';
 import Slider from './Slider';
-import { calculateSalary, DEFAULT_VALUES } from './salary'
+import { calculateSalary, DEFAULT_VALUES } from '../utils/salary';
 
 const locale = 'sv-SE';
 
@@ -21,10 +21,15 @@ export default () => {
         </div>
         <div>
           <span className={styles.label}>Lön</span>
-          <span className={styles.money}>{calculateSalary({
-            hourlyRate: rate, sickDays: DEFAULT_VALUES.SICK_DAYS, extraVacationDays: DEFAULT_VALUES.EXTRA_VACATION_DAYS,
-            extraPension: DEFAULT_VALUES.EXTRA_PENSION, otherMonthlyCosts: DEFAULT_VALUES.OTHER_MONTHLY_COSTS
-          })}</span>
+          <span className={styles.money}>
+            {calculateSalary({
+              hourlyRate: rate,
+              sickDays: DEFAULT_VALUES.SICK_DAYS,
+              extraVacationDays: DEFAULT_VALUES.EXTRA_VACATION_DAYS,
+              extraPension: DEFAULT_VALUES.EXTRA_PENSION,
+              otherMonthlyCosts: DEFAULT_VALUES.OTHER_MONTHLY_COSTS
+            })}
+          </span>
           <span className={styles.label}>Kr</span>
         </div>
       </div>

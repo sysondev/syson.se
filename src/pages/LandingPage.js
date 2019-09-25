@@ -1,26 +1,26 @@
 import React from 'react';
-import SalarySlider from './SalarySlider';
-import People from './People';
-import Insta from './Insta';
-import Header from './Header';
-import Contact from './Contact';
-import Map from './Map';
-import IntroSection from './IntroSection';
-import Customers from './Customers';
-import Gasell from './Gasell';
-import Buzzwords from './Buzzwords'
-import Squares from './Squares';
-import Emoji from './Emoji';
+import SalarySlider from '../components/SalarySlider';
+import People from '../components/People';
+import Insta from '../components/Insta';
+import Header from '../components/Header';
+import Contact from '../components/Contact';
+import Map from '../components/Map';
+import IntroSection from '../components/IntroSection';
+import Customers from '../components/Customers';
+import Gasell from '../pages/Gasell';
+import Buzzwords from '../components/Buzzwords';
+import Squares from '../components/Squares';
+import Emoji from '../components/Emoji';
 import handshake from './emojis/handshake.png';
 import woman from './emojis/woman.png';
 import house from './emojis/house.png';
-import peoples from './peoples'
+import peoples from '../peoples';
 
 export default () => (
   <>
     <Header />
     <main>
-      <IntroSection title="Fokus på dig" emoji={woman}>
+      <IntroSection title='Fokus på dig' emoji={woman}>
         <p>
           Hos oss får du friheten att fokusera på det du tycker om. Jobba på
           roliga projekt hos bra kunder. Umgås avslappnat och resa till nya
@@ -28,20 +28,23 @@ export default () => (
           lägga åt sidan.
         </p>
         <p>
-          Du kan lägga din energi på uppdraget och på att lära dig nya saker. Att jobba 8 timmar om dagen
-          och sen kunna tänka på annat ser vi som en självklarhet.
+          Du kan lägga din energi på uppdraget och på att lära dig nya saker.
+          Att jobba 8 timmar om dagen och sen kunna tänka på annat ser vi som en
+          självklarhet.
         </p>
       </IntroSection>
       <People />
       <Buzzwords />
       <section>
-        <div className="container">
+        <div className='container'>
           <h2>
             En schysst deal <Emoji src={handshake} />
           </h2>
           <p>
-            Vår lönemodell är enkel. Du får <b>70%</b> av timpriset när du har ett
-            uppdrag, annars är du garanterad 26 000 kr. Att hitta uppdraget eller förhandla om timpriset behöver du inte lägga någon energi på själv, det löser vi.
+            Vår lönemodell är enkel. Du får <b>70%</b> av timpriset när du har
+            ett uppdrag, annars är du garanterad 26 000 kr. Att hitta uppdraget
+            eller förhandla om timpriset behöver du inte lägga någon energi på
+            själv, det löser vi.
           </p>
           <p>
             Vi räknar med att du tar minst sex veckors semester, men du har
@@ -55,15 +58,17 @@ export default () => (
       <Squares />
       <Customers />
       <Gasell />
-      <IntroSection title="Bäst, inte störst" emoji={house}>
+      <IntroSection title='Bäst, inte störst' emoji={house}>
         <p>
           Vi är ett konsultbolag som utvecklar system, hemsidor och appar. Vi
           jobbar i roller som utvecklare, testare, tech lead och scrum master.
           Men det är inte det som gör Syson speciellt.
         </p>
         <p>
-          Vi är ett litet bolag och vi gillar det. Vi är idag {peoples.length + ' '}
-          personer. Som en liten skolklass eller ett fotbollslag ungefär. Några fler vill vi bli, men inte många.
+          Vi är ett litet bolag och vi gillar det. Vi är idag{' '}
+          {peoples.length + ' '}
+          personer. Som en liten skolklass eller ett fotbollslag ungefär. Några
+          fler vill vi bli, men inte många.
         </p>
         <p>
           Mycket blir bättre när man är mindre. Vi lär känna varandra bättre,

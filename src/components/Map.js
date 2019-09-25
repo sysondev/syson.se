@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styles from './Map.module.css';
-import useLazy from './useLazy';
+import useLazy from '../utils/useLazy';
 
 const theParkSveavagenLocation = { lat: 59.3424874, lng: 18.0572211 };
 const theParkHalsingegatanLocation = { lat: 59.3466611, lng: 18.0382911 };

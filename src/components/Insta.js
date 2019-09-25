@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Masonry from './Masonry';
-import useLazy from './useLazy';
+import useLazy from '../utils/useLazy';
 import styles from './Insta.module.css';
 
 export default () => {

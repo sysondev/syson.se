@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import styles from './People.module.css';
 import arrow from './arrow.svg';
-import people from './peoples';
+import people from '../peoples';
 
 const isTouchDevice = () => {
   // there's probably a better way to do this
