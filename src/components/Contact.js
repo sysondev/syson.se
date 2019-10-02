@@ -17,8 +17,6 @@ export default () => {
           <div className={styles.list}>
             <div>Soroush</div>
             <a href='tel:0730473441'>073-047 34 41</a>
-            <div>Anders</div>
-            <a href='tel:0733347999'>073-334 79 99</a>
             <div></div>
             <a href='mailto:hej@syson.se'>hej@syson.se</a>
           </div>
