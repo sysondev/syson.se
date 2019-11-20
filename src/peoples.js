@@ -22,7 +22,7 @@ export default shuffle([
   {
     name: 'Johanna Lagerholm',
     profileUrl:
-      'https://docs.google.com/document/d/1FTaXx83ry7rS5vMPMyywwaQ_XqRk-3VBmQV5Pi-7-yc/pub',
+      'https://docs.google.com/document/d/19fDEWBrFH449nJoqzrZkqby3v5AcJ7PYdn4pmUlr07E/edit?usp=sharing',
     image: '/images/people/johanna.jpg',
     quote: 'JS / Java'
   },
@@ -43,7 +43,7 @@ export default shuffle([
   {
     name: 'Anton Söderstedt',
     profileUrl:
-      'https://docs.google.com/document/d/1vZeB8Jxe7qM4qVV8wJBM6X2zGvQKCUEhkVY4-vTFGtk/pub',
+      'https://docs.google.com/document/d/1mp3L3mIeuixXMV7CpGp_wHiyGcWzOQPJ_GT7zu-sixs/edit?usp=sharing',
     image: '/images/people/anton.jpg',
     quote: 'JS / .NET'
   },
