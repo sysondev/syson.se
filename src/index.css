@@ -38,6 +38,7 @@ h3 {
 h1,
 h2 {
   font-size: 36px;
+  line-height: 1;
 }
 @media (min-width: 768px) {
   h1,
