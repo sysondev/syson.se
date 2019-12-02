@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
 import classNames from 'classnames';
+import React, { useState } from 'react';
 import posed from 'react-pose';
-import styles from './People.module.css';
-import arrow from '../icons/arrow.svg';
-import Emoji from './Emoji';
 import rockSign from '../emojis/rock-sign.png';
+import arrow from '../icons/arrow.svg';
 import people from '../peoples';
+import Emoji from './Emoji';
+import styles from './People.module.css';
 import PeopleSlider from './PeopleSlider';
 
 const Box = posed.div({
@@ -43,25 +43,21 @@ export default () => {
       {showAllPeople && (
         <div className={classNames('container', styles.allPeople)}>
           {people.map(person => (
-            <div
-              key={person.name}
-              className={styles.allPeoplePerson}
-              onClick={() => {
-                console.log('derp');
-              }}
-            >
+            <div key={person.name} className={styles.allPeoplePerson}>
               <div
                 className={classNames(styles.details, styles.highlighted)}
                 style={{ backgroundImage: `url(${person.image})` }}
               >
                 <div className={classNames(styles.name)}>{person.name}</div>
-                <div className={classNames(styles.quote)}>{person.quote}</div>
-                {person.linkedInUrl && (
-                  <Link url={person.linkedInUrl} title='LinkedIn' />
-                )}
-                {person.profileUrl && (
-                  <Link url={person.profileUrl} title='Profil' />
-                )}
+                <div className={styles.bottomDetails}>
+                  <div className={classNames(styles.quote)}>{person.quote}</div>
+                  {person.linkedInUrl && (
+                    <Link url={person.linkedInUrl} title='LinkedIn' />
+                  )}
+                  {person.profileUrl && (
+                    <Link url={person.profileUrl} title='Profil' />
+                  )}
+                </div>
               </div>
             </div>
           ))}

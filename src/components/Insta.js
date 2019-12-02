@@ -26,12 +26,12 @@ export default () => {
 
   return (
     <>
-      <h2 className='container'>
+      <div className='container'>
         <h2 ref={heading}>
           <a href='https://www.instagram.com/syson.se/'>@syson.se</a> på
           Instagram <Emoji src={cameraWithFlash} />
         </h2>
-      </h2>
+      </div>
       <div className={styles.wrapper}>
         <Masonry
           breakpointCols={{ default: 3, 720: 4, 1024: 6 }}

@@ -38,6 +38,20 @@
   flex-grow: 1;
 }
 
+.bottomDetails {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.2) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  padding: 8px;
+  padding-top: 16px;
+}
+
 .details {
   opacity: 0;
   z-index: 1;
@@ -53,7 +67,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 8px;
   transition: all 0.1s;
   pointer-events: none;
 }
@@ -67,9 +80,10 @@
 .name {
   background-color: var(--tradewind-transparent);
   padding: 2px;
-  margin-bottom: auto;
   font-family: octarine;
   font-size: 18px;
+  margin: 8px;
+  margin-bottom: auto;
 }
 
 .quote {
@@ -100,7 +114,8 @@
   font-family: 'octarine';
 }
 
-.button:focus, .invertedButton:focus {
+.button:focus,
+.invertedButton:focus {
   outline: 0;
 }
 
