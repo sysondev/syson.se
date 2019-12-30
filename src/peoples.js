@@ -103,10 +103,10 @@ export default shuffle([
     quote: 'JS / Java'
   },
   {
-    name: 'Anders Söderstedt',
-    image: '/images/people/anders.jpg',
-    linkedInUrl: 'https://www.linkedin.com/in/anders-s%C3%B6derstedt-1631b8/',
-    quote: 'Sälj / Rekrytering'
+    name: 'Mattias Ekström',
+    image: '/images/people/mattias.jpg',
+    profileUrl: 'https://docs.google.com/document/d/1_h2Fjb8JxDHs1B1b-ftnSTsH5O_z_UJjo2iATJ8KUFI/edit?usp=sharing',
+    quote: 'JS / .NET'
   },
   {
     name: 'Sabina Kosgård',
