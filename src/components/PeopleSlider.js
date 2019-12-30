@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
-import styles from './People.module.css';
+import React, { useEffect, useRef, useState } from 'react';
 import arrow from '../icons/arrow.svg';
 import people from '../peoples';
+import styles from './People.module.css';
 
 const isTouchDevice = () => {
   // there's probably a better way to do this
@@ -74,15 +74,17 @@ export default () => {
             <div className={classNames(styles.name, styles.highlight)}>
               {person.name}
             </div>
-            <div className={classNames(styles.quote, styles.highlight)}>
-              {person.quote}
+            <div className={styles.bottomDetails}>
+              <div className={classNames(styles.quote, styles.highlight)}>
+                {person.quote}
+              </div>
+              {person.linkedInUrl && (
+                <Link url={person.linkedInUrl} title='LinkedIn' />
+              )}
+              {person.profileUrl && (
+                <Link url={person.profileUrl} title='Profil' />
+              )}
             </div>
-            {person.linkedInUrl && (
-              <Link url={person.linkedInUrl} title='LinkedIn' />
-            )}
-            {person.profileUrl && (
-              <Link url={person.profileUrl} title='Profil' />
-            )}
           </div>
         </div>
       ))}

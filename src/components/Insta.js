@@ -1,7 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Masonry from './Masonry';
+import React, { useEffect, useRef, useState } from 'react';
+import cameraWithFlash from '../emojis/camera-with-flash.png';
 import useLazy from '../utils/useLazy';
+import Emoji from './Emoji';
 import styles from './Insta.module.css';
+import Masonry from './Masonry';
 
 export default () => {
   const heading = useRef();
@@ -24,9 +26,12 @@ export default () => {
 
   return (
     <>
-      <h2 ref={heading} className='container'>
-        <a href='https://www.instagram.com/syson.se/'>@syson.se</a> på Instagram
-      </h2>
+      <div className='container'>
+        <h2 ref={heading}>
+          <a href='https://www.instagram.com/syson.se/'>@syson.se</a> på
+          Instagram <Emoji src={cameraWithFlash} />
+        </h2>
+      </div>
       <div className={styles.wrapper}>
         <Masonry
           breakpointCols={{ default: 3, 720: 4, 1024: 6 }}
