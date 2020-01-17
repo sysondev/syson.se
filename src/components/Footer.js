@@ -11,11 +11,10 @@ export default () => {
           <p>hej@syson.se</p>
         </div>
         <div>
-          <p>Sveavägen 98</p>
-          <p>113 50 Stockholm</p>
+          <p><strong>Postadress</strong></p>
+          <p>Syson AB<br />Kivra: 556934-1851<br />106 31 Stockholm</p>
         </div>
         <div>
-          <p>Syson AB</p>
           <p>Orgnr: 556934-1851</p>
         </div>
         <div className={styles.icon}>
