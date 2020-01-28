@@ -71,7 +71,7 @@ export default shuffle([
   {
     name: 'Katrine Johansson',
     profileUrl:
-      'https://docs.google.com/document/d/1TZj2yAhj6acUkCCTEomhN2GXQNFQHp2HRt6ksnaJP2M/pub',
+      'https://docs.google.com/document/d/10vA5JZfqXxqPSt4YuKJXRNWVjs2sQ0fc3-2Y9_dDuts/edit?usp=sharing',
     image: '/images/people/katrine.jpg',
     quote: 'Testautomatisering / Java'
   },
