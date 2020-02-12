@@ -29,7 +29,7 @@ export default shuffle([
   {
     name: 'Leo Danielsson',
     profileUrl:
-      'https://docs.google.com/document/d/137oNF9v4lR4XGavlMksW7wwxxtYERTnONBFZrlud3i4/edit?usp=sharing',
+      'https://docs.google.com/document/d/1vFr4LHEOGgcXI5rXEM2cgqzS_5AuhiwJI1I-ex6oEGU/edit?usp=sharing',
     image: '/images/people/leo.jpg',
     quote: 'JS / Java'
   },
