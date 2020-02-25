@@ -78,7 +78,7 @@ export default shuffle([
   {
     name: 'Joakim Gordillo',
     profileUrl:
-      'https://docs.google.com/a/syson.se/document/d/1zNxgPpG5LfE35n1OLF3rB6iKIHbZBUCbo__h9wOC2wE/pub',
+      'https://docs.google.com/document/d/119PGfv9tjTpKQMSwPT3PmaXOFVaL42S6tnTqov3hPEo/edit?usp=sharing',
     image: '/images/people/joakim.jpg',
     quote: 'Node / JS'
   },
