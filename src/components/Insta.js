@@ -13,7 +13,7 @@ export default () => {
 
   const fetchPosts = async () => {
     const response = await fetch(
-      '//api.instagram.com/v1/users/1805388781/media/recent/?access_token=1805388781.6f84264.ba97662b8d0240579d138931a4d06671',
+      '//api.instagram.com/v1/users/1805388781/media/recent/?access_token=1805388781.6f84264.6ed970577f8146058364186ce399776b',
       { headers: { Accept: 'application/json' } }
     );
     const json = await response.json();
