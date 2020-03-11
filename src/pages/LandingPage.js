@@ -78,7 +78,6 @@ export default () => (
       </IntroSection>
       <Insta />
       <Contact />
-      <Map />
     </main>
   </>
 );
