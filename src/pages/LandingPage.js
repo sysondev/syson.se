@@ -4,7 +4,6 @@ import People from '../components/People';
 import Insta from '../components/Insta';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
-import Map from '../components/Map';
 import IntroSection from '../components/IntroSection';
 import Customers from '../components/Customers';
 import Gasell from '../components/Gasell';
@@ -20,7 +19,7 @@ export default () => (
   <>
     <Header />
     <main>
-      <IntroSection title='Fokus på dig' emoji={woman}>
+      <IntroSection title="Fokus på dig" emoji={woman}>
         <p>
           Hos oss får du friheten att fokusera på det du tycker om. Jobba på
           roliga projekt hos bra kunder. Umgås avslappnat och resa till nya
@@ -36,7 +35,7 @@ export default () => (
       <People />
       <Buzzwords />
       <section>
-        <div className='container'>
+        <div className="container">
           <h2>
             En schysst deal <Emoji src={handshake} />
           </h2>
@@ -58,7 +57,7 @@ export default () => (
       <Squares />
       <Customers />
       <Gasell />
-      <IntroSection title='Bäst, inte störst' emoji={house}>
+      <IntroSection title="Bäst, inte störst" emoji={house}>
         <p>
           Vi är ett konsultbolag som utvecklar system, hemsidor och appar. Vi
           jobbar i roller som utvecklare, testare, tech lead och scrum master.
