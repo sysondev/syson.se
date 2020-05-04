@@ -36,7 +36,7 @@ export default shuffle([
   {
     name: 'Alexander Lissenko',
     profileUrl:
-      'https://docs.google.com/document/d/1GAd6cXTrBft_0I_pwRYJD9lNLb4bKLXApv6vD_OGZeE/edit?usp=sharing',
+      'https://docs.google.com/document/d/1tk9L-IHqo-yGvLbj3feiCj8sdnKEEM-ff2ugQjjvQkc/edit?usp=sharing',
     image: '/images/people/alexander.jpg',
     quote: 'JS / Java',
   },
