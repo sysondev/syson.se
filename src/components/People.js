@@ -57,6 +57,12 @@ export default () => {
                   {person.profileUrl && (
                     <Link url={person.profileUrl} title='Profil' />
                   )}
+                  {person.mail && (
+                    <Link url={'mailto:' + person.mail} title={person.mail} />
+                  )}
+                  {person.phone && (
+                    <Link url={'tel:' + person.phone} title={person.phone} />
+                  )}
                 </div>
               </div>
             </div>

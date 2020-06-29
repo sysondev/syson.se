@@ -92,7 +92,8 @@ export default shuffle([
   {
     name: 'Soroush Hakami',
     image: '/images/people/soroush.jpg',
-    linkedInUrl: 'https://www.linkedin.com/in/soroush-hakami/',
+    phone: '073-047 34 41',
+    mail: 'salj@syson.se',
     quote: 'Sälj / Rekrytering',
   },
   {
