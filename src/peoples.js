@@ -83,13 +83,6 @@ export default shuffle([
     quote: 'Node / JS',
   },
   {
-    name: 'Patrick Thomsson',
-    profileUrl:
-      'https://docs.google.com/document/d/1GuaMyViqwnT8Nysba9n3LKW2CBJesuORIiGlY93twqk/pub',
-    image: '/images/people/patrick.jpg',
-    quote: 'JS / Java',
-  },
-  {
     name: 'Soroush Hakami',
     image: '/images/people/soroush.jpg',
     phone: '073-047 34 41',
