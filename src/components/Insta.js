@@ -9,11 +9,12 @@ export default () => {
   const heading = useRef();
   const [posts, setPosts] = useState([]);
   const [loaded, setLoaded] = useState(false);
+  const VIDEO = 'VIDEO';
   useLazy(heading, () => setLoaded(true));
 
   const fetchPosts = async () => {
     const response = await fetch(
-      '//api.instagram.com/v1/users/1805388781/media/recent/?access_token=1805388781.6f84264.6ed970577f8146058364186ce399776b',
+      'https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&access_token=IGQVJWb3ZA1dUljcVNzcFhXU0hhOGpobkdvNTNZAd0FHc3BhbkhzZAncwNUhjMWx4M3dTbnN4UGtlR2NHZA3FZASF9fVjNTS3ZAiQVdjWDRoaHlSR3ljUWt3cnExMjg5ZAkptTmdzRVctTGJn',
       { headers: { Accept: 'application/json' } }
     );
     const json = await response.json();
@@ -23,6 +24,8 @@ export default () => {
   useEffect(() => {
     fetchPosts();
   }, []);
+
+  const getImageUrl = post => post.media_type === VIDEO ? post.thumbnail_url : post.media_url;
 
   return (
     <>
@@ -39,18 +42,13 @@ export default () => {
           columnClassName={styles.masonryColumn}
         >
           {posts.map(post => (
-            <a key={post.id} href={post.link}>
+            <a key={post.id} href={post.permalink} target="_blank" rel="noopener noreferrer">
               {loaded && (
                 <picture>
-                  <source
-                    media='(max-width: 960px)'
-                    srcSet={post.images.low_resolution.url}
-                  />
-                  <source srcSet={post.images.standard_resolution.url} />
                   <img
                     className={styles.image}
-                    src={post.images.low_resolution.url}
-                    alt={post.caption.text}
+                    src={getImageUrl(post)}
+                    alt={post.caption}
                   />
                 </picture>
               )}

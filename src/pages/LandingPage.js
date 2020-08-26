@@ -75,6 +75,7 @@ export default () => (
           viktigare.
         </p>
       </IntroSection>
+      <Insta />
       <Contact />
     </main>
   </>
