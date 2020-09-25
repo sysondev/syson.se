@@ -122,4 +122,10 @@ export default shuffle([
     image: '/images/people/denny.jpg',
     quote: 'JS / React',
   },
+  {
+    name: 'Olov Gulliksson',
+    profileUrl: 'https://docs.google.com/document/d/1NQ7IQzW8mZMl9iYdsS8JZXPmGzWP6AWrymL-C37bjTA/edit?usp=sharing',
+    image: '/images/people/olov.jpg',
+    quote: 'JS / .NET',
+  },
 ]);
