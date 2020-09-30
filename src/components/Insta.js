@@ -35,7 +35,7 @@ export default () => {
           Instagram <Emoji src={cameraWithFlash} />
         </h2>
       </div>
-      <div className={styles.wrapper}>
+      {posts && <div className={styles.wrapper}>
         <Masonry
           breakpointCols={{ default: 3, 720: 4, 1024: 6 }}
           className={styles.masonry}
@@ -55,7 +55,7 @@ export default () => {
             </a>
           ))}
         </Masonry>
-      </div>
+      </div>}
     </>
   );
 };
