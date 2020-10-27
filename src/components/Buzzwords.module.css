@@ -14,19 +14,21 @@
   color: var(--tradewind);
 }
 
-.words {
+.logos {
   color: var(--westar);
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.word {
+.logo {
   margin-right: 24px;
+  margin-bottom: 24px;
+  width: 100px;
 }
 
 @media (min-width: 1024px) {
-  .words {
+  .logos {
     justify-content: space-between;
   }
 }
