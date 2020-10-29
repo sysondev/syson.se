@@ -25,8 +25,8 @@ export default () => {
           <img className={classNames(styles.logo)} src={javaLogo} alt='Java' />
           <img className={classNames(styles.logo)} src={netLogo} alt='.NET' />
           <img className={classNames(styles.logo)} src={awsLogo} alt='AWS' />
-          <img className={classNames(styles.logo)} src={nodeLogo} alt='Node' />
           <img className={classNames(styles.logo)} src={typescriptLogo} alt='TypeScript' />
+          <img className={classNames(styles.logo)} src={nodeLogo} alt='Node' />
         </div>
       </div>
     </div>
