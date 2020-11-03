@@ -20,13 +20,13 @@ export default () => {
       <div className={classNames('container', styles.content)}>
         <h1 className={styles.title}>Tekniker vi gillar</h1>
         <div className={classNames(styles.logos)}>
-          <img className={classNames(styles.logo)} src={jsLogo} alt='JavaScript' />
-          <img className={classNames(styles.logo)} src={reactLogo} alt='React' />
-          <img className={classNames(styles.logo)} src={javaLogo} alt='Java' />
-          <img className={classNames(styles.logo)} src={netLogo} alt='.NET' />
-          <img className={classNames(styles.logo)} src={awsLogo} alt='AWS' />
-          <img className={classNames(styles.logo)} src={typescriptLogo} alt='TypeScript' />
-          <img className={classNames(styles.logo)} src={nodeLogo} alt='Node' />
+          <img className={classNames(styles.logo)} src={jsLogo} alt='JavaScript' title='JavaScript' />
+          <img className={classNames(styles.logo)} src={reactLogo} alt='React' title='React' />
+          <img className={classNames(styles.logo)} src={javaLogo} alt='Java' title='Java' />
+          <img className={classNames(styles.logo)} src={netLogo} alt='.NET' title='.NET' />
+          <img className={classNames(styles.logo)} src={awsLogo} alt='AWS' title='AWS' />
+          <img className={classNames(styles.logo)} src={typescriptLogo} alt='TypeScript' title='TypeScript' />
+          <img className={classNames(styles.logo)} src={nodeLogo} alt='Node' title='Node' />
         </div>
       </div>
     </div>
