@@ -57,7 +57,7 @@ export default shuffle([
   {
     name: 'Otto Nordgren',
     profileUrl:
-      'https://docs.google.com/document/d/1NwXJjs6DdApM_Qg04mQY8raWkY7IrPeaUxIa64TkIDM/pub',
+      'https://docs.google.com/document/d/1phWA45KT4CCJyRJavBUPAiO6P14baWjMgsawtL3P5c0/edit?usp=sharing',
     image: '/images/people/otto.jpg',
     quote: 'JS / Java',
   },
