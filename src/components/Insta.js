@@ -14,7 +14,7 @@ export default () => {
 
   const fetchPosts = async () => {
     const response = await fetch(
-      'https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&access_token=IGQVJWb3ZA1dUljcVNzcFhXU0hhOGpobkdvNTNZAd0FHc3BhbkhzZAncwNUhjMWx4M3dTbnN4UGtlR2NHZA3FZASF9fVjNTS3ZAiQVdjWDRoaHlSR3ljUWt3cnExMjg5ZAkptTmdzRVctTGJn',
+      'https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&access_token=IGQVJVVlVKaklYRDNtWUI5MzJBZATUwVGhDUFNad0pBRmo0MG9UTHNCY3VNUEZAxODV4MUNtTHdaNkZA1dGVqUXVJUldnT1NrQndhUURNQk5oa2Y5dzVOYlh1MUZAMZA1hwVjlldmJmUHZAR',
       { headers: { Accept: 'application/json' } }
     );
     const json = await response.json();
