@@ -55,20 +55,6 @@ export default shuffle([
     quote: 'Node / JS / UX',
   },
   {
-    name: 'Otto Nordgren',
-    profileUrl:
-      'https://docs.google.com/document/d/1phWA45KT4CCJyRJavBUPAiO6P14baWjMgsawtL3P5c0/edit?usp=sharing',
-    image: '/images/people/otto.jpg',
-    quote: 'JS / Java',
-  },
-  {
-    name: 'Magnus Linell',
-    profileUrl:
-      'https://docs.google.com/document/d/1aTuje5x5GmgnupA6zcyPqvzm-mRebmGIO_z0JTn_4ao/pub',
-    image: '/images/people/magnus.jpg',
-    quote: 'JS / Java',
-  },
-  {
     name: 'Katrine Johansson',
     profileUrl:
       'https://docs.google.com/document/d/10vA5JZfqXxqPSt4YuKJXRNWVjs2sQ0fc3-2Y9_dDuts/edit?usp=sharing',
