@@ -6,9 +6,9 @@ import logoGreen from '../images/logo-green.png';
 import Emoji from './Emoji';
 import wavingHand from '../emojis/waving-hand.png';
 import landingPortraitSmallWebp from '../images/landing-portrait.webp';
-import ottoBigWebp from '../images/otto-1920.webp';
+import landingLandscapeWebp from '../images/landing-landscape.webp';
 import landingPortraitSmall from '../images/landing-portrait.jpg';
-import ottoBig from '../images/otto-1920.jpg';
+import landingLandscape from '../images/landing-landscape.jpg';
 
 const isSmallDevice = () => {
   return window.innerWidth < 1024;
@@ -20,10 +20,10 @@ export default () => (
       <picture>
         <source
           media='(min-width: 450px)'
-          srcSet={ottoBigWebp}
+          srcSet={landingLandscapeWebp}
           type='image/webp'
         />
-        <source media='(min-width: 450px)' srcSet={ottoBig} type='image/jpeg' />
+        <source media='(min-width: 450px)' srcSet={landingLandscape} type='image/jpeg' />
         <source srcSet={landingPortraitSmallWebp} type='image/webp' />
         <source srcSet={landingPortraitSmall} type='image/jpeg' />
         <img className={styles.heroImage} src={landingPortraitSmallWebp} alt='' />
