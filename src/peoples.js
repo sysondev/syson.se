@@ -50,7 +50,7 @@ export default shuffle([
   {
     name: 'Mikael Larsson',
     profileUrl:
-      'https://docs.google.com/document/d/1f_5OAMS1hnyARTHRON8lj3BZSFB02J8ogYruCUDNFRk/edit?usp=sharing',
+      'https://docs.google.com/document/d/1o0v_EqH5tozHDAXhG-FDIedoGT_Pw6Xa2nfe9dmFbuw/edit?usp=sharing',
     image: '/images/people/micke.jpg',
     quote: 'Node / JS / UX',
   },
