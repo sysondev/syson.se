@@ -48,13 +48,6 @@ export default shuffle([
     quote: 'JS / .NET',
   },
   {
-    name: 'Mikael Larsson',
-    profileUrl:
-      'https://docs.google.com/document/d/1o0v_EqH5tozHDAXhG-FDIedoGT_Pw6Xa2nfe9dmFbuw/edit?usp=sharing',
-    image: '/images/people/micke.jpg',
-    quote: 'Node / JS / UX',
-  },
-  {
     name: 'Katrine Johansson',
     profileUrl:
       'https://docs.google.com/document/d/10vA5JZfqXxqPSt4YuKJXRNWVjs2sQ0fc3-2Y9_dDuts/edit?usp=sharing',
