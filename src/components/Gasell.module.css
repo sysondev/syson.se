@@ -1,6 +1,6 @@
 .gasell {
   background-color: var(--lily-blue);
-  min-width: 100vw;
+  min-width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
   display: flex;
