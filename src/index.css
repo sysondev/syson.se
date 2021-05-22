@@ -1,4 +1,4 @@
-body {
+:root {
   --gum-leaf: #aad2bd;
   --lily-blue: #edfaff;
   --tradewind: #59b89d;
@@ -8,9 +8,10 @@ body {
   --cashmere: #e8b5aa;
   --westar: #dbdad0;
   --kangaroo: #dadacf;
-
   --body-max-width: 1106px;
+}
 
+body {
   margin: 0;
   padding: 0;
   font-family: 'ibm-plex-mono', monospace, -apple-system, BlinkMacSystemFont,
