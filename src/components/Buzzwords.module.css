@@ -1,6 +1,6 @@
 .buzzwords {
   background-color: var(--mirage);
-  min-width: 100vw;
+  min-width: 100%;
   padding-top: 48px;
   padding-bottom: 64px;
 }

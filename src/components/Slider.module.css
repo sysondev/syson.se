@@ -26,6 +26,7 @@
   border-radius: 50%;
   height: 24px;
   width: 24px;
+  margin-left: -12px;
   background-color: white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
