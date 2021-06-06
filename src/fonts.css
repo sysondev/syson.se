@@ -1,16 +1,17 @@
+/* webpackIgnore: true */
 @font-face {
   font-family: 'octarine';
-  src: url('/fonts/octarine-lightoblique-webfont.woff2') format('woff2'),
-    url('/fonts/octarine-lightoblique-webfont.woff') format('woff');
+  src: url('./fonts/octarine-lightoblique-webfont.woff2') format('woff2'),
+    url('./fonts/octarine-lightoblique-webfont.woff') format('woff');
   font-weight: lighter;
   font-style: oblique;
   font-display: swap;
 }
-  
+
 @font-face {
   font-family: 'octarine';
-  src: url('/fonts/octarine-boldoblique-webfont.woff2') format('woff2'),
-    url('/fonts/octarine-boldoblique-webfont.woff') format('woff');
+  src: url('./fonts/octarine-boldoblique-webfont.woff2') format('woff2'),
+    url('./fonts/octarine-boldoblique-webfont.woff') format('woff');
   font-weight: normal;
   font-style: oblique;
   font-display: swap;
@@ -18,8 +19,8 @@
 
 @font-face {
   font-family: 'octarine';
-  src: url('/fonts/octarine-light-webfont.woff2') format('woff2'),
-    url('/fonts/octarine-light-webfont.woff') format('woff');
+  src: url('./fonts/octarine-light-webfont.woff2') format('woff2'),
+    url('./fonts/octarine-light-webfont.woff') format('woff');
   font-weight: lighter;
   font-style: normal;
   font-display: swap;
@@ -27,8 +28,8 @@
 
 @font-face {
   font-family: 'octarine';
-  src: url('/fonts/octarine-bold-webfont.woff2') format('woff2'),
-    url('/fonts/octarine-bold-webfont.woff') format('woff');
+  src: url('./fonts/octarine-bold-webfont.woff2') format('woff2'),
+    url('./fonts/octarine-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -36,8 +37,8 @@
 
 @font-face {
   font-family: 'ibm-plex-mono';
-  src: url('/fonts/IBMPlexMono-Text.woff2') format('woff2'),
-    url('/fonts/IBMPlexMono-Text.woff') format('woff');
+  src: url('./fonts/IBMPlexMono-Text.woff2') format('woff2'),
+    url('./fonts/IBMPlexMono-Text.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: fallback;
