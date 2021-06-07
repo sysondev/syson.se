@@ -13,3 +13,9 @@
 npm install
 npm start
 ```
+
+## Förutsättningar
+
+```
+node >= 16.3.0 rekommenderas
+```
