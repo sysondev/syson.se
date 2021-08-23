@@ -107,4 +107,10 @@ export default shuffle([
     image: '/images/people/olov.jpg',
     quote: 'JS / .NET',
   },
+  {
+    name: 'Victor Trigo Wagner',
+    profileUrl: 'https://docs.google.com/document/d/1UoNXF-xm-xHoJLp9fibAlq5aw6KwU3Oz8uvFc-4YjCM/edit?usp=sharing',
+    image: '/images/people/victor.jpg',
+    quote: 'JS / React',
+  },
 ]);
