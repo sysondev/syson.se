@@ -63,10 +63,10 @@ export default shuffle([
   },
   {
     name: 'Soroush Hakami',
+    profileUrl: 'https://docs.google.com/document/d/1zhhJQneniBod_kk54PkmVA6cbL6GabbR5sgHmVkju4o/edit?usp=sharing',
     image: '/images/people/soroush.jpg',
     phone: '073-047 34 41',
-    mail: 'salj@syson.se',
-    quote: 'Sälj / Rekrytering',
+    quote: 'JS / React',
   },
   {
     name: 'Love Gehlin',
