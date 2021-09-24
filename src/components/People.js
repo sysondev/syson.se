@@ -1,31 +1,31 @@
-import classNames from 'classnames';
-import React, { useState } from 'react';
-import posed from 'react-pose';
-import rockSign from '../emojis/rock-sign.png';
-import arrow from '../icons/arrow.svg';
-import people from '../peoples';
-import Emoji from './Emoji';
-import styles from './People.module.css';
-import PeopleSlider from './PeopleSlider';
+import classNames from "classnames";
+import React, { useState } from "react";
+import posed from "react-pose";
+import rockSign from "../emojis/rock-sign.png";
+import arrow from "../icons/arrow.svg";
+import people from "../peoples";
+import Emoji from "./Emoji";
+import styles from "./People.module.css";
+import PeopleSlider from "./PeopleSlider";
 
 const Box = posed.div({
   hoverable: true,
   init: { scale: 1.0 },
-  hover: { scale: 1.025 }
+  hover: { scale: 1.025 },
 });
 
 const Link = ({ url, title }) => (
   <a
     href={url}
-    target='_blank'
-    rel='noopener noreferrer'
+    target="_blank"
+    rel="noopener noreferrer"
     className={classNames(styles.link, styles.highlight)}
   >
-    <span className={styles.linkText}>{title}</span> <img src={arrow} alt='' />
+    <span className={styles.linkText}>{title}</span> <img src={arrow} alt="" />
   </a>
 );
 
-export default () => {
+export default function People() {
   const [showAllPeople, setShowAllPeople] = useState(false);
 
   const toggleShowAllPeople = () => {
@@ -34,15 +34,15 @@ export default () => {
 
   return (
     <section className={styles.section}>
-      <div className='container'>
+      <div className="container">
         <h2>
           Vi är Syson <Emoji src={rockSign} />
         </h2>
       </div>
       {!showAllPeople && <PeopleSlider />}
       {showAllPeople && (
-        <div className={classNames('container', styles.allPeople)}>
-          {people.map(person => (
+        <div className={classNames("container", styles.allPeople)}>
+          {people.map((person) => (
             <div key={person.name} className={styles.allPeoplePerson}>
               <div
                 className={classNames(styles.details, styles.highlighted)}
@@ -52,16 +52,16 @@ export default () => {
                 <div className={styles.bottomDetails}>
                   <div className={classNames(styles.quote)}>{person.quote}</div>
                   {person.linkedInUrl && (
-                    <Link url={person.linkedInUrl} title='LinkedIn' />
+                    <Link url={person.linkedInUrl} title="LinkedIn" />
                   )}
                   {person.profileUrl && (
-                    <Link url={person.profileUrl} title='Profil' />
+                    <Link url={person.profileUrl} title="Profil" />
                   )}
                   {person.mail && (
-                    <Link url={'mailto:' + person.mail} title={person.mail} />
+                    <Link url={"mailto:" + person.mail} title={person.mail} />
                   )}
                   {person.phone && (
-                    <Link url={'tel:' + person.phone} title={person.phone} />
+                    <Link url={"tel:" + person.phone} title={person.phone} />
                   )}
                 </div>
               </div>
@@ -69,7 +69,7 @@ export default () => {
           ))}
         </div>
       )}
-      <div className={classNames('container', styles.buttonContainer)}>
+      <div className={classNames("container", styles.buttonContainer)}>
         <Box>
           <button
             className={classNames(
@@ -78,10 +78,10 @@ export default () => {
             )}
             onClick={toggleShowAllPeople}
           >
-            {showAllPeople ? 'DÖLJ' : 'VISA ALLA'}
+            {showAllPeople ? "DÖLJ" : "VISA ALLA"}
           </button>
         </Box>
       </div>
     </section>
   );
-};
+}

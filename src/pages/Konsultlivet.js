@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './Konsultlivet.module.css';
-import konsultlivet from '../images/konsultlivet.png';
+import React from "react";
+import styles from "./Konsultlivet.module.css";
+import konsultlivet from "../images/konsultlivet.png";
 
-export default () => {
+export default function Konsultlivet() {
   return (
     <>
       <h1>Hur är konsultlivet?</h1>
@@ -15,7 +15,7 @@ export default () => {
       </p>
 
       <div className={styles.imageContainer}>
-        <img className={styles.image} src={konsultlivet} alt='' />
+        <img className={styles.image} src={konsultlivet} alt="" />
       </div>
 
       <p>
@@ -28,4 +28,4 @@ export default () => {
       </p>
     </>
   );
-};
+}

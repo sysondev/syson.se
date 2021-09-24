@@ -1,14 +1,14 @@
-import React from 'react';
-import classNames from 'classnames';
-import styles from './IntroSection.module.css';
-import Emoji from './Emoji';
+import React from "react";
+import classNames from "classnames";
+import styles from "./IntroSection.module.css";
+import Emoji from "./Emoji";
 
-export default ({ title, children, leftAligned, emoji }) => {
+export default function InstaSection({ title, children, leftAligned, emoji }) {
   return (
     <section>
       <div
         className={classNames(
-          'container',
+          "container",
           styles.intro,
           leftAligned && styles.leftAligned
         )}
@@ -21,4 +21,4 @@ export default ({ title, children, leftAligned, emoji }) => {
       </div>
     </section>
   );
-};
+}

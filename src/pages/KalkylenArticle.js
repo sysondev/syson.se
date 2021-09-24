@@ -1,7 +1,7 @@
-import React from 'react';
-import Kalkylen from '../components/Kalkylen';
+import React from "react";
+import Kalkylen from "../components/Kalkylen";
 
-export default () => {
+export default function KalkylenArticle() {
   return (
     <div>
       <h1>Lönemodellen i detalj</h1>
@@ -27,4 +27,4 @@ export default () => {
       </p>
     </div>
   );
-};
+}

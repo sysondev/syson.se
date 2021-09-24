@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import styles from './Slider.module.css';
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import styles from "./Slider.module.css";
 
-export default ({ min, max, value, onChange }) => {
+export default function Slider({ min, max, value, onChange }) {
   const bar = useRef();
   const [dragging, setDragging] = useState(false);
 
   const handleChange = useCallback(
-    dragX => {
+    (dragX) => {
       const barRect = bar.current.getBoundingClientRect();
       const barWidth = barRect.right - barRect.left;
       const xPos = dragX - barRect.left;
@@ -22,7 +22,7 @@ export default ({ min, max, value, onChange }) => {
     [max, min, onChange]
   );
 
-  const mouseDown = event => {
+  const mouseDown = (event) => {
     setDragging(true);
     handleChange(event.clientX);
   };
@@ -31,22 +31,22 @@ export default ({ min, max, value, onChange }) => {
     setDragging(false);
   };
 
-  const touchMove = event => {
+  const touchMove = (event) => {
     handleChange(event.touches[0].clientX);
   };
 
   useEffect(() => {
-    const mouseMove = event => {
+    const mouseMove = (event) => {
       if (dragging) {
         handleChange(event.clientX);
       }
     };
 
-    document.addEventListener('mouseup', mouseUp);
-    document.addEventListener('mousemove', mouseMove);
+    document.addEventListener("mouseup", mouseUp);
+    document.addEventListener("mousemove", mouseMove);
     return () => {
-      document.removeEventListener('mouseup', mouseUp);
-      document.removeEventListener('mousemove', mouseMove);
+      document.removeEventListener("mouseup", mouseUp);
+      document.removeEventListener("mousemove", mouseMove);
     };
   }, [dragging, handleChange]);
 
@@ -66,7 +66,7 @@ export default ({ min, max, value, onChange }) => {
         <div
           style={{ left: `${valuePercentage}%` }}
           className={styles.handle}
-          role='slider'
+          role="slider"
           aria-valuemin={min}
           aria-valuemax={max}
           aria-valuenow={value}
@@ -74,4 +74,4 @@ export default ({ min, max, value, onChange }) => {
       </div>
     </div>
   );
-};
+}

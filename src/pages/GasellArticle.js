@@ -1,14 +1,14 @@
-import React from 'react';
-import styles from './GasellArticle.module.css';
-import gasell from '../images/gasell.png';
+import React from "react";
+import styles from "./GasellArticle.module.css";
+import gasell from "../images/gasell.png";
 
-export default () => {
+export default function GasellArticle() {
   return (
     <>
       <h1>Man får skryta ibland</h1>
 
       <div className={styles.imageContainer}>
-        <img className={styles.image} src={gasell} alt='DI Gasell 2018' />
+        <img className={styles.image} src={gasell} alt="DI Gasell 2018" />
       </div>
 
       <p>
@@ -33,4 +33,4 @@ export default () => {
       </i>
     </>
   );
-};
+}

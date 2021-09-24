@@ -1,8 +1,9 @@
-import classNames from 'classnames';
-import React, { useEffect, useRef, useState } from 'react';
-import arrow from '../icons/arrow.svg';
-import people from '../peoples';
-import styles from './People.module.css';
+/* eslint-disable import/no-anonymous-default-export */
+import classNames from "classnames";
+import React, { useEffect, useRef, useState } from "react";
+import arrow from "../icons/arrow.svg";
+import people from "../peoples";
+import styles from "./People.module.css";
 
 const isTouchDevice = () => {
   // there's probably a better way to do this
@@ -12,11 +13,11 @@ const isTouchDevice = () => {
 const Link = ({ url, title }) => (
   <a
     href={url}
-    target='_blank'
-    rel='noopener noreferrer'
+    target="_blank"
+    rel="noopener noreferrer"
     className={classNames(styles.link, styles.highlight)}
   >
-    <span className={styles.linkText}>{title}</span> <img src={arrow} alt='' />
+    <span className={styles.linkText}>{title}</span> <img src={arrow} alt="" />
   </a>
 );
 
@@ -30,7 +31,7 @@ export default () => {
   }, {});
 
   const highlightCenter = () => {
-    const centerPerson = Object.keys(refs).find(name => {
+    const centerPerson = Object.keys(refs).find((name) => {
       const rect = refs[name].current.getBoundingClientRect();
       const viewportCenter = window.innerWidth / 2;
       return rect.left < viewportCenter && rect.right > viewportCenter;
@@ -38,7 +39,7 @@ export default () => {
     setHighlighted(centerPerson);
   };
 
-  const mouseEnter = name => {
+  const mouseEnter = (name) => {
     setHighlighted(name);
   };
 
@@ -55,7 +56,7 @@ export default () => {
 
   return (
     <div className={styles.people} ref={peopleElement} onScroll={scroll}>
-      {people.map(person => (
+      {people.map((person) => (
         <div key={person.name} className={styles.person}>
           <div
             className={styles.preview}
@@ -79,16 +80,16 @@ export default () => {
                 {person.quote}
               </div>
               {person.linkedInUrl && (
-                <Link url={person.linkedInUrl} title='LinkedIn' />
+                <Link url={person.linkedInUrl} title="LinkedIn" />
               )}
               {person.profileUrl && (
-                <Link url={person.profileUrl} title='Profil' />
+                <Link url={person.profileUrl} title="Profil" />
               )}
               {person.mail && (
-                <Link url={'mailto:' + person.mail} title={person.mail} />
+                <Link url={"mailto:" + person.mail} title={person.mail} />
               )}
               {person.phone && (
-                <Link url={'tel:' + person.phone} title={person.phone} />
+                <Link url={"tel:" + person.phone} title={person.phone} />
               )}
             </div>
           </div>

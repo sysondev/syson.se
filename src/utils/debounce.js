@@ -1,4 +1,4 @@
-export default (func, wait = 100) => {
+export default function debounce(func, wait = 100) {
   let timeout;
   return (...args) => {
     clearTimeout(timeout);
@@ -6,4 +6,4 @@ export default (func, wait = 100) => {
       func.apply(this, args);
     }, wait);
   };
-};
+}

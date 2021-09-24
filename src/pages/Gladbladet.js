@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './Gladbladet.module.css';
-import gladbladet from '../images/gladbladet.svg';
+import React from "react";
+import styles from "./Gladbladet.module.css";
+import gladbladet from "../images/gladbladet.svg";
 
-export default () => {
+export default function Gladbladet() {
   return (
     <>
       <h1>Hur vi mår är viktigast</h1>
@@ -19,7 +19,7 @@ export default () => {
       </p>
 
       <div className={styles.imageContainer}>
-        <img className={styles.image} src={gladbladet} alt='gladbladet' />
+        <img className={styles.image} src={gladbladet} alt="gladbladet" />
         <figcaption>
           <i>Vårt faktiska gladblad per April 2019</i>
         </figcaption>
@@ -27,8 +27,8 @@ export default () => {
 
       <p>
         2015 började vi mäta vårt mående i det vi kallar för gladbladet. Idén
-        lånade vi från{' '}
-        <a href='https://dna.crisp.se/docs/happiness-index.html'>Crisp</a>.
+        lånade vi från{" "}
+        <a href="https://dna.crisp.se/docs/happiness-index.html">Crisp</a>.
       </p>
 
       <p>
@@ -43,4 +43,4 @@ export default () => {
       </p>
     </>
   );
-};
+}
