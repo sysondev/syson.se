@@ -21,7 +21,7 @@ export default function Gladbladet() {
       <div className={styles.imageContainer}>
         <img className={styles.image} src={gladbladet} alt="gladbladet" />
         <figcaption>
-          <i>Vårt faktiska gladblad per April 2019</i>
+          <i>Vårt faktiska gladblad per December 2021</i>
         </figcaption>
       </div>
 
