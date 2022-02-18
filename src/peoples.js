@@ -84,13 +84,6 @@ export default shuffle([
     quote: 'JS / .NET',
   },
   {
-    name: 'Sabina Kosgård',
-    image: '/images/people/sabina.jpg',
-    profileUrl:
-      'https://docs.google.com/document/d/1kzZkwy7fCbRlKJKmD6v01i4UO8_WpjbQAAsVjGLJAZM/edit?usp=sharing',
-    quote: 'Test & testautomatisering',
-  },
-  {
     name: 'Aram Ghanipour',
     profileUrl:
       'https://docs.google.com/document/d/1MMQOWN8GbvxxQAmD6bisEndDSZVme1B-A2yiF8e5WS0/edit?usp=sharing',
