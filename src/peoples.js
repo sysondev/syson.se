@@ -34,13 +34,6 @@ export default shuffle([
     quote: 'JS / Java',
   },
   {
-    name: 'Alexander Lissenko',
-    profileUrl:
-      'https://docs.google.com/document/d/1tk9L-IHqo-yGvLbj3feiCj8sdnKEEM-ff2ugQjjvQkc/edit?usp=sharing',
-    image: '/images/people/alexander.jpg',
-    quote: 'JS / Java',
-  },
-  {
     name: 'Anton Söderstedt',
     profileUrl:
       'https://docs.google.com/document/d/1mp3L3mIeuixXMV7CpGp_wHiyGcWzOQPJ_GT7zu-sixs/edit?usp=sharing',
