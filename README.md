@@ -5,7 +5,7 @@
 
 - Deployas automatiskt till produktion när kod pushas till master
 
-- Joina #hemsidan på Slack om du diskutera eller bidra
+- Joina #hemsidan på Slack om du vill diskutera eller bidra
 
 ## Köra lokalt
 
