@@ -109,4 +109,11 @@ export default shuffle([
     image: '/images/people/gustav.jpg',
     quote: 'JS / React',
   },
+  {
+    name: 'Dimitris Thanasis',
+    profileUrl:
+      'https://docs.google.com/document/d/1eNJre_NsDYioSvKQHmQQMjRHUg52Jd-iZuPg233Ao9g/edit?usp=sharing',
+    image: '/images/people/dimitris.jpg',
+    quote: 'JS / React',
+  },
 ]);
