@@ -11,10 +11,11 @@ export default function Insta() {
   const [loaded, setLoaded] = useState(false);
   const VIDEO = "VIDEO";
   useLazy(heading, () => setLoaded(true));
+  const instaEndpoint = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&access_token=${process.env.REACT_APP_INSTAGRAM_TOKEN}`;
 
   const fetchPosts = async () => {
     const response = await fetch(
-      "https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&access_token=IGQVJVVlVKaklYRDNtWUI5MzJBZATUwVGhDUFNad0pBRmo0MG9UTHNCY3VNUEZAxODV4MUNtTHdaNkZA1dGVqUXVJUldnT1NrQndhUURNQk5oa2Y5dzVOYlh1MUZAMZA1hwVjlldmJmUHZAR",
+      instaEndpoint,
       { headers: { Accept: "application/json" } }
     );
     const json = await response.json();
