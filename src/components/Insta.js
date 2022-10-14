@@ -5,25 +5,25 @@ import Emoji from "./Emoji";
 import styles from "./Insta.module.css";
 import Masonry from "./Masonry";
 
+const instaEndpoint = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&access_token=${process.env.REACT_APP_INSTAGRAM_TOKEN}`;
+const fetchPosts = async () => {
+  const response = await fetch(
+    instaEndpoint,
+    { headers: { Accept: "application/json" } }
+  );
+  const json = await response.json();
+  return json.data
+};
+
 export default function Insta() {
   const heading = useRef();
   const [posts, setPosts] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const VIDEO = "VIDEO";
   useLazy(heading, () => setLoaded(true));
-  const instaEndpoint = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&access_token=${process.env.REACT_APP_INSTAGRAM_TOKEN}`;
-
-  const fetchPosts = async () => {
-    const response = await fetch(
-      instaEndpoint,
-      { headers: { Accept: "application/json" } }
-    );
-    const json = await response.json();
-    setPosts(json.data);
-  };
 
   useEffect(() => {
-    fetchPosts();
+    fetchPosts().then(setPosts);
   }, []);
 
   const getImageUrl = (post) =>
