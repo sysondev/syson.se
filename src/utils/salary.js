@@ -6,7 +6,7 @@ const DEFAULT_VALUES = {
     EXTRA_VACATION_DAYS: 0,
     OTHER_MONTHLY_COSTS: 1000,
     EXTRA_PENSION: 0,
-    BASE_SALARY: 26000,
+    BASE_SALARY:30000,
 }
 
 const calculateSalary = ({ hourlyRate, sickDays = 0, extraVacationDays = 0,
