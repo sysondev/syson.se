@@ -65,7 +65,7 @@ export default shuffle([
   {
     name: 'Love Gehlin',
     profileUrl:
-      'https://docs.google.com/document/d/1rk1qTNxWkkgRCP6aTH_8Wj_mJsv1GfKWqORRGdz1sWA/edit?usp=sharing',
+      'https://docs.google.com/document/d/1G5nqrnYOWyYFlL1kPp0h4kwzgaqXPl9Cq66-bDQqECE/edit#',
     image: '/images/people/love.jpg',
     quote: 'JS / Java',
   },
