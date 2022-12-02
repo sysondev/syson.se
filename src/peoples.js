@@ -48,13 +48,6 @@ export default shuffle([
     quote: 'Testautomatisering / Java',
   },
   {
-    name: 'Joakim Gordillo',
-    profileUrl:
-      'https://docs.google.com/document/d/119PGfv9tjTpKQMSwPT3PmaXOFVaL42S6tnTqov3hPEo/edit?usp=sharing',
-    image: '/images/people/joakim.jpg',
-    quote: 'Node / JS',
-  },
-  {
     name: 'Soroush Hakami',
     profileUrl:
       'https://docs.google.com/document/d/1zhhJQneniBod_kk54PkmVA6cbL6GabbR5sgHmVkju4o/edit?usp=sharing',
