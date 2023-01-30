@@ -109,4 +109,11 @@ export default shuffle([
     image: '/images/people/dimitris.jpg',
     quote: 'JS / .NET',
   },
+  {
+    name: 'Edvin Lundberg',
+    profileUrl:
+      'https://docs.google.com/document/d/1intPOtGY2aNpBjQJ9q6vWDXzk5SIgSxAQzM3Kjj8ucA/edit?usp=sharing',
+    image: '/images/people/edvin.jpg',
+    quote: 'JS / Java',
+  },
 ]);
