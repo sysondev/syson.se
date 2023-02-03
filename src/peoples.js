@@ -29,9 +29,9 @@ export default shuffle([
   {
     name: 'Leo Danielsson',
     profileUrl:
-      'https://docs.google.com/document/d/1vFr4LHEOGgcXI5rXEM2cgqzS_5AuhiwJI1I-ex6oEGU/edit?usp=sharing',
+      'https://docs.google.com/document/d/172NvQgKH1xIx-UTDcIwtFDDgKeEYaOn-OFsf4MCiNm8/edit?usp=sharing',
     image: '/images/people/leo.jpg',
-    quote: 'JS / Java',
+    quote: 'JS / React',
   },
   {
     name: 'Anton Söderstedt',
