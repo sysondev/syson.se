@@ -41,13 +41,6 @@ export default shuffle([
     quote: 'JS / .NET',
   },
   {
-    name: 'Katrine Johansson',
-    profileUrl:
-      'https://docs.google.com/document/d/10vA5JZfqXxqPSt4YuKJXRNWVjs2sQ0fc3-2Y9_dDuts/edit?usp=sharing',
-    image: '/images/people/katrine.jpg',
-    quote: 'Testautomatisering / Java',
-  },
-  {
     name: 'Soroush Hakami',
     profileUrl:
       'https://docs.google.com/document/d/1zhhJQneniBod_kk54PkmVA6cbL6GabbR5sgHmVkju4o/edit?usp=sharing',
