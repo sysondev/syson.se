@@ -6,7 +6,6 @@ import Header from "../components/Header";
 import Contact from "../components/Contact";
 import IntroSection from "../components/IntroSection";
 import Customers from "../components/Customers";
-import Gasell from "../components/Gasell";
 import Buzzwords from "../components/Buzzwords";
 import Squares from "../components/Squares";
 import Emoji from "../components/Emoji";
