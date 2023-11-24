@@ -58,7 +58,6 @@ export default function LandingPage() {
         </section>
         <Squares />
         <Customers />
-        <Gasell />
         <IntroSection title="Bäst, inte störst" emoji={house}>
           <p>
             Vi är ett konsultbolag som utvecklar system, hemsidor och appar. Vi
