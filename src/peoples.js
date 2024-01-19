@@ -103,11 +103,4 @@ export default shuffle([
     image: '/images/people/edvin.jpg',
     quote: 'JS / Java',
   },
-  {
-    name: 'Michaela Bång',
-    profileUrl:
-      'https://docs.google.com/document/d/1zHAKhsHYDRLgfF9lTrQuT7BOBc97owk1MLKxEPk791Q/edit?usp=sharing',
-    image: '/images/people/michaela.jpg',
-    quote: 'JS / React',
-  },
 ]);
