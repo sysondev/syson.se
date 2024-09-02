@@ -6,7 +6,7 @@ import styles from "./Insta.module.css";
 import Masonry from "./Masonry";
 
 const instaEndpoint = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&access_token=${
-  import.meta.env.REACT_APP_INSTAGRAM_TOKEN
+  import.meta.env.VITE_APP_INSTAGRAM_TOKEN
 }`;
 const fetchPosts = async () => {
   const response = await fetch(instaEndpoint, {
