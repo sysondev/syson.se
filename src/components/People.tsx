@@ -7,7 +7,10 @@ import Emoji from "./Emoji";
 import styles from "./People.module.css";
 import PeopleSlider from "./PeopleSlider";
 
-const Link = ({ url, title }) => (
+const Link = ({ url, title }: {
+  url: string;
+  title: string;
+}) => (
   <a
     href={url}
     target="_blank"

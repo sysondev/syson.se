@@ -3,7 +3,12 @@ import classNames from "classnames";
 import styles from "./IntroSection.module.css";
 import Emoji from "./Emoji";
 
-export default function InstaSection({ title, children, leftAligned, emoji }) {
+export default function InstaSection({ title, children, leftAligned, emoji }: {
+  title: string;
+  children: React.ReactNode;
+  leftAligned?: boolean;
+  emoji?: string;
+}) {
   return (
     <section>
       <div

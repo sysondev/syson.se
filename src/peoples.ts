@@ -1,4 +1,14 @@
-const shuffle = (array) => {
+interface Person {
+  name: string;
+  profileUrl: string;
+  image: string;
+  quote: string;
+  linkedInUrl?: string;
+  mail?: string;
+  phone?: string;
+}
+
+const shuffle = <T,>(array: T[]) => {
   var currentIndex = array.length,
     temporaryValue,
     randomIndex;
@@ -97,4 +107,4 @@ export default shuffle([
     image: '/images/people/edvin.jpg',
     quote: 'JS / Java',
   },
-]);
+] as Person[]);

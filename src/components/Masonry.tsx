@@ -6,15 +6,25 @@ const Masonry = ({
   breakpointCols,
   column,
   columnClassName,
+  className,
   ...rest
+}: {
+  children: React.ReactNode;
+  breakpointCols: {
+    [key: number]: number;
+    default: number;
+  };
+  column?: React.HTMLAttributes<HTMLDivElement>;
+  columnClassName?: string;
+  className?: string;
 }) => {
   const [columnCount, setColumnCount] = useState(breakpointCols.default || 2);
 
   const reCalculateColumnCount = useCallback(() => {
     const matchedBreakpoints = Object.keys(breakpointCols).filter(
-      breakpoint => window.innerWidth >= breakpoint
+      breakpoint => window.innerWidth >= Number(breakpoint)
     );
-    const matchedBreakpoint = matchedBreakpoints[matchedBreakpoints.length - 1];
+    const matchedBreakpoint = Number(matchedBreakpoints[matchedBreakpoints.length - 1]);
     setColumnCount(breakpointCols[matchedBreakpoint] || breakpointCols.default);
   }, [breakpointCols]);
 
@@ -30,8 +40,9 @@ const Masonry = ({
   });
 
   const itemsInColumns = () => {
-    return children.reduce((accumulator, child, index) => {
-      const columnIndex = index % columnCount;
+    const childrenArray = React.Children.toArray(children);
+    return childrenArray.reduce((accumulator: React.ReactNode[][], child: React.ReactNode, index: number) => {
+      const columnIndex: number = index % columnCount;
       if (!accumulator[columnIndex]) {
         accumulator[columnIndex] = [];
       }

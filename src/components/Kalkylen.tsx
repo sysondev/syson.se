@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import classNames from 'classnames';
 import styles from './Kalkylen.module.css';
 import { calculateSalary, DEFAULT_VALUES } from '../utils/salary';
-class Kalkylen extends React.Component {
-  constructor(props) {
+
+interface KalkylenState {
+  hourlyRate: number;
+  sickDays: number;
+  extraVacationDays: number;
+  otherMonthlyCosts: number;
+  extraPension: number;
+  salary?: number;
+}
+
+
+
+
+class Kalkylen extends React.Component<{}, KalkylenState> {
+  constructor(props: {}) {
     super(props);
     this.state = {
       hourlyRate: DEFAULT_VALUES.HOURLY_RATE,
@@ -28,27 +41,29 @@ class Kalkylen extends React.Component {
     this.setSalary();
   }
 
-  handleInputChange = e => {
+  handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
 
     if (value === '') {
-      this.setState(
+      this.setState(prevState => (
         {
+          ...prevState,
           [e.target.name]: ''
-        },
+        }),
         this.setSalary
       );
-    } else if (value >= 0) {
+    } else if (Number(value) >= 0) {
       this.setState(
-        {
+        prevState => ({
+          ...prevState,
           [e.target.name]: parseInt(e.target.value)
-        },
+        }),
         this.setSalary
       );
     }
   };
 
-  handleFocus = e => e.target.select();
+  handleFocus = (e: React.FocusEvent<HTMLInputElement>) => e.target.select();
 
   render() {
     return (

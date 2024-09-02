@@ -7,7 +7,7 @@ import sj from "../images/sj.png";
 import klarna from "../images/klarna.png";
 import assa from "../images/assa.png";
 
-export default function Customers({ title }) {
+export default function Customers() {
   return (
     <div className={classNames(styles.customers)}>
       <div className={classNames("container", styles.content)}>

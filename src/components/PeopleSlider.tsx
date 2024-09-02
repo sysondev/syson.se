@@ -10,7 +10,10 @@ const isTouchDevice = () => {
   return window.innerWidth < 1024;
 };
 
-const Link = ({ url, title }) => (
+const Link = ({ url, title }: {
+  url: string;
+  title: string;
+}) => (
   <a
     href={url}
     target="_blank"
@@ -22,24 +25,25 @@ const Link = ({ url, title }) => (
 );
 
 export default () => {
-  const [highlighted, setHighlighted] = useState();
-  const peopleElement = useRef();
+  const [highlighted, setHighlighted] = useState("");
+  const peopleElement = useRef<HTMLDivElement>(null);
 
-  const refs = people.reduce((refMap, person) => {
-    refMap[person.name] = useRef();
+  const refs = people.reduce((refMap: Record<string, React.RefObject<HTMLDivElement>>, person) => {
+    refMap[person.name] = useRef<HTMLDivElement>(null);
     return refMap;
   }, {});
 
   const highlightCenter = () => {
     const centerPerson = Object.keys(refs).find((name) => {
+      if(!refs[name].current) return;
       const rect = refs[name].current.getBoundingClientRect();
       const viewportCenter = window.innerWidth / 2;
       return rect.left < viewportCenter && rect.right > viewportCenter;
     });
-    setHighlighted(centerPerson);
+    centerPerson && setHighlighted(centerPerson);
   };
 
-  const mouseEnter = (name) => {
+  const mouseEnter = (name: string) => {
     setHighlighted(name);
   };
 

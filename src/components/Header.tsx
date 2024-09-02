@@ -39,7 +39,7 @@ export default function Header() {
         </picture>
       )}
       {!isSmallDevice() && (
-        <video autoPlay loop muted playsInline style={styles.video}>
+        <video autoPlay loop muted playsInline>
           <source src="/video/desktop.mp4" type="video/mp4" />
         </video>
       )}

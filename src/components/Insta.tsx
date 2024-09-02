@@ -5,6 +5,15 @@ import Emoji from "./Emoji";
 import styles from "./Insta.module.css";
 import Masonry from "./Masonry";
 
+interface Post {
+  id: string;
+  caption: string;
+  media_url: string;
+  permalink: string;
+  media_type: string;
+  thumbnail_url: string;
+}
+
 const instaEndpoint = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&access_token=${
   import.meta.env.VITE_APP_INSTAGRAM_TOKEN
 }`;
@@ -17,8 +26,8 @@ const fetchPosts = async () => {
 };
 
 export default function Insta() {
-  const heading = useRef();
-  const [posts, setPosts] = useState([]);
+  const heading = useRef<HTMLHeadingElement>(null);
+  const [posts, setPosts] = useState<Post[]>([]);
   const [loaded, setLoaded] = useState(false);
   const VIDEO = "VIDEO";
   useLazy(heading, () => setLoaded(true));
@@ -27,7 +36,7 @@ export default function Insta() {
     fetchPosts().then(setPosts);
   }, []);
 
-  const getImageUrl = (post) =>
+  const getImageUrl = (post: Post) =>
     post.media_type === VIDEO ? post.thumbnail_url : post.media_url;
 
   return (

@@ -8,7 +8,13 @@ import pencil from "../emojis/pencil.png";
 import chart from "../emojis/chart.png";
 import woman from "../emojis/woman_office_worker.png";
 
-const Square = ({ emoji, title, description, url, color }) => (
+const Square = ({ emoji, title, description, url, color }: {
+  emoji: string;
+  title: string;
+  description: string;
+  url: string;
+  color: "tradewind" | "cashmere" | "citrus";
+}) => (
   <Link to={url} className={classNames(styles.square, styles[color])}>
     <div className={styles.content}>
       <div>

@@ -6,7 +6,13 @@ const theParkSveavagenLocation = { lat: 59.3424874, lng: 18.0572211 };
 const theParkHalsingegatanLocation = { lat: 59.3466611, lng: 18.0382911 };
 const theParkSodermalmLocation = { lat: 59.3118736, lng: 18.0593306 };
 
-const loadGoogleMaps = (onLoad) => {
+declare global {
+  interface Window {
+    google: any;
+  }
+}
+
+const loadGoogleMaps = (onLoad: () => void) => {
   const script = document.createElement("script");
   script.src =
     "//maps.googleapis.com/maps/api/js?key=AIzaSyAr56WKXjNbvehf7vOI8y4m0Qsyl9PiPww";
@@ -19,7 +25,7 @@ const loadGoogleMaps = (onLoad) => {
 };
 
 export default function Map() {
-  const element = useRef();
+  const element = useRef<HTMLDivElement>(null);
 
   function initMap() {
     const map = new window.google.maps.Map(element.current, {

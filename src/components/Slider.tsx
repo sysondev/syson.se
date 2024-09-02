@@ -1,12 +1,18 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import styles from "./Slider.module.css";
 
-export default function Slider({ min, max, value, onChange }) {
-  const bar = useRef();
+export default function Slider({ min, max, value, onChange }: {
+  min: number;
+  max: number;
+  value: number;
+  onChange: (value: number) => void;
+}) {
+  const bar = useRef<HTMLDivElement>(null);
   const [dragging, setDragging] = useState(false);
 
   const handleChange = useCallback(
-    (dragX) => {
+    (dragX: number) => {
+      if(!bar.current) return;
       const barRect = bar.current.getBoundingClientRect();
       const barWidth = barRect.right - barRect.left;
       const xPos = dragX - barRect.left;
@@ -22,7 +28,7 @@ export default function Slider({ min, max, value, onChange }) {
     [max, min, onChange]
   );
 
-  const mouseDown = (event) => {
+  const mouseDown = (event:  React.MouseEvent<HTMLDivElement>) => {
     setDragging(true);
     handleChange(event.clientX);
   };
@@ -31,12 +37,12 @@ export default function Slider({ min, max, value, onChange }) {
     setDragging(false);
   };
 
-  const touchMove = (event) => {
+  const touchMove = (event: React.TouchEvent<HTMLDivElement>) => {
     handleChange(event.touches[0].clientX);
   };
 
   useEffect(() => {
-    const mouseMove = (event) => {
+    const mouseMove = (event: MouseEvent) => {
       if (dragging) {
         handleChange(event.clientX);
       }
