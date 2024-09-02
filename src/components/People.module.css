@@ -112,6 +112,13 @@
   padding: 16px 64px;
   text-transform: uppercase;
   font-family: 'octarine';
+
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
+
+.button:hover {
+  transform: scale(1.025);
 }
 
 .button:focus,

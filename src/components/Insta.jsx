@@ -5,14 +5,15 @@ import Emoji from "./Emoji";
 import styles from "./Insta.module.css";
 import Masonry from "./Masonry";
 
-const instaEndpoint = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&access_token=${process.env.REACT_APP_INSTAGRAM_TOKEN}`;
+const instaEndpoint = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&access_token=${
+  import.meta.env.VITE_APP_INSTAGRAM_TOKEN
+}`;
 const fetchPosts = async () => {
-  const response = await fetch(
-    instaEndpoint,
-    { headers: { Accept: "application/json" } }
-  );
+  const response = await fetch(instaEndpoint, {
+    headers: { Accept: "application/json" },
+  });
   const json = await response.json();
-  return json.data
+  return json.data;
 };
 
 export default function Insta() {
@@ -37,7 +38,7 @@ export default function Insta() {
           Instagram <Emoji src={cameraWithFlash} />
         </h2>
       </div>
-      {posts && (
+      {posts?.length > 0 && (
         <div className={styles.wrapper}>
           <Masonry
             breakpointCols={{ default: 3, 720: 4, 1024: 6 }}

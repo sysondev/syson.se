@@ -1,18 +1,11 @@
 import classNames from "classnames";
 import React, { useState } from "react";
-import posed from "react-pose";
 import rockSign from "../emojis/rock-sign.png";
 import arrow from "../icons/arrow.svg";
 import people from "../peoples";
 import Emoji from "./Emoji";
 import styles from "./People.module.css";
 import PeopleSlider from "./PeopleSlider";
-
-const Box = posed.div({
-  hoverable: true,
-  init: { scale: 1.0 },
-  hover: { scale: 1.025 },
-});
 
 const Link = ({ url, title }) => (
   <a
@@ -70,17 +63,15 @@ export default function People() {
         </div>
       )}
       <div className={classNames("container", styles.buttonContainer)}>
-        <Box>
-          <button
-            className={classNames(
-              !showAllPeople && styles.button,
-              showAllPeople && styles.invertedButton
-            )}
-            onClick={toggleShowAllPeople}
-          >
-            {showAllPeople ? "DÖLJ" : "VISA ALLA"}
-          </button>
-        </Box>
+        <button
+          className={classNames(
+            !showAllPeople && styles.button,
+            showAllPeople && styles.invertedButton
+          )}
+          onClick={toggleShowAllPeople}
+        >
+          {showAllPeople ? "DÖLJ" : "VISA ALLA"}
+        </button>
       </div>
     </section>
   );
