@@ -38,7 +38,7 @@ export default function Insta() {
           Instagram <Emoji src={cameraWithFlash} />
         </h2>
       </div>
-      {posts.length > 0 && (
+      {posts?.length > 0 && (
         <div className={styles.wrapper}>
           <Masonry
             breakpointCols={{ default: 3, 720: 4, 1024: 6 }}
