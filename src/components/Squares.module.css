@@ -5,6 +5,13 @@
   cursor: pointer;
   text-decoration: none;
   margin-bottom: 16px;
+
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
+
+.square:hover {
+  transform: scale(1.025);
 }
 
 .tradewind {
