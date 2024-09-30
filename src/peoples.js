@@ -27,13 +27,6 @@ export default shuffle([
     quote: 'JS / Java',
   },
   {
-    name: 'Leo Danielsson',
-    profileUrl:
-      'https://docs.google.com/document/d/172NvQgKH1xIx-UTDcIwtFDDgKeEYaOn-OFsf4MCiNm8/edit?usp=sharing',
-    image: '/images/people/leo.jpg',
-    quote: 'JS / React',
-  },
-  {
     name: 'Anton Söderstedt',
     profileUrl:
       'https://docs.google.com/document/d/1mp3L3mIeuixXMV7CpGp_wHiyGcWzOQPJ_GT7zu-sixs/edit?usp=sharing',
@@ -63,13 +56,6 @@ export default shuffle([
     quote: 'JS / .NET',
   },
   {
-    name: 'Aram Ghanipour',
-    profileUrl:
-      'https://docs.google.com/document/d/1MMQOWN8GbvxxQAmD6bisEndDSZVme1B-A2yiF8e5WS0/edit?usp=sharing',
-    image: '/images/people/aram.jpg',
-    quote: 'JS / .NET',
-  },
-  {
     name: 'Olov Gulliksson',
     profileUrl:
       'https://docs.google.com/document/d/1NQ7IQzW8mZMl9iYdsS8JZXPmGzWP6AWrymL-C37bjTA/edit?usp=sharing',
@@ -86,15 +72,8 @@ export default shuffle([
   {
     name: 'Gustav Lindberg',
     profileUrl:
-      'https://docs.google.com/document/d/1KhtqREPwBCNqAoReT8r1dqZjAGqlZfmgSRyXNecVH-0/edit?usp=sharing',
+      'https://docs.google.com/document/d/1DvzCYClGfJEwFZBYBG0Ax3dXO-ZQ0NXuHFMaoHm6CxU/edit?usp=sharing',
     image: '/images/people/gustav.jpg',
     quote: 'JS / React',
-  },
-  {
-    name: 'Edvin Lundberg',
-    profileUrl:
-      'https://docs.google.com/document/d/1intPOtGY2aNpBjQJ9q6vWDXzk5SIgSxAQzM3Kjj8ucA/edit?usp=sharing',
-    image: '/images/people/edvin.jpg',
-    quote: 'JS / Java',
   },
 ]);
