@@ -66,8 +66,7 @@ export default function LandingPage() {
           <p>
             Vi är ett litet bolag och vi gillar det. Vi är idag{" "}
             {peoples.length + " "}
-            personer. Som en liten skolklass eller ett fotbollslag ungefär.
-            Några fler vill vi bli, men inte många.
+            personer. Några fler vill vi bli, men inte många.
           </p>
           <p>
             Mycket blir bättre när man är mindre. Vi lär känna varandra bättre,
