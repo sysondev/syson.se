@@ -40,7 +40,7 @@ export default function LandingPage() {
               En schysst deal <Emoji src={handshake} />
             </h2>
             <p>
-              Vår lönemodell är enkel. Du får <b>70%</b> av timpriset när du har
+              Vår lönemodell är enkel. Du får <b>75%</b> av timpriset när du har
               ett uppdrag, annars är du garanterad 30 000 kr. Att hitta
               uppdraget eller förhandla om timpriset behöver du inte lägga någon
               energi på själv, det löser vi.
