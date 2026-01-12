@@ -39,7 +39,7 @@ export default shuffle([
     profileUrl:
       "https://docs.google.com/document/d/1G5nqrnYOWyYFlL1kPp0h4kwzgaqXPl9Cq66-bDQqECE/edit#",
     image: "/images/people/love.jpg",
-    quote: "JS / Java",
+    quote: "JS / React / Kotlin",
   },
   {
     name: "Mattias Ekström",
@@ -67,6 +67,13 @@ export default shuffle([
     profileUrl:
       "https://docs.google.com/document/d/1DvzCYClGfJEwFZBYBG0Ax3dXO-ZQ0NXuHFMaoHm6CxU/edit?usp=sharing",
     image: "/images/people/gustav.jpg",
+    quote: "JS / React",
+  },
+  {
+    name: "Fredrik Löfgren",
+    profileUrl:
+      "https://docs.google.com/document/d/1xFTRZXjfSmW7msqN_kUNlHuUFt_EBvLp8RCpFeaPWbQ/edit?usp=sharing",
+    image: "/images/people/fredrik.jpg",
     quote: "JS / React",
   },
 ]);
