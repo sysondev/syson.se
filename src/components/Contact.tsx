@@ -10,17 +10,10 @@ export default function Contact() {
           <div className={styles.left}>
             <p>Vi vill alltid höra från trevligt folk. </p>
             <p>
-              Fikasugen? Skicka ett mail eller ring oss så bokar vi in en något.
+              Fikasugen? Skicka ett mail så bokar vi in en något.
             </p>
           </div>
           <div className={styles.list}>
-            <div>Soroush</div>
-            <a href="tel:0730473441">073-047 34 41</a>
-            <div>Anton</div>
-            <a href="tel:0763479001">076-347 90 01</a>
-            <div>Love</div>
-            <a href="tel:0706591870">070-659 18 70</a>
-            <div></div>
             <a href="mailto:hej@syson.se">hej@syson.se</a>
           </div>
           <div className={styles.sysonmanContainer}>
