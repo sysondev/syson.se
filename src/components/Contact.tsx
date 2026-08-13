@@ -10,7 +10,7 @@ export default function Contact() {
           <div className={styles.left}>
             <p>Vi vill alltid höra från trevligt folk. </p>
             <p>
-              Fikasugen? Skicka ett mail så bokar vi in en något.
+              Fikasugen? Skicka ett mail så hittar vi en tid som passar.
             </p>
           </div>
           <div className={styles.list}>
