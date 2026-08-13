@@ -10,8 +10,7 @@ export default function Contact() {
           <div className={styles.left}>
             <p>Vi vill alltid höra från trevligt folk. </p>
             <p>
-              Fikasugen? Vi sitter på The Parks lokaler i City, Vasastan och
-              Södermalm.
+              Fikasugen? Skicka ett mail eller ring oss så bokar vi in en något.
             </p>
           </div>
           <div className={styles.list}>
