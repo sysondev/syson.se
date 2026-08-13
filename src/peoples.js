@@ -49,24 +49,10 @@ export default shuffle([
     quote: "JS / .NET",
   },
   {
-    name: "Olov Gulliksson",
-    profileUrl:
-      "https://docs.google.com/document/d/1NQ7IQzW8mZMl9iYdsS8JZXPmGzWP6AWrymL-C37bjTA/edit?usp=sharing",
-    image: "/images/people/olov.jpg",
-    quote: "JS / .NET",
-  },
-  {
     name: "Victor Trigo Wagner",
     profileUrl:
       "https://docs.google.com/document/d/1UoNXF-xm-xHoJLp9fibAlq5aw6KwU3Oz8uvFc-4YjCM/edit?usp=sharing",
     image: "/images/people/victor.jpg",
-    quote: "JS / React",
-  },
-  {
-    name: "Gustav Lindberg",
-    profileUrl:
-      "https://docs.google.com/document/d/1DvzCYClGfJEwFZBYBG0Ax3dXO-ZQ0NXuHFMaoHm6CxU/edit?usp=sharing",
-    image: "/images/people/gustav.jpg",
     quote: "JS / React",
   },
   {
